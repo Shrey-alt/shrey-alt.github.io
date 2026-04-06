@@ -377,3 +377,175 @@
       .pain-points { grid-template-columns:1fr; }
       .research-grid { grid-template-columns:1fr; gap:48px; }
     }
+/* =============================================
+   RESPONSIVE — ENHANCED TABLET (≤1024px)
+============================================= */
+@media (max-width: 1024px) {
+  body { cursor: auto; }
+  #cursor { display: none; }
+
+  .nav { padding: 0 28px; }
+  .divider { margin: 0 28px; }
+
+  #hero { padding: 0 28px clamp(40px,5vw,64px); min-height: 600px; }
+  #impact { padding: 64px 28px; }
+  #overview { padding: 72px 28px; }
+  #problem { padding: 80px 28px; }
+  #research { padding: 72px 28px; }
+  #personas { padding: 72px 28px; }
+  #strategy { padding: 72px 28px; }
+  #design-showcase { padding: 72px 0; }
+  #transformation { padding: 72px 28px; }
+  #process { padding: 72px 28px; }
+  #results { padding: 72px 28px; }
+  #learnings { padding: 72px 28px; }
+  #cs-footer { padding: 64px 28px !important; }
+
+  .metrics-grid { grid-template-columns: repeat(2,1fr); }
+  .wf-strip { padding: 0 28px 24px; }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (≤768px)
+============================================= */
+@media (max-width: 768px) {
+  .nav { padding: 0 20px; height: 56px; }
+  .nav-label { display: none; }
+  .divider { margin: 0 20px; }
+
+  /* Hero */
+  #hero {
+    padding: 0 20px 32px;
+    min-height: 100svh;
+  }
+  .hero-title-line { font-size: clamp(36px, 10vw, 72px); }
+  .hero-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .hero-meta-items { flex-wrap: wrap; gap: 20px; }
+  .hero-scroll-hint { display: none; }
+
+  /* Impact */
+  #impact { padding: 56px 20px; }
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .impact-item { padding: 0 !important; border: none !important; }
+  .impact-num { font-size: clamp(36px, 9vw, 56px); }
+
+  /* Overview */
+  #overview { padding: 56px 20px; }
+  .overview-body { font-size: 16px; }
+
+  /* Problem */
+  #problem { padding: 56px 20px; }
+  .problem-quote { font-size: clamp(22px, 6.5vw, 40px); }
+  .pain-points { grid-template-columns: 1fr; margin-top: 48px; }
+  .pain-item { padding: 28px 20px; }
+
+  /* Research */
+  #research { padding: 56px 20px; }
+  .research-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Personas */
+  #personas { padding: 56px 20px; }
+  .persona-grid { grid-template-columns: 1fr; }
+  .persona-card:hover { transform: none; }
+
+  /* Strategy */
+  #strategy { padding: 56px 20px; }
+
+  /* Design showcase */
+  #design-showcase { padding: 56px 0; }
+  .wf-strip { padding: 0 20px 20px; }
+  .wf-frame { width: 220px; }
+  .wf-screen { height: 400px; }
+
+  /* Visual design */
+  .vis-ph-img-wrap { height: 260px; }
+  .vis-ph-img-wrap--short { height: 200px; }
+
+  /* Transformation */
+  #transformation { padding: 56px 20px; }
+  .transform-table { display: block; overflow-x: auto; }
+  .transform-table td, .transform-table th { padding: 14px 16px; font-size: 14px; }
+  .transform-table td:not(:first-child),
+  .transform-table th:not(:first-child) { padding-left: 16px; }
+
+  /* Process */
+  #process { padding: 56px 20px; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .process-steps::before { display: none; }
+
+  /* Results */
+  #results { padding: 56px 20px; }
+  .results-top { grid-template-columns: 1fr; margin-bottom: 48px; }
+  .results-body { padding-left: 0; margin-top: 20px; font-size: 16px; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .metric-card { padding: 32px 24px; }
+  .metric-value { font-size: clamp(36px, 9vw, 60px); }
+
+  /* Learnings */
+  #learnings { padding: 56px 20px; }
+  .learnings-layout { grid-template-columns: 1fr; gap: 40px; }
+  .learnings-body { font-size: 16px; }
+
+  /* Footer */
+  #cs-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 56px 20px !important;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — SMALL MOBILE (≤480px)
+============================================= */
+@media (max-width: 480px) {
+  .nav { padding: 0 16px; height: 52px; }
+  .divider { margin: 0 16px; }
+
+  #hero { padding: 0 16px 24px; }
+  .hero-title-line { font-size: clamp(30px, 10vw, 56px); }
+  .hero-eyebrow { margin-bottom: 12px; }
+
+  #impact { padding: 48px 16px; }
+  .impact-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .impact-num { font-size: clamp(28px, 8vw, 48px); }
+
+  #overview, #problem, #research, #personas,
+  #strategy, #transformation, #process,
+  #results, #learnings { padding: 48px 16px; }
+
+  #design-showcase { padding: 48px 0; }
+  .wf-strip { padding: 0 16px 16px; }
+  .wf-frame { width: 188px; }
+  .wf-screen { height: 340px; }
+
+  .vis-ph-img-wrap { height: 220px; }
+
+  .metrics-grid { grid-template-columns: 1fr; }
+  .metric-card { padding: 28px 20px; }
+
+  .process-steps { grid-template-columns: 1fr; gap: 16px; }
+
+  #cs-footer { padding: 48px 16px !important; }
+  .back-btn { padding: 12px 22px; font-size: 14px; }
+}
+
+/* =============================================
+   TOUCH DEVICE
+============================================= */
+@media (hover: none) {
+  .persona-card:hover { transform: none; box-shadow: none; }
+  .pain-item:hover { background: #1d1d1d; }
+  .metric-card:hover { transform: none; box-shadow: none; }
+  .wf-screen:hover { box-shadow: none; transform: none; }
+  .vis-ph-card:hover .vis-ph-img-wrap img,
+  .vis-ph-full:hover .vis-ph-img-wrap img { transform: none; }
+}

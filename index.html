@@ -37,8 +37,26 @@
       <li><a href="#about">INFO</a></li>
       <li><a href="#contact">CONTACT</a></li>
     </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- ==================== MOBILE MENU ==================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+  <ul class="mobile-nav-links">
+    <li><a href="#hero"    class="mobile-nav-link">Home</a></li>
+    <li><a href="#work"    class="mobile-nav-link">Work</a></li>
+    <li><a href="#about"   class="mobile-nav-link">Info</a></li>
+    <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-footer">
+    <span>Mumbai, IN</span>
+    <span>S.R © 2026</span>
+  </div>
+</div>
 
 <!-- ==================== HERO ==================== -->
 <section id="hero">
@@ -166,7 +184,7 @@
       </div>
       <div class="proj-img-wrap">
         <img src="https://www.figma.com/api/mcp/asset/86d5052f-99d9-4496-b876-d25e2b1dc864"
-             alt="HDFC Bank" style="height:688px;" />
+             alt="HDFC Bank" />
       </div>
     </a>
     <a href="tata-mf-case-study.html" class="proj-card reveal d2" style="display:block;text-decoration:none;color:inherit;">
@@ -176,7 +194,7 @@
       </div>
       <div class="proj-img-wrap">
         <img src="https://www.figma.com/api/mcp/asset/e5a1aede-8982-4a43-8b8f-cb34e185aa6c"
-             alt="Tata Mutual Fund" style="height:822px;" />
+             alt="Tata Mutual Fund" />
       </div>
     </a>
   </div>
@@ -190,7 +208,7 @@
       </div>
       <div class="proj-img-wrap" style="width:946px;max-width:100%;overflow:hidden;">
         <img src="https://www.figma.com/api/mcp/asset/160d08d7-0800-4621-8e84-506da762d072"
-             alt="Project 03" style="height:581px;width:100%;object-fit:cover;" />
+             alt="Project 03" />
       </div>
     </div>
   </div>
@@ -204,7 +222,7 @@
       </div>
       <div class="proj-img-wrap">
         <img src="https://www.figma.com/api/mcp/asset/44cfca51-a1e3-4553-9856-a4d4133ad26d"
-             alt="Project 04" style="height:822px;" />
+             alt="Project 04" />
       </div>
     </div>
     <div class="proj-card reveal d2">
@@ -214,7 +232,7 @@
       </div>
       <div class="proj-img-wrap">
         <img src="https://www.figma.com/api/mcp/asset/936c5013-8504-4901-901d-b5f8eccf1034"
-             alt="Project 05" style="height:688px;" />
+             alt="Project 05" />
       </div>
     </div>
   </div>
@@ -641,10 +659,6 @@ function fitNameRow(rowSel, firstId, lastId) {
   const last  = document.getElementById(lastId);
   if (!row || !first || !last) return;
 
-  /* Subtract the element's own horizontal padding + a glyph-edge buffer.
-     This is critical for the footer row which has padding: 0 40px —
-     without subtracting padding, "Rathod" would size to full offsetWidth
-     and the final glyph would overflow into the padding and get clipped. */
   const cs   = window.getComputedStyle(row);
   const padH = (parseFloat(cs.paddingLeft) || 0) + (parseFloat(cs.paddingRight) || 0);
   const W    = row.offsetWidth - padH - 24; /* 24px glyph-edge buffer */
@@ -655,21 +669,37 @@ function fitNameRow(rowSel, firstId, lastId) {
   first.style.transition = 'none';
   last.style.transition  = 'none';
 
-  /* Binary-search the right font-size */
-  const RATIO = 1.045; /* "Rathod" is ~4.5% larger than "Shreyansh" (from Figma) */
-  let lo = 40, hi = 900;
-
-  for (let i = 0; i < 60; i++) {
-    const mid = (lo + hi) / 2;
-    first.style.fontSize = mid + 'px';
-    last.style.fontSize  = (mid * RATIO) + 'px';
-    const total = first.scrollWidth + last.scrollWidth;
-    if (total < W) lo = mid; else hi = mid;
+  /* Helper: binary-search font-size to fill W for a single element */
+  function fitSingle(el) {
+    let lo = 20, hi = 900;
+    for (let i = 0; i < 60; i++) {
+      const mid = (lo + hi) / 2;
+      el.style.fontSize = mid + 'px';
+      if (el.scrollWidth < W) lo = mid; else hi = mid;
+    }
+    el.style.fontSize = lo + 'px';
   }
 
-  /* Commit final values */
-  first.style.fontSize = lo + 'px';
-  last.style.fontSize  = (lo * RATIO) + 'px';
+  /* On mobile the row is flex-column — each word fills its own full width.
+     On desktop it's flex-row — both words share the row (original logic). */
+  if (cs.flexDirection === 'column') {
+    /* Mobile: size each word independently to fill full row width */
+    fitSingle(first);
+    fitSingle(last);
+  } else {
+    /* Desktop: fit both side-by-side with the original ratio */
+    const RATIO = 1.045; /* "Rathod" is ~4.5% larger than "Shreyansh" */
+    let lo = 40, hi = 900;
+    for (let i = 0; i < 60; i++) {
+      const mid = (lo + hi) / 2;
+      first.style.fontSize = mid + 'px';
+      last.style.fontSize  = (mid * RATIO) + 'px';
+      const total = first.scrollWidth + last.scrollWidth;
+      if (total < W) lo = mid; else hi = mid;
+    }
+    first.style.fontSize = lo + 'px';
+    last.style.fontSize  = (lo * RATIO) + 'px';
+  }
 
   /* Restore transitions */
   requestAnimationFrame(() => {
@@ -690,6 +720,33 @@ if (document.fonts && document.fonts.ready) {
   window.addEventListener('load', fitAllNames);
 }
 window.addEventListener('resize', fitAllNames);
+
+/* =============================================
+   MOBILE HAMBURGER MENU
+============================================= */
+const burger     = document.getElementById('navBurger');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose  = document.getElementById('mobileMenuClose');
+const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+function openMenu() {
+  burger.classList.add('open');
+  mobileMenu.classList.add('open');
+  document.body.classList.add('menu-open');
+}
+function closeMenu() {
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.classList.remove('menu-open');
+}
+
+burger.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeMenu();
+  });
+});
 </script>
 
 </body>
