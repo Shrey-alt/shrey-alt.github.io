@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="90" stroke="#1d1d1d" stroke-width="9"/>
+  <!-- R letterform — stem + bowl + leg as a single compound fill -->
+  <path fill-rule="evenodd" fill="#1d1d1d"
+    d="
+      M 60 50 L 60 150 L 76 150 L 76 112 L 100 112 L 128 150 L 147 150 L 117 110
+      C 131 105 141 93 141 78 C 141 62 128 50 110 50 Z
+      M 76 64 L 108 64 C 120 64 127 70 127 78 C 127 86 120 98 108 98 L 76 98 Z
+    "
+  />
+</svg>

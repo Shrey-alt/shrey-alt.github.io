@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDFC Bank Redesign — Case Study · Shreyansh Rathod</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="hdfc-case-study.css">
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-inner">
+    <span class="loader-char">H</span>
+    <span class="loader-char">D</span>
+    <span class="loader-char">F</span>
+    <span class="loader-char">C</span>
+  </div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Portfolio
+  </a>
+  <span class="nav-label">HDFC Bank · Case Study</span>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-parallax-bg" id="heroBg"></div>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow" id="heroEyebrow">
+      <span class="hero-tag">UI / UX Case Study</span>
+      <span class="hero-dot-sep"></span>
+      <span class="hero-tag">2024</span>
+      <span class="hero-dot-sep"></span>
+      <div class="hero-client-badge">
+        <div class="hdfc-dot"></div>
+        HDFC Bank
+      </div>
+    </div>
+
+    <div class="hero-title">
+      <span class="hero-title-line" id="hl1">HDFC Bank</span>
+      <span class="hero-title-line bold" id="hl2">Website</span>
+      <span class="hero-title-line" id="hl3">Redesign.</span>
+    </div>
+
+    <div class="hero-meta-row" id="heroMeta">
+      <div class="hero-meta-items">
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Role</div>
+          <div class="hero-meta-val">UX Research · UI Design · IA · Accessibility</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Platform</div>
+          <div class="hero-meta-val">Responsive Website</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Timeline</div>
+          <div class="hero-meta-val">3–6 Months</div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 2v6M2 7l3 3 3-3" stroke="rgba(0,0,0,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== IMPACT STRIP ==================== -->
+<section id="impact">
+  <div class="impact-grid">
+    <div class="impact-item reveal">
+      <div class="impact-num"><span class="counter" data-target="160">0</span><span class="accent">M+</span></div>
+      <div class="impact-label">Monthly visits post-redesign (up from ~40M)</div>
+    </div>
+    <div class="impact-item reveal d1">
+      <div class="impact-num"><span class="counter" data-target="30">0</span><span class="accent">%</span></div>
+      <div class="impact-label">Lift in form submissions &amp; product applications</div>
+    </div>
+    <div class="impact-item reveal d2">
+      <div class="impact-num"><span class="counter" data-target="4">0</span><span class="accent">×</span></div>
+      <div class="impact-label">Traffic growth from 40M to 160M monthly visits</div>
+    </div>
+    <div class="impact-item reveal d3">
+      <div class="impact-num"><span class="counter" data-target="100">0</span><span class="accent">%</span></div>
+      <div class="impact-label">WCAG AA accessibility compliance achieved</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== OVERVIEW ==================== -->
+<section id="overview">
+  <div class="overview-left reveal">
+    <p class="s-label">Project Overview</p>
+    <h2 class="overview-heading">
+      Modernising India's<br><em>most trusted bank</em><br>for the digital era.
+    </h2>
+    <p class="overview-body">
+      The goal was to modernise the HDFC Bank website experience while maintaining trust, scale, and regulatory clarity. The redesign focused on simplifying navigation, reducing cognitive load, and increasing digital product conversions across all key customer journeys.
+    </p>
+  </div>
+  <div class="overview-right reveal d1">
+    <div class="meta-list">
+      <div class="meta-row">
+        <span class="meta-key">Client</span>
+        <span class="meta-val">HDFC Bank</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-key">Industry</span>
+        <span class="meta-val">Banking &amp; Financial Services</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-key">Platform</span>
+        <span class="meta-val">Responsive Website</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-key">Timeline</span>
+        <span class="meta-val">3–6 Months</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-key">My Role</span>
+        <span class="meta-val">UX Research, UI Design, Information Architecture, Accessibility</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-key">Year</span>
+        <span class="meta-val">2024</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== PROBLEM ==================== -->
+<section id="problem">
+  <div class="problem-bg-text" id="problemBgText">PROBLEM</div>
+  <div class="problem-inner">
+    <p class="s-label light reveal">Problem Statement</p>
+    <h2 class="problem-quote reveal d1">
+      The legacy experience was<br><em>working against</em> the user.
+    </h2>
+    <p class="problem-body reveal d2">
+      The legacy HDFC Bank website suffered from high information density, fragmented navigation, limited accessibility, and outdated UI patterns. Key customer actions like logging into NetBanking, comparing products, or applying online required excessive effort and time — directly impacting conversion and trust.
+    </p>
+
+    <div class="pain-points">
+      <div class="pain-item reveal">
+        <div class="pain-num">01</div>
+        <div class="pain-title">Dense Multi-Level Navigation</div>
+        <div class="pain-desc">Users couldn't find products quickly. Navigation had 4–5 nested levels causing high drop-off at the discovery stage.</div>
+      </div>
+      <div class="pain-item reveal d1">
+        <div class="pain-num">02</div>
+        <div class="pain-title">Cognitive Overload</div>
+        <div class="pain-desc">Overloaded banners, heavy financial jargon and competing CTAs created decision paralysis across every page.</div>
+      </div>
+      <div class="pain-item reveal d2">
+        <div class="pain-num">03</div>
+        <div class="pain-title">Accessibility Gaps</div>
+        <div class="pain-desc">Limited keyboard support, poor colour contrast, and screen-reader incompatibilities excluded a large segment of users.</div>
+      </div>
+      <div class="pain-item reveal d3">
+        <div class="pain-num">04</div>
+        <div class="pain-title">Indirect Conversion Flows</div>
+        <div class="pain-desc">Critical journeys — loan applications, credit card sign-ups, NetBanking — had too many friction points and unnecessary redirects.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== RESEARCH ==================== -->
+<section id="research">
+  <p class="s-label reveal">Research &amp; Discovery</p>
+  <div class="research-grid">
+    <div class="reveal d1">
+      <h2 class="research-heading">
+        Understanding the<br><em>real friction</em><br>through data.
+      </h2>
+      <p style="margin-top:28px; font-size:17px; font-weight:400; line-height:1.7; color:rgba(0,0,0,0.6); max-width:400px;">
+        A multi-method research approach combining qualitative and quantitative signals to build a precise picture of where — and why — users were abandoning the experience.
+      </p>
+    </div>
+    <div class="reveal d2">
+      <div class="method-list">
+        <div class="method-item">
+          <span class="method-num">i.</span>
+          <span class="method-text">Stakeholder interviews across marketing, product, and customer support teams to align on business objectives</span>
+        </div>
+        <div class="method-item">
+          <span class="method-num">ii.</span>
+          <span class="method-text">Full UX audit of the legacy live site — heuristic evaluation, task analysis, and session recordings</span>
+        </div>
+        <div class="method-item">
+          <span class="method-num">iii.</span>
+          <span class="method-text">Funnel analysis using SimilarWeb-style engagement metrics to identify highest drop-off pages</span>
+        </div>
+        <div class="method-item">
+          <span class="method-num">iv.</span>
+          <span class="method-text">Competitive benchmarking across leading Indian banks (SBI, ICICI, Kotak) and global digital-first banks</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== PERSONAS ==================== -->
+<section id="personas">
+  <p class="s-label reveal">User Personas</p>
+  <h2 class="personas-heading reveal d1">
+    Designing for<br><em>three distinct</em> mindsets.
+  </h2>
+  <div class="persona-grid">
+    <div class="persona-card reveal">
+      <div class="persona-icon blue">🏦</div>
+      <div class="persona-role">Primary User</div>
+      <div class="persona-name">Retail Banking User</div>
+      <div class="persona-need">Needs quick access to accounts, cards, transactions, and loan status — with minimal steps and maximum confidence.</div>
+      <div class="persona-tags">
+        <span class="persona-tag">Quick Access</span>
+        <span class="persona-tag">Transactions</span>
+        <span class="persona-tag">NetBanking</span>
+      </div>
+    </div>
+    <div class="persona-card reveal d1">
+      <div class="persona-icon red">👁</div>
+      <div class="persona-role">Acquisition Target</div>
+      <div class="persona-name">First-Time Visitor</div>
+      <div class="persona-need">Looks for clarity, guidance, and easy onboarding when exploring savings accounts, credit cards, or home loans for the first time.</div>
+      <div class="persona-tags">
+        <span class="persona-tag">Discovery</span>
+        <span class="persona-tag">Comparison</span>
+        <span class="persona-tag">Onboarding</span>
+      </div>
+    </div>
+    <div class="persona-card reveal d2">
+      <div class="persona-icon green">💼</div>
+      <div class="persona-role">High-Value Segment</div>
+      <div class="persona-name">Business Customer</div>
+      <div class="persona-need">Seeks detailed product comparisons, trade finance services, and relationship manager access — with professional-grade information density.</div>
+      <div class="persona-tags">
+        <span class="persona-tag">B2B Services</span>
+        <span class="persona-tag">Comparison</span>
+        <span class="persona-tag">Relationship</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== UX STRATEGY ==================== -->
+<section id="strategy">
+  <div class="strategy-layout">
+    <div class="reveal">
+      <p class="s-label">UX Strategy</p>
+      <h2 class="strategy-heading">
+        Five pillars.<br><em>One clear</em><br>direction.
+      </h2>
+    </div>
+    <div class="strategy-pillars reveal d1">
+      <div class="pillar-item">
+        <span class="pillar-num">01</span>
+        <div class="pillar-content">
+          <div class="pillar-title">Simplified Information Architecture</div>
+          <div class="pillar-desc">Restructured site taxonomy from 5 levels to 3 — grounded in card-sorting sessions with real users, not internal org charts.</div>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">02</span>
+        <div class="pillar-content">
+          <div class="pillar-title">Primary Task-Based Navigation</div>
+          <div class="pillar-desc">Navigation rebuilt around user intent ("I want to…") rather than product categories, reducing time-to-task by an estimated 40%.</div>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">03</span>
+        <div class="pillar-content">
+          <div class="pillar-title">Strong Visual Hierarchy for CTAs</div>
+          <div class="pillar-desc">Clear primary, secondary, and tertiary CTA hierarchy across every page — eliminating competing calls to action and decision paralysis.</div>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">04</span>
+        <div class="pillar-content">
+          <div class="pillar-title">Content Simplification for Financial Literacy</div>
+          <div class="pillar-desc">Financial jargon replaced with plain-language content — increasing comprehension and reducing calls to customer support.</div>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">05</span>
+        <div class="pillar-content">
+          <div class="pillar-title">WCAG-Aligned Accessibility</div>
+          <div class="pillar-desc">Full AA compliance: colour contrast ratios, keyboard navigation, ARIA labels, and screen-reader testing built into every component.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WIREFRAMES & VISUALS ==================== -->
+<div class="divider"></div>
+<section id="design-showcase" style="padding:100px 0; overflow:hidden;">
+
+  <!-- WIREFRAMES -->
+  <div style="padding:0 40px; margin-bottom:72px;">
+    <p class="s-label reveal">Wireframes</p>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:40px;">
+      <h2 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(32px,3.8vw,58px);letter-spacing:-0.02em;line-height:1.1;">
+        From <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">rough intent</em><br>to structured layout.
+      </h2>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;color:rgba(0,0,0,0.5);max-width:320px;line-height:1.6;text-align:right;">
+        Low-fidelity wireframes mapped every critical user flow before a single pixel of colour was committed.
+      </p>
+    </div>
+  </div>
+
+  <!-- Wireframe strip — horizontal scroll -->
+  <div class="wf-strip reveal">
+    <div class="wf-track">
+
+      <!-- Homepage wireframe -->
+      <div class="wf-frame">
+        <div class="wf-label">Homepage — Above Fold</div>
+        <div class="wf-screen">
+          <div class="wf-nav-bar"><div class="wf-rect w-20 h-8"></div><div style="display:flex;gap:8px;"><div class="wf-rect w-10 h-8"></div><div class="wf-rect w-10 h-8"></div><div class="wf-rect w-10 h-8"></div></div><div class="wf-rect w-16 h-8 wf-filled"></div></div>
+          <div class="wf-hero-area">
+            <div class="wf-rect w-60 h-10 mb-8"></div>
+            <div class="wf-rect w-80 h-6 mb-4"></div>
+            <div class="wf-rect w-72 h-6 mb-16"></div>
+            <div style="display:flex;gap:10px;"><div class="wf-rect w-28 h-10 wf-filled"></div><div class="wf-rect w-28 h-10"></div></div>
+          </div>
+          <div class="wf-quick-access">
+            <div class="wf-rect w-full h-6 mb-10" style="opacity:0.3;"></div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+              <div class="wf-card-sm"></div><div class="wf-card-sm"></div><div class="wf-card-sm"></div><div class="wf-card-sm"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation IA wireframe -->
+      <div class="wf-frame">
+        <div class="wf-label">Navigation — IA Structure</div>
+        <div class="wf-screen">
+          <div class="wf-nav-bar"><div class="wf-rect w-20 h-8"></div><div style="display:flex;gap:6px;"><div class="wf-rect w-12 h-8"></div><div class="wf-rect w-12 h-8 wf-filled"></div><div class="wf-rect w-12 h-8"></div></div></div>
+          <div style="padding:16px;background:rgba(0,0,0,0.03);margin:8px;border-radius:4px;">
+            <div class="wf-rect w-40 h-6 mb-12"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+              <div><div class="wf-rect w-full h-7 mb-6 wf-filled" style="opacity:0.5;"></div><div class="wf-rect w-full h-5 mb-4"></div><div class="wf-rect w-full h-5 mb-4"></div><div class="wf-rect w-70 h-5"></div></div>
+              <div><div class="wf-rect w-full h-7 mb-6 wf-filled" style="opacity:0.5;"></div><div class="wf-rect w-full h-5 mb-4"></div><div class="wf-rect w-full h-5 mb-4"></div><div class="wf-rect w-70 h-5"></div></div>
+              <div><div class="wf-rect w-full h-7 mb-6 wf-filled" style="opacity:0.5;"></div><div class="wf-rect w-full h-5 mb-4"></div><div class="wf-rect w-full h-5"></div></div>
+            </div>
+          </div>
+          <div style="padding:8px 16px;"><div class="wf-rect w-full h-px"></div></div>
+          <div style="padding:8px 16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div class="wf-rect w-full h-10"></div><div class="wf-rect w-full h-10 wf-filled"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product page wireframe -->
+      <div class="wf-frame">
+        <div class="wf-label">Credit Card — Product Page</div>
+        <div class="wf-screen">
+          <div class="wf-nav-bar"><div class="wf-rect w-20 h-8"></div><div class="wf-rect w-24 h-8"></div></div>
+          <div style="padding:12px 16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;">
+            <div>
+              <div class="wf-rect w-full h-36 mb-8" style="background:rgba(0,0,0,0.06);border-radius:4px;"></div>
+              <div class="wf-rect w-80 h-7 mb-4"></div>
+              <div class="wf-rect w-full h-5 mb-3"></div>
+              <div class="wf-rect w-full h-5 mb-3"></div>
+              <div class="wf-rect w-60 h-5"></div>
+            </div>
+            <div>
+              <div class="wf-rect w-full h-8 mb-6 wf-filled"></div>
+              <div class="wf-rect w-full h-px mb-6"></div>
+              <div class="wf-rect w-50 h-5 mb-3"></div>
+              <div class="wf-rect w-full h-5 mb-3"></div>
+              <div class="wf-rect w-full h-5 mb-10"></div>
+              <div class="wf-rect w-full h-8 wf-filled" style="opacity:0.5;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loan application flow -->
+      <div class="wf-frame">
+        <div class="wf-label">Loan Application — Step 1/3</div>
+        <div class="wf-screen">
+          <div class="wf-nav-bar"><div class="wf-rect w-20 h-8"></div></div>
+          <!-- progress bar -->
+          <div style="padding:10px 16px 0;"><div style="height:4px;background:rgba(0,0,0,0.08);border-radius:4px;position:relative;"><div style="position:absolute;left:0;top:0;height:100%;width:33%;background:rgba(0,0,0,0.35);border-radius:4px;"></div></div></div>
+          <div style="padding:10px 16px;">
+            <div class="wf-rect w-40 h-5 mb-12"></div>
+            <div class="wf-rect w-60 h-7 mb-16"></div>
+            <div class="wf-rect w-full h-5 mb-4"></div><div class="wf-input mb-8"></div>
+            <div class="wf-rect w-full h-5 mb-4"></div><div class="wf-input mb-8"></div>
+            <div class="wf-rect w-full h-5 mb-4"></div><div class="wf-input mb-14"></div>
+            <div class="wf-rect w-full h-10 wf-filled"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile homepage -->
+      <div class="wf-frame wf-frame-mobile">
+        <div class="wf-label">Mobile — Homepage</div>
+        <div class="wf-screen wf-screen-mobile">
+          <div style="height:10px;background:rgba(0,0,0,0.06);margin-bottom:8px;border-radius:2px;"></div>
+          <div style="display:flex;justify-content:space-between;padding:0 8px 8px;"><div class="wf-rect w-16 h-7"></div><div class="wf-rect w-7 h-7"></div></div>
+          <div style="padding:8px;"><div class="wf-rect w-full h-32 mb-8" style="background:rgba(0,0,0,0.06);border-radius:4px;"></div></div>
+          <div style="padding:0 8px;"><div class="wf-rect w-70 h-6 mb-4"></div><div class="wf-rect w-full h-5 mb-3"></div><div class="wf-rect w-80 h-5 mb-12"></div></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 8px;">
+            <div class="wf-card-sm"></div><div class="wf-card-sm"></div><div class="wf-card-sm"></div><div class="wf-card-sm"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VISUAL DESIGNS -->
+  <div style="padding:80px 40px 0;">
+    <p class="s-label reveal">Visual Design</p>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px;">
+      <h2 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(32px,3.8vw,58px);letter-spacing:-0.02em;line-height:1.1;">
+        High-fidelity screens<br>built for <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">trust &amp; clarity.</em>
+      </h2>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;color:rgba(0,0,0,0.5);max-width:320px;line-height:1.6;text-align:right;">
+        Every visual decision — colour, type, spacing — made to reduce cognitive load and drive confident action.
+      </p>
+    </div>
+
+    <!-- Full-width placeholder image -->
+    <div class="vis-ph-full reveal" style="margin-bottom:24px;">
+      <div class="vis-ph-img-wrap">
+        <img src="Images/shrey-portfolio-1.png" alt="Visual Design — Homepage Redesign" />
+        <div class="vis-ph-overlay">
+          <div class="vis-ph-tag">Screen 01 · Homepage — Redesigned</div>
+        </div>
+      </div>
+      <div class="vis-ph-caption">
+        <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,0.35);margin-bottom:8px;">Visual Design</div>
+        <div style="font-size:18px;font-weight:600;">High-Fidelity Screens</div>
+        <div style="font-size:14px;color:rgba(0,0,0,0.5);margin-top:6px;line-height:1.5;">Final UI delivered across Homepage, Product pages and key user flows</div>
+      </div>
+    </div>
+
+    <!-- 2-up placeholder grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div class="vis-ph-card reveal">
+        <div class="vis-ph-img-wrap vis-ph-img-wrap--short">
+          <img src="Images/shrey-portfolio-1.png" alt="Visual Design — Product Page" />
+          <div class="vis-ph-overlay">
+            <div class="vis-ph-tag">Screen 02 · Product Detail Page</div>
+          </div>
+        </div>
+        <div style="padding:20px 0 0;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,0.35);margin-bottom:6px;">Screen 02</div>
+          <div style="font-size:16px;font-weight:600;">Product Detail Page</div>
+          <div style="font-size:13px;color:rgba(0,0,0,0.5);margin-top:4px;">Benefit-first layout with a simplified CTA hierarchy</div>
+        </div>
+      </div>
+      <div class="vis-ph-card reveal d1">
+        <div class="vis-ph-img-wrap vis-ph-img-wrap--short">
+          <img src="Images/shrey-portfolio-1.png" alt="Visual Design — Application Flow" />
+          <div class="vis-ph-overlay">
+            <div class="vis-ph-tag">Screen 03 · Loan Application Flow</div>
+          </div>
+        </div>
+        <div style="padding:20px 0 0;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,0.35);margin-bottom:6px;">Screen 03</div>
+          <div style="font-size:16px;font-weight:600;">Loan Application Flow</div>
+          <div style="font-size:13px;color:rgba(0,0,0,0.5);margin-top:4px;">3-step form with clear progress and focused inputs</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JS: draggable wireframe strip -->
+<script>
+(function() {
+  const strip = document.querySelector('.wf-strip');
+  if (!strip) return;
+  let isDown = false, startX, scrollLeft;
+  strip.addEventListener('mousedown', e => {
+    isDown = true; strip.style.cursor = 'grabbing';
+    startX = e.pageX - strip.offsetLeft;
+    scrollLeft = strip.scrollLeft;
+  });
+  strip.addEventListener('mouseleave', () => { isDown = false; strip.style.cursor = 'grab'; });
+  strip.addEventListener('mouseup', () => { isDown = false; strip.style.cursor = 'grab'; });
+  strip.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - strip.offsetLeft;
+    strip.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+})();
+</script>
+
+<!-- ==================== PROCESS ==================== -->
+<div class="divider"></div>
+<section id="process" style="background:#f7f7f5;">
+  <div class="process-label-row reveal">
+    <p class="s-label">Design Process</p>
+    <h3 style="font-family:var(--font-sans);font-weight:300;font-size:clamp(24px,2.8vw,40px);letter-spacing:-0.02em;margin-top:12px;">
+      A structured, evidence-led approach from <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">discovery to delivery.</em>
+    </h3>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <circle cx="11" cy="11" r="7" stroke="#1d1d1d" stroke-width="1.3"/>
+          <circle cx="11" cy="11" r="2.5" stroke="#1d1d1d" stroke-width="1.3"/>
+        </svg>
+      </div>
+      <div class="process-step-name">Research</div>
+      <div class="process-step-desc">Stakeholder interviews, audits, analytics review</div>
+    </div>
+    <div class="process-step reveal d1">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="4" y="4" width="14" height="14" rx="2" stroke="#1d1d1d" stroke-width="1.3"/>
+          <path d="M8 11h6M11 8v6" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="process-step-name">Define</div>
+      <div class="process-step-desc">Personas, journey maps, problem framing</div>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M5 17L10 7l4 6 3-4 3 8" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="process-step-name">Ideate</div>
+      <div class="process-step-desc">Information architecture, flows, wireframes</div>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="3" y="5" width="16" height="12" rx="2" stroke="#1d1d1d" stroke-width="1.3"/>
+          <path d="M8 9h6M8 13h4" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="process-step-name">Design</div>
+      <div class="process-step-desc">UI components, design system, hi-fi prototypes</div>
+    </div>
+    <div class="process-step reveal d4">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M6 11l4 4 6-7" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="11" cy="11" r="8" stroke="#1d1d1d" stroke-width="1.3"/>
+        </svg>
+      </div>
+      <div class="process-step-name">Validate</div>
+      <div class="process-step-desc">Usability testing, iteration, accessibility audit</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRANSFORMATION TABLE ==================== -->
+<section id="transformation">
+  <div class="transform-header reveal">
+    <p class="s-label light">Experience Transformation</p>
+    <h2 class="transform-title">
+      Before vs. <em>After.</em><br>Every touchpoint, reimagined.
+    </h2>
+  </div>
+  <table class="transform-table reveal d1">
+    <thead>
+      <tr>
+        <th style="width:18%">Area</th>
+        <th style="width:38%">Before — Legacy</th>
+        <th style="width:44%">After — Redesign</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-area">Navigation</td>
+        <td class="td-before">Dense, multi-level menus with 4–5 nested layers</td>
+        <td><span class="td-after">Task-based, simplified 3-level structure</span></td>
+      </tr>
+      <tr>
+        <td class="td-area">Homepage</td>
+        <td class="td-before">Overloaded banners, competing CTAs, visual noise</td>
+        <td><span class="td-after">Clear hierarchy with action-first layout</span></td>
+      </tr>
+      <tr>
+        <td class="td-area">Content</td>
+        <td class="td-before">Heavy financial jargon inaccessible to most users</td>
+        <td><span class="td-after">Simplified, scannable plain-language content</span></td>
+      </tr>
+      <tr>
+        <td class="td-area">Accessibility</td>
+        <td class="td-before">Limited keyboard support, poor contrast ratios</td>
+        <td><span class="td-after">WCAG AA compliant across all components</span></td>
+      </tr>
+      <tr>
+        <td class="td-area">Conversions</td>
+        <td class="td-before">Indirect user flows with unnecessary redirects</td>
+        <td><span class="td-after">Clear, prioritised CTAs across every journey</span></td>
+      </tr>
+      <tr>
+        <td class="td-area">Mobile</td>
+        <td class="td-before">Desktop-first, poorly adapted for mobile</td>
+        <td><span class="td-after">Mobile-first responsive design system</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ==================== RESULTS ==================== -->
+<section id="results">
+  <div class="results-top">
+    <h2 class="results-heading reveal">
+      Performance<br>&amp; <em>Impact.</em>
+    </h2>
+    <p class="results-body reveal d1">
+      The redesign drove measurable improvements across every key performance indicator — from raw traffic growth to conversion lift and user engagement depth.
+    </p>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card reveal">
+      <div class="metric-card-bg blue"></div>
+      <div class="metric-category">Traffic Growth</div>
+      <div class="metric-value"><span class="counter" data-target="160">0</span><span class="unit">M+</span></div>
+      <div class="metric-sub">Monthly visits post-redesign, up from ~40M</div>
+      <div class="metric-delta">↑ 4× growth</div>
+    </div>
+    <div class="metric-card reveal d1">
+      <div class="metric-card-bg red"></div>
+      <div class="metric-category">Conversion Lift</div>
+      <div class="metric-value"><span class="counter" data-target="30">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">Increase in form submissions and product applications</div>
+      <div class="metric-delta">↑ 10–30% conversion range</div>
+    </div>
+    <div class="metric-card reveal d2">
+      <div class="metric-card-bg green"></div>
+      <div class="metric-category">Engagement</div>
+      <div class="metric-value">↓ <span class="counter" data-target="42">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">Reduction in bounce rate through clearer navigation paths</div>
+      <div class="metric-delta">↑ Deeper session depth</div>
+    </div>
+    <div class="metric-card reveal d3">
+      <div class="metric-card-bg purple"></div>
+      <div class="metric-category">Accessibility</div>
+      <div class="metric-value"><span class="counter" data-target="100">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">WCAG 2.1 AA compliance — first full pass in bank's history</div>
+      <div class="metric-delta">↑ AA compliant</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LEARNINGS ==================== -->
+<section id="learnings">
+  <div class="learnings-layout">
+    <div class="learnings-left">
+      <p class="s-label reveal">Outcome &amp; Learnings</p>
+      <h2 class="learnings-heading reveal d1">
+        Design that<br><em>earns trust</em><br>at scale.
+      </h2>
+      <p class="learnings-body reveal d2">
+        This case study demonstrates how thoughtful UX design in regulated industries like banking can drive measurable business outcomes. By aligning user needs with business objectives, the HDFC Bank website now delivers clarity, confidence, and conversion at scale — across 160M+ monthly touchpoints.
+      </p>
+    </div>
+    <div class="learning-list reveal d1">
+      <div class="learning-item">
+        <span class="learning-icon">◈</span>
+        <div class="learning-content">
+          <div class="learning-title">Trust is a design decision</div>
+          <div class="learning-desc">In banking, visual clarity and accessibility aren't just good UX — they directly build institutional trust and reduce anxiety around financial decisions.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <span class="learning-icon">◈</span>
+        <div class="learning-content">
+          <div class="learning-title">Simplification is hard work</div>
+          <div class="learning-desc">Reducing cognitive load required more iterations than adding features. Every cut had to be defended with user data and stakeholder alignment.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <span class="learning-icon">◈</span>
+        <div class="learning-content">
+          <div class="learning-title">Scalability from day one</div>
+          <div class="learning-desc">A robust design system meant the bank could scale new product pages and campaigns without breaking the experience — compounding design value over time.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <span class="learning-icon">◈</span>
+        <div class="learning-content">
+          <div class="learning-title">Accessibility is not a constraint</div>
+          <div class="learning-desc">WCAG compliance opened the site to millions of users who were previously excluded — and improved the experience for everyone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="cs-footer">
+  <div class="footer-left">
+    <div class="footer-label">Case Study by</div>
+    <div class="footer-name">Shreyansh Rathod</div>
+  </div>
+  <a href="index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    Back to Portfolio
+  </a>
+</footer>
+
+
+<script>
+/* =============================================
+   PAGE LOADER
+============================================= */
+(function() {
+  const loader = document.getElementById('page-loader');
+  const chars  = loader.querySelectorAll('.loader-char');
+  chars.forEach((c, i) => {
+    setTimeout(() => c.classList.add('up'), 100 + i * 80);
+  });
+  window.addEventListener('load', () => {
+    setTimeout(() => loader.classList.add('loaded'), 900);
+  });
+})();
+
+/* =============================================
+   CUSTOM CURSOR
+============================================= */
+(function() {
+  const cur = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cur.style.left = e.clientX + 'px';
+    cur.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button, .persona-card, .metric-card, .pillar-item, .pain-item, .process-node').forEach(el => {
+    el.addEventListener('mouseenter', () => cur.classList.add('grow'));
+    el.addEventListener('mouseleave', () => cur.classList.remove('grow'));
+  });
+  const darkSections = document.querySelectorAll('#impact, #problem, #transformation, #cs-footer');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) cur.classList.add('on-dark');
+    });
+  }, { threshold: 0.4 });
+  const lightSections = document.querySelectorAll('#overview, #research, #personas, #strategy, #process, #results, #learnings');
+  const lightObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) cur.classList.remove('on-dark');
+    });
+  }, { threshold: 0.4 });
+  darkSections.forEach(s  => observer.observe(s));
+  lightSections.forEach(s => lightObs.observe(s));
+})();
+
+/* =============================================
+   NAV SCROLL
+============================================= */
+(function() {
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+})();
+
+/* =============================================
+   HERO ENTRANCE
+============================================= */
+(function() {
+  setTimeout(() => {
+    document.getElementById('heroEyebrow').classList.add('show');
+    ['hl1','hl2','hl3'].forEach((id, i) => {
+      setTimeout(() => document.getElementById(id).classList.add('show'), i * 130);
+    });
+    setTimeout(() => document.getElementById('heroMeta').classList.add('show'), 700);
+  }, 1000);
+})();
+
+/* =============================================
+   HERO PARALLAX BG
+============================================= */
+(function() {
+  const bg = document.getElementById('heroBg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    bg.style.transform = `translateY(${y * 0.35}px)`;
+  }, { passive: true });
+})();
+
+/* =============================================
+   PROBLEM SECTION PARALLAX TEXT
+============================================= */
+(function() {
+  const txt = document.getElementById('problemBgText');
+  if (!txt) return;
+  window.addEventListener('scroll', () => {
+    const rect = txt.closest('section').getBoundingClientRect();
+    const progress = -rect.top / window.innerHeight;
+    txt.style.transform = `translateX(${progress * -60}px)`;
+  }, { passive: true });
+})();
+
+/* =============================================
+   SCROLL REVEAL
+============================================= */
+(function() {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+})();
+
+/* =============================================
+   COUNTER ANIMATION
+============================================= */
+(function() {
+  const counters = document.querySelectorAll('.counter');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el     = e.target;
+      const target = +el.dataset.target;
+      const dur    = 1800;
+      const start  = performance.now();
+      function step(now) {
+        const t = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(ease * target);
+        if (t < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => io.observe(c));
+})();
+
+/* =============================================
+   PILLAR HOVER — subtle line expand
+============================================= */
+(function() {
+  document.querySelectorAll('.pillar-item').forEach(item => {
+    const desc = item.querySelector('.pillar-desc');
+    item.addEventListener('mouseenter', () => {
+      desc.style.opacity = '1';
+      desc.style.color   = 'rgba(0,0,0,0.65)';
+    });
+    item.addEventListener('mouseleave', () => {
+      desc.style.color = 'rgba(0,0,0,0.5)';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tata Mutual Fund App — Case Study · Shreyansh Rathod</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tata-mf-case-study.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="page-loader">
+  <div class="loader-inner">
+    <span class="loader-char">T</span>
+    <span class="loader-char">A</span>
+    <span class="loader-char">T</span>
+    <span class="loader-char">A</span>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Portfolio
+  </a>
+  <span class="nav-label">Tata Mutual Fund · Case Study</span>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-parallax-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" id="heroEyebrow">
+      <span class="hero-tag">UI / UX Case Study</span>
+      <span class="hero-dot-sep"></span>
+      <span class="hero-tag">2024</span>
+      <span class="hero-dot-sep"></span>
+      <div class="hero-client-badge">
+        <div class="tata-dot"></div>
+        Tata Mutual Fund
+      </div>
+    </div>
+    <div class="hero-title">
+      <span class="hero-title-line" id="hl1">Tata Mutual</span>
+      <span class="hero-title-line bold" id="hl2">Fund App —</span>
+      <span class="hero-title-line" id="hl3">Zero to One.</span>
+    </div>
+    <div class="hero-meta-row" id="heroMeta">
+      <div class="hero-meta-items">
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Role</div>
+          <div class="hero-meta-val">Product Design · UX Strategy · Mobile-First</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Platform</div>
+          <div class="hero-meta-val">iOS &amp; Android App</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Timeline</div>
+          <div class="hero-meta-val">4–8 Months</div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 2v6M2 7l3 3 3-3" stroke="rgba(0,0,0,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMPACT ═══ -->
+<section id="impact">
+  <div class="impact-grid">
+    <div class="impact-item reveal">
+      <div class="impact-num">₹<span class="counter" data-target="232">0</span><span class="accent">K Cr</span></div>
+      <div class="impact-label">AUM post-launch — up from ₹1.53L Cr</div>
+    </div>
+    <div class="impact-item reveal d1">
+      <div class="impact-num"><span class="counter" data-target="59">0</span><span class="accent">L+</span></div>
+      <div class="impact-label">Active investors on the platform</div>
+    </div>
+    <div class="impact-item reveal d2">
+      <div class="impact-num"><span class="counter" data-target="50">0</span><span class="accent">%</span></div>
+      <div class="impact-label">Quarterly AUM growth — vs 34% industry avg</div>
+    </div>
+    <div class="impact-item reveal d3">
+      <div class="impact-num"><span class="counter" data-target="71">0</span><span class="accent">L+</span></div>
+      <div class="impact-label">Folios managed across 173+ schemes</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ OVERVIEW ═══ -->
+<section id="overview">
+  <div class="overview-left reveal">
+    <p class="s-label">Project Overview</p>
+    <h2 class="overview-heading">
+      Building India's<br><em>smartest mutual fund</em><br>app from scratch.
+    </h2>
+    <p class="overview-body">
+      Tata Mutual Fund had a robust desktop web platform — but no dedicated mobile app. With 80%+ of Indian investors primarily on mobile, the brief was clear: design a zero-to-one mobile experience that moves beyond a desktop-to-mobile port and delivers a genuinely native, intelligent investing journey.
+    </p>
+  </div>
+  <div class="overview-right reveal d1">
+    <div class="meta-list">
+      <div class="meta-row"><span class="meta-key">Client</span><span class="meta-val">Tata Asset Management</span></div>
+      <div class="meta-row"><span class="meta-key">Industry</span><span class="meta-val">Fintech / Mutual Funds</span></div>
+      <div class="meta-row"><span class="meta-key">Platform</span><span class="meta-val">iOS &amp; Android (Mobile-First)</span></div>
+      <div class="meta-row"><span class="meta-key">Timeline</span><span class="meta-val">4–8 Months</span></div>
+      <div class="meta-row"><span class="meta-key">My Role</span><span class="meta-val">UX Strategy, Product Design, Interaction Design, Design System</span></div>
+      <div class="meta-row"><span class="meta-key">Year</span><span class="meta-val">2024</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PROBLEM ═══ -->
+<section id="problem">
+  <div class="problem-bg-text" id="problemBgText">MOBILE</div>
+  <div class="problem-inner">
+    <p class="s-label light reveal">Problem Statement</p>
+    <h2 class="problem-quote reveal d1">
+      A desktop-first product<br><em>failing a mobile-first</em> generation.
+    </h2>
+    <p class="problem-body reveal d2">
+      Tata Mutual Fund's existing web platform was built for desktop — dense data tables, multi-step forms, and complex navigation that simply broke on mobile. Meanwhile, first-time investors were choosing app-native competitors like Zerodha, Groww and ET Money, whose mobile experiences were built from first principles. Tata needed more than a responsive port. It needed a rethink.
+    </p>
+    <div class="pain-points">
+      <div class="pain-item reveal">
+        <div class="pain-num">01</div>
+        <div class="pain-title">No Native Mobile Presence</div>
+        <div class="pain-desc">Users were forced onto a mobile-web experience that was never designed for thumb navigation, small screens, or on-the-go investing behaviour.</div>
+      </div>
+      <div class="pain-item reveal d1">
+        <div class="pain-num">02</div>
+        <div class="pain-title">Complex Desktop-Ported Flows</div>
+        <div class="pain-desc">SIP setup, KYC, and portfolio views were directly ported from desktop — requiring 8–12 steps for actions that should take 3 on mobile.</div>
+      </div>
+      <div class="pain-item reveal d2">
+        <div class="pain-num">03</div>
+        <div class="pain-title">First-Timer Anxiety</div>
+        <div class="pain-desc">New investors faced raw NAV tables and fund fact sheets with no guidance — creating high anxiety and abandonment before the first SIP.</div>
+      </div>
+      <div class="pain-item reveal d3">
+        <div class="pain-num">04</div>
+        <div class="pain-title">Losing Ground to App-Native Rivals</div>
+        <div class="pain-desc">Groww and Zerodha were onboarding first-time investors in under 5 minutes on mobile. Tata's web-first approach was visibly losing acquisition share.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESEARCH ═══ -->
+<section id="research">
+  <p class="s-label reveal">Research &amp; Discovery</p>
+  <div class="research-grid">
+    <div class="reveal d1">
+      <h2 class="research-heading">
+        Understanding<br>the <em>mobile investor</em><br>from the ground up.
+      </h2>
+      <p style="margin-top:28px;font-size:17px;font-weight:400;line-height:1.7;color:rgba(0,0,0,.6);max-width:400px;">
+        We ran a 6-week discovery sprint combining behavioural data from the existing web platform with primary research targeting first-time and lapsed mutual fund investors.
+      </p>
+    </div>
+    <div class="reveal d2">
+      <div class="method-list">
+        <div class="method-item"><span class="method-num">i.</span><span class="method-text">In-depth interviews with 24 mobile-first investors aged 22–38 — segmented by investing experience, income, and digital comfort</span></div>
+        <div class="method-item"><span class="method-num">ii.</span><span class="method-text">Heatmap and session analysis of the existing mobile-web experience — identifying top 5 drop-off screens and friction hotspots</span></div>
+        <div class="method-item"><span class="method-num">iii.</span><span class="method-text">Competitive teardowns of Groww, Zerodha Coin, ET Money, Paytm Money and Kuvera — benchmarking onboarding, SIP flow, and portfolio UX</span></div>
+        <div class="method-item"><span class="method-num">iv.</span><span class="method-text">Jobs-to-be-Done workshops with internal PMs and distribution partners to align on the app's core value proposition and priority features</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PERSONAS ═══ -->
+<section id="personas">
+  <p class="s-label reveal">User Personas</p>
+  <h2 class="personas-heading reveal d1">Three investors,<br><em>one seamless</em> experience.</h2>
+  <div class="persona-grid">
+    <div class="persona-card reveal">
+      <div class="persona-icon blue">📱</div>
+      <div class="persona-role">Primary Target</div>
+      <div class="persona-name">The First-Time Investor</div>
+      <div class="persona-need">25–32, salaried professional. Wants to start a SIP but overwhelmed by fund choice, jargon and KYC. Needs hand-holding, clarity and a sense of safety before committing money.</div>
+      <div class="persona-tags"><span class="persona-tag">First SIP</span><span class="persona-tag">Low Trust</span><span class="persona-tag">Guidance</span></div>
+    </div>
+    <div class="persona-card reveal d1">
+      <div class="persona-icon purple">📊</div>
+      <div class="persona-role">Growth Segment</div>
+      <div class="persona-name">The Active Portfolio Builder</div>
+      <div class="persona-need">28–40, mid-to-high income. Already investing via web or distributor. Wants a fast, data-rich mobile view to track folios, NAVs and returns — and manage SIPs on the go.</div>
+      <div class="persona-tags"><span class="persona-tag">Multi-Folio</span><span class="persona-tag">Data-Driven</span><span class="persona-tag">Efficiency</span></div>
+    </div>
+    <div class="persona-card reveal d2">
+      <div class="persona-icon green">🎯</div>
+      <div class="persona-role">Goal Investor</div>
+      <div class="persona-name">The Goal-Based Planner</div>
+      <div class="persona-need">30–45, family-oriented. Saving for specific goals — child's education, home, retirement. Needs goal-setting tools, progress visualisation and long-term horizon thinking.</div>
+      <div class="persona-tags"><span class="persona-tag">Goal SIPs</span><span class="persona-tag">FIRE Calc</span><span class="persona-tag">Long-Term</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ UX STRATEGY ═══ -->
+<section id="strategy">
+  <div class="strategy-layout">
+    <div class="reveal">
+      <p class="s-label">UX Strategy</p>
+      <h2 class="strategy-heading">Native by<br>design. <em>Not a</em><br>port.
+      </h2>
+    </div>
+    <div class="reveal d1">
+      <div class="pillar-item">
+        <span class="pillar-num">01</span>
+        <div><div class="pillar-title">Mobile-First Information Architecture</div><div class="pillar-desc">Rebuilt the IA from scratch for thumb-reachable navigation — five bottom-tab zones replacing the desktop's top-nav mega-menu. Every screen designed for one hand.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">02</span>
+        <div><div class="pillar-title">Portfolio 360° — Industry First</div><div class="pillar-desc">Single-screen view of mutual funds, stocks, and linked bank accounts. Reduced context-switching across apps for users managing multiple asset classes.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">03</span>
+        <div><div class="pillar-title">Smart Onboarding in Under 4 Minutes</div><div class="pillar-desc">KYC, bank linking and first SIP compressed into a guided 3-step flow with progress indicators, inline validation and no unnecessary redirects.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">04</span>
+        <div><div class="pillar-title">Goal-Based Investing UX</div><div class="pillar-desc">FIRE Calculator, Retirement Planner and Financial Roadmap built into the core experience — shifting the mental model from "picking a fund" to "building a future."</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">05</span>
+        <div><div class="pillar-title">Scalable Design System</div><div class="pillar-desc">Component library spanning 120+ components, covering both iOS and Android variants — enabling the engineering team to ship new features without design debt.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DESIGN SHOWCASE ═══ -->
+<div class="divider"></div>
+<section id="design-showcase">
+
+  <!-- WIREFRAMES -->
+  <div style="padding:0 40px;margin-bottom:72px;">
+    <p class="s-label reveal">Wireframes</p>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;">
+      <h2 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(32px,3.8vw,58px);letter-spacing:-0.02em;line-height:1.1;">
+        From intent<br>to <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">native structure.</em>
+      </h2>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;color:rgba(0,0,0,.5);max-width:300px;line-height:1.6;text-align:right;">
+        Low-fi wireframes across every critical mobile flow before a pixel of colour was committed.
+      </p>
+    </div>
+  </div>
+
+  <div class="wf-strip reveal">
+    <div class="wf-track">
+
+      <!-- Home Dashboard -->
+      <div class="wf-frame">
+        <div class="wf-label">Home — Portfolio Dashboard</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-nav-bar" style="justify-content:center;"><div class="wf-r dark" style="width:80px;height:8px;"></div></div>
+            <div class="wf-body">
+              <!-- greeting -->
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div><div class="wf-r" style="width:80px;height:6px;margin-bottom:5px;"></div><div class="wf-r dark" style="width:120px;height:9px;"></div></div>
+                <div style="width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.08);"></div>
+              </div>
+              <!-- portfolio card -->
+              <div style="background:rgba(0,0,0,.06);border-radius:10px;padding:14px;">
+                <div class="wf-r" style="width:90px;height:5px;margin-bottom:8px;"></div>
+                <div class="wf-r dark" style="width:130px;height:14px;margin-bottom:10px;"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                  <div><div class="wf-r" style="width:60px;height:5px;margin-bottom:4px;"></div><div class="wf-r dark" style="width:80px;height:9px;"></div></div>
+                  <div><div class="wf-r" style="width:60px;height:5px;margin-bottom:4px;"></div><div class="wf-r dark" style="width:80px;height:9px;"></div></div>
+                </div>
+              </div>
+              <!-- quick actions -->
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+                <div style="text-align:center;"><div style="width:36px;height:36px;background:rgba(0,0,0,.06);border-radius:50%;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+                <div style="text-align:center;"><div style="width:36px;height:36px;background:rgba(0,0,0,.06);border-radius:50%;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+                <div style="text-align:center;"><div style="width:36px;height:36px;background:rgba(0,0,0,.06);border-radius:50%;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+                <div style="text-align:center;"><div style="width:36px;height:36px;background:rgba(0,0,0,.06);border-radius:50%;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+              </div>
+              <!-- fund list -->
+              <div class="wf-r" style="width:80px;height:6px;margin-bottom:8px;"></div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:rgba(0,0,0,.04);border-radius:6px;"><div><div class="wf-r" style="width:100px;height:6px;margin-bottom:4px;"></div><div class="wf-r" style="width:60px;height:5px;"></div></div><div class="wf-r dark" style="width:50px;height:8px;"></div></div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:rgba(0,0,0,.04);border-radius:6px;"><div><div class="wf-r" style="width:90px;height:6px;margin-bottom:4px;"></div><div class="wf-r" style="width:60px;height:5px;"></div></div><div class="wf-r dark" style="width:50px;height:8px;"></div></div>
+              </div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore / Fund Discovery -->
+      <div class="wf-frame">
+        <div class="wf-label">Explore — Fund Discovery</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-body" style="gap:10px;">
+              <div class="wf-r dark" style="width:100px;height:9px;"></div>
+              <!-- search bar -->
+              <div style="height:34px;border:1px solid rgba(0,0,0,.12);border-radius:8px;background:white;"></div>
+              <!-- category pills -->
+              <div style="display:flex;gap:6px;overflow:hidden;">
+                <div class="wf-r pill dark" style="width:55px;height:22px;flex-shrink:0;"></div>
+                <div class="wf-r pill" style="width:65px;height:22px;flex-shrink:0;"></div>
+                <div class="wf-r pill" style="width:50px;height:22px;flex-shrink:0;"></div>
+                <div class="wf-r pill" style="width:60px;height:22px;flex-shrink:0;"></div>
+              </div>
+              <!-- fund cards -->
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="padding:12px;background:rgba(0,0,0,.04);border-radius:8px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><div class="wf-r" style="width:110px;height:6px;"></div><div class="wf-r dark" style="width:40px;height:8px;"></div></div>
+                  <div class="wf-r" style="width:80px;height:5px;margin-bottom:8px;"></div>
+                  <div style="display:flex;gap:6px;"><div class="wf-r pill" style="width:40px;height:16px;"></div><div class="wf-r pill" style="width:50px;height:16px;"></div></div>
+                </div>
+                <div style="padding:12px;background:rgba(0,0,0,.04);border-radius:8px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><div class="wf-r" style="width:100px;height:6px;"></div><div class="wf-r dark" style="width:40px;height:8px;"></div></div>
+                  <div class="wf-r" style="width:70px;height:5px;margin-bottom:8px;"></div>
+                  <div style="display:flex;gap:6px;"><div class="wf-r pill" style="width:45px;height:16px;"></div><div class="wf-r pill" style="width:55px;height:16px;"></div></div>
+                </div>
+                <div style="padding:12px;background:rgba(0,0,0,.04);border-radius:8px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><div class="wf-r" style="width:90px;height:6px;"></div><div class="wf-r dark" style="width:40px;height:8px;"></div></div>
+                  <div class="wf-r" style="width:75px;height:5px;margin-bottom:8px;"></div>
+                  <div style="display:flex;gap:6px;"><div class="wf-r pill" style="width:42px;height:16px;"></div><div class="wf-r pill" style="width:52px;height:16px;"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIP Setup -->
+      <div class="wf-frame">
+        <div class="wf-label">Invest — SIP Setup Flow</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-nav-bar"><div style="width:20px;height:20px;background:rgba(0,0,0,.1);border-radius:4px;"></div><div class="wf-r dark" style="width:90px;height:8px;"></div><div style="width:20px;"></div></div>
+            <!-- progress -->
+            <div style="padding:8px 14px 0;"><div style="height:3px;background:rgba(0,0,0,.06);border-radius:4px;"><div style="width:66%;height:100%;background:rgba(0,48,135,.4);border-radius:4px;"></div></div></div>
+            <div class="wf-body">
+              <div class="wf-r" style="width:110px;height:6px;"></div>
+              <div class="wf-r dark" style="width:150px;height:10px;"></div>
+              <!-- amount input -->
+              <div>
+                <div class="wf-r" style="width:80px;height:5px;margin-bottom:6px;"></div>
+                <div style="height:44px;border:2px solid rgba(0,48,135,.3);border-radius:8px;background:white;display:flex;align-items:center;padding:0 12px;"><div class="wf-r dark" style="width:60px;height:8px;"></div></div>
+              </div>
+              <!-- frequency -->
+              <div>
+                <div class="wf-r" style="width:80px;height:5px;margin-bottom:6px;"></div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+                  <div style="height:32px;border:2px solid rgba(0,48,135,.3);border-radius:6px;background:rgba(0,48,135,.06);"></div>
+                  <div style="height:32px;border:1px solid rgba(0,0,0,.1);border-radius:6px;"></div>
+                  <div style="height:32px;border:1px solid rgba(0,0,0,.1);border-radius:6px;"></div>
+                </div>
+              </div>
+              <!-- date -->
+              <div>
+                <div class="wf-r" style="width:70px;height:5px;margin-bottom:6px;"></div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                  <div style="width:30px;height:30px;border:1px solid rgba(0,0,0,.1);border-radius:6px;"></div>
+                  <div style="width:30px;height:30px;border:2px solid rgba(0,48,135,.4);border-radius:6px;background:rgba(0,48,135,.06);"></div>
+                  <div style="width:30px;height:30px;border:1px solid rgba(0,0,0,.1);border-radius:6px;"></div>
+                  <div style="width:30px;height:30px;border:1px solid rgba(0,0,0,.1);border-radius:6px;"></div>
+                </div>
+              </div>
+              <!-- projections -->
+              <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:10px;">
+                <div class="wf-r" style="width:80px;height:5px;margin-bottom:6px;"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+                  <div><div class="wf-r" style="width:50px;height:4px;margin-bottom:4px;"></div><div class="wf-r dark" style="width:70px;height:8px;"></div></div>
+                  <div><div class="wf-r" style="width:50px;height:4px;margin-bottom:4px;"></div><div class="wf-r dark" style="width:70px;height:8px;"></div></div>
+                </div>
+              </div>
+              <div style="height:40px;background:rgba(0,48,135,.25);border-radius:8px;margin-top:auto;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goals -->
+      <div class="wf-frame">
+        <div class="wf-label">Goals — Financial Roadmap</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-nav-bar"><div class="wf-r dark" style="width:100px;height:8px;"></div><div class="wf-r pill dark" style="width:40px;height:20px;"></div></div>
+            <div class="wf-body">
+              <!-- active goal card -->
+              <div style="background:rgba(0,0,0,.06);border-radius:10px;padding:14px;position:relative;overflow:hidden;">
+                <div class="wf-r" style="width:80px;height:5px;margin-bottom:6px;"></div>
+                <div class="wf-r dark" style="width:130px;height:10px;margin-bottom:12px;"></div>
+                <!-- progress bar -->
+                <div style="height:4px;background:rgba(0,0,0,.1);border-radius:4px;margin-bottom:8px;"><div style="width:42%;height:100%;background:rgba(0,48,135,.4);border-radius:4px;"></div></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+                  <div><div class="wf-r" style="width:50px;height:4px;margin-bottom:3px;"></div><div class="wf-r dark" style="width:65px;height:7px;"></div></div>
+                  <div><div class="wf-r" style="width:50px;height:4px;margin-bottom:3px;"></div><div class="wf-r dark" style="width:65px;height:7px;"></div></div>
+                </div>
+              </div>
+              <div class="wf-r" style="width:70px;height:6px;margin-bottom:6px;"></div>
+              <!-- goal items -->
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="display:flex;align-items:center;gap:10px;padding:10px;background:rgba(0,0,0,.04);border-radius:8px;"><div style="width:28px;height:28px;background:rgba(0,0,0,.1);border-radius:50%;flex-shrink:0;"></div><div style="flex:1;"><div class="wf-r" style="width:90px;height:6px;margin-bottom:4px;"></div><div style="height:3px;background:rgba(0,0,0,.08);border-radius:4px;"><div style="width:65%;height:100%;background:rgba(0,48,135,.3);border-radius:4px;"></div></div></div><div class="wf-r dark" style="width:40px;height:7px;"></div></div>
+                <div style="display:flex;align-items:center;gap:10px;padding:10px;background:rgba(0,0,0,.04);border-radius:8px;"><div style="width:28px;height:28px;background:rgba(0,0,0,.1);border-radius:50%;flex-shrink:0;"></div><div style="flex:1;"><div class="wf-r" style="width:80px;height:6px;margin-bottom:4px;"></div><div style="height:3px;background:rgba(0,0,0,.08);border-radius:4px;"><div style="width:30%;height:100%;background:rgba(109,32,119,.3);border-radius:4px;"></div></div></div><div class="wf-r dark" style="width:40px;height:7px;"></div></div>
+              </div>
+              <!-- add goal -->
+              <div style="height:38px;border:1.5px dashed rgba(0,0,0,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;"><div class="wf-r" style="width:80px;height:5px;"></div></div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Onboarding KYC -->
+      <div class="wf-frame">
+        <div class="wf-label">Onboarding — KYC Flow</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-body" style="padding-top:20px;">
+              <!-- step dots -->
+              <div style="display:flex;gap:6px;justify-content:center;margin-bottom:8px;">
+                <div style="width:24px;height:6px;background:rgba(0,48,135,.5);border-radius:4px;"></div>
+                <div style="width:6px;height:6px;background:rgba(0,0,0,.12);border-radius:50%;"></div>
+                <div style="width:6px;height:6px;background:rgba(0,0,0,.12);border-radius:50%;"></div>
+                <div style="width:6px;height:6px;background:rgba(0,0,0,.12);border-radius:50%;"></div>
+              </div>
+              <div class="wf-r" style="width:80px;height:5px;margin:0 auto 8px;"></div>
+              <div class="wf-r dark" style="width:160px;height:11px;margin:0 auto 24px;"></div>
+              <!-- PAN input -->
+              <div style="margin-bottom:12px;"><div class="wf-r" style="width:70px;height:5px;margin-bottom:6px;"></div><div style="height:40px;border:1px solid rgba(0,0,0,.15);border-radius:8px;"></div></div>
+              <!-- DOB -->
+              <div style="margin-bottom:12px;"><div class="wf-r" style="width:90px;height:5px;margin-bottom:6px;"></div><div style="height:40px;border:1px solid rgba(0,0,0,.15);border-radius:8px;"></div></div>
+              <!-- mobile -->
+              <div style="margin-bottom:20px;"><div class="wf-r" style="width:100px;height:5px;margin-bottom:6px;"></div><div style="height:40px;border:2px solid rgba(0,48,135,.3);border-radius:8px;"></div></div>
+              <!-- secure note -->
+              <div style="display:flex;gap:8px;align-items:center;padding:10px;background:rgba(0,0,0,.04);border-radius:6px;margin-bottom:20px;"><div style="width:14px;height:14px;background:rgba(0,0,0,.12);border-radius:3px;flex-shrink:0;"></div><div class="wf-r" style="width:160px;height:5px;"></div></div>
+              <div style="height:40px;background:rgba(0,48,135,.25);border-radius:8px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VISUAL DESIGN -->
+  <div style="padding:80px 40px 0;">
+    <p class="s-label reveal">Visual Design</p>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;">
+      <h2 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(32px,3.8vw,58px);letter-spacing:-0.02em;line-height:1.1;">
+        High-fidelity screens<br>built for <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">confidence &amp; clarity.</em>
+      </h2>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;color:rgba(0,0,0,.5);max-width:300px;line-height:1.6;text-align:right;">
+        Every colour, type and spacing decision made to reduce investing anxiety and drive first SIP commitment.
+      </p>
+    </div>
+
+    <!-- Full-width -->
+    <div class="vis-ph-full reveal" style="margin-bottom:24px;">
+      <div class="vis-ph-img-wrap">
+        <img src="Images/shrey-portfolio-1.png" alt="Visual Design — Dashboard" />
+        <div class="vis-ph-overlay"><div class="vis-ph-tag">Screen 01 · Portfolio Dashboard — Hi-Fi</div></div>
+      </div>
+      <div class="vis-ph-caption">
+        <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:8px;">Visual Design</div>
+        <div style="font-size:18px;font-weight:600;">Portfolio 360° Dashboard</div>
+        <div style="font-size:14px;color:rgba(0,0,0,.5);margin-top:6px;line-height:1.5;">Industry-first unified view of mutual funds, stocks and bank accounts in one screen</div>
+      </div>
+    </div>
+
+    <!-- 2-up grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div class="vis-ph-card reveal">
+        <div class="vis-ph-img-wrap vis-ph-img-wrap--short">
+          <img src="Images/shrey-portfolio-1.png" alt="Visual Design — Fund Discovery" />
+          <div class="vis-ph-overlay"><div class="vis-ph-tag">Screen 02 · Explore &amp; Fund Discovery</div></div>
+        </div>
+        <div style="padding:20px 24px 0;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:6px;">Screen 02</div>
+          <div style="font-size:16px;font-weight:600;">Explore &amp; Fund Discovery</div>
+          <div style="font-size:13px;color:rgba(0,0,0,.5);margin-top:4px;">Curated fund cards with risk badges, returns and one-tap SIP start</div>
+        </div>
+      </div>
+      <div class="vis-ph-card reveal d1">
+        <div class="vis-ph-img-wrap vis-ph-img-wrap--short">
+          <img src="Images/shrey-portfolio-1.png" alt="Visual Design — Goals" />
+          <div class="vis-ph-overlay"><div class="vis-ph-tag">Screen 03 · Financial Roadmap &amp; Goals</div></div>
+        </div>
+        <div style="padding:20px 24px 0;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:6px;">Screen 03</div>
+          <div style="font-size:16px;font-weight:600;">Financial Roadmap &amp; Goals</div>
+          <div style="font-size:13px;color:rgba(0,0,0,.5);margin-top:4px;">Goal-based investing with FIRE calculator and progress visualisation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<div class="divider"></div>
+<section id="transformation">
+  <p class="s-label light reveal">Before vs. After</p>
+  <h2 class="transform-title reveal d1">Desktop web <em>to</em><br>native mobile. Reimagined.
+  </h2>
+  <table class="transform-table reveal d2">
+    <thead>
+      <tr>
+        <th style="width:18%">Area</th>
+        <th style="width:38%">Before — Desktop Web</th>
+        <th style="width:44%">After — Native App</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="td-area">Navigation</td><td>Top-nav mega-menu, broken on small screens</td><td><span class="td-after">5-tab bottom nav, thumb-reachable on all devices</span></td></tr>
+      <tr><td class="td-area">Onboarding</td><td>12-step KYC flow with PDF uploads and redirects</td><td><span class="td-after">Guided 3-step flow — KYC to first SIP in under 4 min</span></td></tr>
+      <tr><td class="td-area">Portfolio View</td><td>Dense data tables, no unified asset view</td><td><span class="td-after">Portfolio 360° — MF, stocks &amp; bank in one screen</span></td></tr>
+      <tr><td class="td-area">SIP Setup</td><td>8-step form with page refreshes and errors</td><td><span class="td-after">3-step in-app flow with live projections</span></td></tr>
+      <tr><td class="td-area">Fund Discovery</td><td>Raw NAV tables, no guidance for beginners</td><td><span class="td-after">Curated cards with risk labels, returns and smart filters</span></td></tr>
+      <tr><td class="td-area">Goal Planning</td><td">Not available</td><td><span class="td-after">FIRE Calculator, Retirement &amp; Education planners built-in</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section id="process">
+  <p class="s-label reveal">Design Process</p>
+  <h3 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(24px,2.8vw,40px);letter-spacing:-0.02em;margin-top:12px;">
+    Evidence-led, from discovery to <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">ship-ready system.</em>
+  </h3>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="#1d1d1d" stroke-width="1.3"/><circle cx="11" cy="11" r="2.5" stroke="#1d1d1d" stroke-width="1.3"/></svg>
+      </div>
+      <div class="process-step-name">Discover</div>
+      <div class="process-step-desc">User interviews, session analysis, competitor teardowns</div>
+    </div>
+    <div class="process-step reveal d1">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="4" width="14" height="14" rx="2" stroke="#1d1d1d" stroke-width="1.3"/><path d="M8 11h6M11 8v6" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="process-step-name">Define</div>
+      <div class="process-step-desc">Personas, JTBD, mobile IA &amp; flow mapping</div>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 17L10 7l4 6 3-4 3 8" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="process-step-name">Design</div>
+      <div class="process-step-desc">Wireframes, hi-fi screens &amp; design system</div>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="5" width="16" height="12" rx="2" stroke="#1d1d1d" stroke-width="1.3"/><path d="M8 9h6M8 13h4" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="process-step-name">Prototype</div>
+      <div class="process-step-desc">Interactive Figma flows for iOS &amp; Android</div>
+    </div>
+    <div class="process-step reveal d4">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6 11l4 4 6-7" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="8" stroke="#1d1d1d" stroke-width="1.3"/></svg>
+      </div>
+      <div class="process-step-name">Validate</div>
+      <div class="process-step-desc">Usability testing, iteration &amp; dev handoff</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTS ═══ -->
+<section id="results">
+  <div class="results-top">
+    <h2 class="results-heading reveal">Growth &amp;<br><em>Impact.</em></h2>
+    <p class="results-body reveal d1">Post-launch metrics confirmed the mobile-first rethink paid off — driving record AUM growth, faster user acquisition and engagement numbers that outpaced the industry average by a significant margin.</p>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card reveal">
+      <div class="metric-card-bg blue"></div>
+      <div class="metric-category">AUM Growth</div>
+      <div class="metric-value">₹<span class="counter" data-target="232">0</span><span class="unit">K Cr</span></div>
+      <div class="metric-sub">Current AUM — up from ₹1.53L Cr at launch, 51% growth in under 9 months</div>
+      <div class="metric-delta">↑ 51% growth</div>
+    </div>
+    <div class="metric-card reveal d1">
+      <div class="metric-card-bg purple"></div>
+      <div class="metric-category">Investor Base</div>
+      <div class="metric-value"><span class="counter" data-target="59">0</span><span class="unit">L+</span></div>
+      <div class="metric-sub">Active investors, with 71L+ folios across 173 schemes</div>
+      <div class="metric-delta">↑ 5.9M users</div>
+    </div>
+    <div class="metric-card reveal d2">
+      <div class="metric-card-bg green"></div>
+      <div class="metric-category">AUM Growth Rate</div>
+      <div class="metric-value"><span class="counter" data-target="50">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">Quarterly AUM growth (FY24) — vs 34% industry average</div>
+      <div class="metric-delta">↑ Fastest growing fund house</div>
+    </div>
+    <div class="metric-card reveal d3">
+      <div class="metric-card-bg orange"></div>
+      <div class="metric-category">Onboarding</div>
+      <div class="metric-value">&lt;<span class="counter" data-target="4">0</span><span class="unit">min</span></div>
+      <div class="metric-sub">Time from app open to first SIP — down from 12+ steps on web</div>
+      <div class="metric-delta">↑ 3× faster than web</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEARNINGS ═══ -->
+<section id="learnings">
+  <div class="learnings-layout">
+    <div>
+      <p class="s-label reveal">Outcome &amp; Learnings</p>
+      <h2 class="learnings-heading reveal d1">Mobile is a<br><em>different medium,</em><br>not a smaller screen.
+      </h2>
+      <p class="learnings-body reveal d2">
+        The biggest learning was that porting a desktop experience to mobile — even a well-designed one — is never the answer. The Tata MF app worked because it was conceived mobile-first from the first whiteboard session, respecting thumb ergonomics, attention spans and the emotional context of making financial decisions on a phone.
+      </p>
+    </div>
+    <div class="learning-list reveal d1">
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Investing confidence is designed, not assumed</div><div class="learning-desc">First-time investors needed reassurance at every step — risk labels, plain-language descriptions, and real-time projections turned anxiety into commitment.</div></div></div>
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Simplicity requires more iterations, not fewer</div><div class="learning-desc">Compressing the KYC-to-SIP flow from 12 steps to 3 required 11 rounds of iteration. Removing friction is harder than adding features.</div></div></div>
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">A design system compounds its value over time</div><div class="learning-desc">The 120+ component library meant the team could ship new fund categories and seasonal campaigns without touching the design team — true design leverage.</div></div></div>
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Goal framing beats product framing</div><div class="learning-desc">Users who entered through a goal (e.g. "Child's Education") had 2× higher SIP completion rates than those who browsed funds directly — validating the Financial Roadmap bet.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="cs-footer">
+  <div>
+    <div class="footer-label">Case Study by</div>
+    <div class="footer-name">Shreyansh Rathod</div>
+  </div>
+  <a href="index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Back to Portfolio
+  </a>
+</footer>
+
+<script>
+/* LOADER */
+(function(){
+  const loader = document.getElementById('page-loader');
+  const chars  = loader.querySelectorAll('.loader-char');
+  chars.forEach((c,i)=>setTimeout(()=>c.classList.add('up'),100+i*80));
+  window.addEventListener('load',()=>setTimeout(()=>loader.classList.add('loaded'),900));
+})();
+
+/* CURSOR */
+(function(){
+  const cur = document.getElementById('cursor');
+  document.addEventListener('mousemove',e=>{ cur.style.left=e.clientX+'px'; cur.style.top=e.clientY+'px'; });
+  document.querySelectorAll('a,button,.persona-card,.metric-card,.pillar-item,.pain-item,.process-node,.wf-screen').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cur.classList.add('grow'));
+    el.addEventListener('mouseleave',()=>cur.classList.remove('grow'));
+  });
+  const dark  = document.querySelectorAll('#impact,#problem,#transformation,#cs-footer');
+  const light = document.querySelectorAll('#hero,#overview,#research,#personas,#strategy,#design-showcase,#process,#results,#learnings');
+  const dObs  = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting) cur.classList.add('on-dark'); }),{threshold:.4});
+  const lObs  = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting) cur.classList.remove('on-dark'); }),{threshold:.4});
+  dark.forEach(s=>dObs.observe(s)); light.forEach(s=>lObs.observe(s));
+})();
+
+/* NAV */
+(function(){
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+})();
+
+/* HERO ENTRANCE */
+(function(){
+  setTimeout(()=>{
+    document.getElementById('heroEyebrow').classList.add('show');
+    ['hl1','hl2','hl3'].forEach((id,i)=>setTimeout(()=>document.getElementById(id).classList.add('show'),i*130));
+    setTimeout(()=>document.getElementById('heroMeta').classList.add('show'),700);
+  },1000);
+})();
+
+/* HERO PARALLAX */
+(function(){
+  const bg = document.getElementById('heroBg');
+  window.addEventListener('scroll',()=>{ bg.style.transform=`translateY(${window.scrollY*.35}px)`; },{passive:true});
+})();
+
+/* PROBLEM PARALLAX TEXT */
+(function(){
+  const txt = document.getElementById('problemBgText');
+  if(!txt) return;
+  window.addEventListener('scroll',()=>{
+    const r = txt.closest('section').getBoundingClientRect();
+    txt.style.transform=`translateX(${(-r.top/window.innerHeight)*-60}px)`;
+  },{passive:true});
+})();
+
+/* SCROLL REVEAL */
+(function(){
+  const io = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);} }),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* COUNTERS */
+(function(){
+  const io = new IntersectionObserver(e=>{
+    e.forEach(x=>{
+      if(!x.isIntersecting) return;
+      const el=x.target,target=+el.dataset.target,dur=1800,start=performance.now();
+      function step(now){ const t=Math.min((now-start)/dur,1),ease=1-Math.pow(1-t,3); el.textContent=Math.round(ease*target); if(t<1) requestAnimationFrame(step); else el.textContent=target; }
+      requestAnimationFrame(step); io.unobserve(el);
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(c=>io.observe(c));
+})();
+
+/* DRAGGABLE WIREFRAME STRIP */
+(function(){
+  const strip = document.querySelector('.wf-strip');
+  if(!strip) return;
+  let isDown=false,startX,scrollLeft;
+  strip.addEventListener('mousedown',e=>{ isDown=true; strip.style.cursor='grabbing'; startX=e.pageX-strip.offsetLeft; scrollLeft=strip.scrollLeft; });
+  strip.addEventListener('mouseleave',()=>{ isDown=false; strip.style.cursor='grab'; });
+  strip.addEventListener('mouseup',()=>{ isDown=false; strip.style.cursor='grab'; });
+  strip.addEventListener('mousemove',e=>{ if(!isDown) return; e.preventDefault(); strip.scrollLeft=scrollLeft-(e.pageX-strip.offsetLeft-startX)*1.5; });
+})();
+</script>
+</body>
+</html>
