@@ -483,7 +483,7 @@
        WORK
     ============================================= */
     #work {
-      padding: 80px 0 40px;
+      padding: 40px 0 40px;
       max-width: 1440px;
       margin-left: auto;
       margin-right: auto;
@@ -944,8 +944,8 @@
   .visit-link { justify-self: end; }
 
   /* Work */
-  #work { padding: 60px 0 32px; }
-  .work-row { padding: 0 20px; gap: 14px; margin-bottom: 14px; align-items: start; }
+  #work { padding: 40px 0 40px; }
+  .work-row { padding: 0 40px; gap: 40px; margin-bottom: 40px; align-items: start; }
 
   /* Skills */
   #skills { padding: 64px 28px 100px; }
@@ -1031,13 +1031,13 @@
   }
 
   /* ── WORK ── */
-  #work { padding: 48px 0 24px; }
+  #work { padding: 40px 0 40px; }
   .work-row {
     grid-template-columns: 1fr !important;
     padding: 0 20px;
-    gap: 24px;
-    margin-bottom: 24px;
-    justify-items: center;      /* centre single cards */
+    gap: 40px;
+    margin-bottom: 40px;
+    justify-items: center;
   }
   /* Row-2 on mobile: collapse to single column full-width */
   .work-row-2 .proj-card { grid-column: 1; }
@@ -1168,7 +1168,7 @@
   }
 
   /* Work */
-  .work-row { padding: 0 12px; gap: 12px; margin-bottom: 12px; }
+  .work-row { padding: 0 16px; gap: 40px; margin-bottom: 40px; }
   .proj-img-wrap img { height: auto !important; aspect-ratio: unset !important; }
 
   /* Work filter */
