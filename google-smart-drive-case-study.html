@@ -204,120 +204,213 @@
 <!-- ═══ USER FLOW ═══ -->
 <section id="user-flow">
   <p class="s-label reveal">User Flow</p>
-  <h2 class="flow-heading reveal d1">Three journeys,<br><em>one intelligent</em> app.</h2>
-  <p class="flow-subhead reveal d2">Critical driver flows mapped before a single wireframe was sketched — ensuring every screen hierarchy served a real user need.</p>
+  <h2 class="flow-heading reveal d1">From first tap<br><em>to safe shift</em> end.</h2>
+  <p class="flow-subhead reveal d2">The complete driver journey — onboarding, pre-trip verification, real-time monitoring, and end-of-shift sign-off — mapped before a single wireframe was sketched.</p>
 
-  <div class="flow-tabs reveal d3">
-    <button class="flow-tab-btn active" data-flow="0">Driver Dashboard</button>
-    <button class="flow-tab-btn" data-flow="1">Fatigue Alert</button>
-    <button class="flow-tab-btn" data-flow="2">Fleet Overview</button>
-  </div>
+  <div class="flow-svg-wrap reveal d3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 820" width="100%" style="display:block;border-radius:16px;background:#0c0c14;">
+      <defs>
+        <marker id="arr" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 7 3, 0 6" fill="rgba(255,255,255,0.55)"/>
+        </marker>
+        <marker id="arr-blue" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 7 3, 0 6" fill="#4285F4"/>
+        </marker>
+      </defs>
 
-  <!-- Flow 0: Driver Dashboard -->
-  <div class="flow-diagram active" data-flow="0">
-    <div class="flow-row">
-      <div class="flow-node flow-start">App Open</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node">Auth / Face ID</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node flow-highlight">Driver Dashboard</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node">Safety Score Ring</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node flow-end">Start New Trip</div>
-    </div>
-    <div class="flow-branch-row">
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-down"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-    </div>
-    <div class="flow-row flow-sub">
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-node flow-sub-node">Behaviour Breakdown</div>
-      <div class="flow-arrow-sub"></div>
-      <div class="flow-node flow-sub-node">Weekly Trends</div>
-      <div class="flow-arrow-sub"></div>
-      <div class="flow-node flow-sub-node">AI Coaching Tips</div>
-    </div>
-    <div class="flow-legend">
-      <span class="flow-leg-item"><span class="flow-leg-dot start"></span>Entry Point</span>
-      <span class="flow-leg-item"><span class="flow-leg-dot highlight"></span>Primary Screen</span>
-      <span class="flow-leg-item"><span class="flow-leg-dot end"></span>Key CTA</span>
-    </div>
-  </div>
+      <!-- Title bar -->
+      <text x="490" y="38" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.9)" letter-spacing="2">USER FLOW</text>
+      <line x1="40" y1="50" x2="940" y2="50" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
 
-  <!-- Flow 1: Fatigue Alert -->
-  <div class="flow-diagram" data-flow="1">
-    <div class="flow-row">
-      <div class="flow-node flow-start">6h Drive Mark</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node">HOS Timer Trigger</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node flow-highlight flow-red">Fatigue Alert</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node">Rest Stop Options</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node flow-end">Navigate / Log</div>
-    </div>
-    <div class="flow-branch-row">
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-down"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-    </div>
-    <div class="flow-row flow-sub">
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-node flow-sub-node">Progressive Scale</div>
-      <div class="flow-arrow-sub"></div>
-      <div class="flow-node flow-sub-node">4h · 6h · 7.5h</div>
-      <div class="flow-arrow-sub"></div>
-      <div class="flow-node flow-sub-node">Override + Log</div>
-    </div>
-    <div class="flow-legend">
-      <span class="flow-leg-item"><span class="flow-leg-dot start"></span>Trigger Event</span>
-      <span class="flow-leg-item"><span class="flow-leg-dot red"></span>Critical Alert</span>
-      <span class="flow-leg-item"><span class="flow-leg-dot end"></span>Resolution Action</span>
-    </div>
-  </div>
+      <!-- ── ROW 1: Splash → Onboarding strip ── -->
+      <!-- Splash Screen (filled blue circle) -->
+      <circle cx="80" cy="108" r="34" fill="#4285F4"/>
+      <text x="80" y="104" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="#fff" font-weight="600">Splash</text>
+      <text x="80" y="117" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="#fff" font-weight="600">Screen</text>
 
-  <!-- Flow 2: Fleet Overview -->
-  <div class="flow-diagram" data-flow="2">
-    <div class="flow-row">
-      <div class="flow-node flow-start">Manager Login</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node flow-highlight">Fleet Dashboard</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node">Driver List</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node">Driver Detail</div>
-      <div class="flow-arrow"></div>
-      <div class="flow-node flow-end">Send Alert</div>
-    </div>
-    <div class="flow-branch-row">
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-down"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-      <div class="flow-branch-empty"></div>
-    </div>
-    <div class="flow-row flow-sub">
-      <div class="flow-branch-empty"></div>
-      <div class="flow-node flow-sub-node">Live Safety Scores</div>
-      <div class="flow-arrow-sub"></div>
-      <div class="flow-node flow-sub-node">Fatigue Flags</div>
-      <div class="flow-arrow-sub"></div>
-      <div class="flow-node flow-sub-node">HOS Compliance</div>
-    </div>
-    <div class="flow-legend">
-      <span class="flow-leg-item"><span class="flow-leg-dot start"></span>Entry Point</span>
-      <span class="flow-leg-item"><span class="flow-leg-dot highlight"></span>Primary Screen</span>
-      <span class="flow-leg-item"><span class="flow-leg-dot end"></span>Key Action</span>
-    </div>
+      <!-- Arrow: Splash → Login -->
+      <line x1="115" y1="108" x2="155" y2="108" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Login Screen -->
+      <rect x="160" y="82" width="110" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="215" y="111" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Login Screen</text>
+
+      <!-- Arrow: Login → Select Language -->
+      <line x1="270" y1="108" x2="310" y2="108" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Select Language -->
+      <rect x="315" y="82" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="375" y="104" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Select</text>
+      <text x="375" y="119" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Language</text>
+
+      <!-- Arrow: Select Lang → Provide Info -->
+      <line x1="435" y1="108" x2="475" y2="108" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Provide Info 1 -->
+      <rect x="480" y="82" width="110" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="535" y="104" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Provide</text>
+      <text x="535" y="119" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Information</text>
+
+      <!-- Arrow: Provide Info 1 → Provide Info 2 -->
+      <line x1="590" y1="108" x2="630" y2="108" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Provide Info 2 -->
+      <rect x="635" y="82" width="110" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="690" y="104" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Provide</text>
+      <text x="690" y="119" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Information</text>
+
+      <!-- Arrow: Provide Info 2 → Verification Diamond -->
+      <line x1="745" y1="108" x2="785" y2="108" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Verification Process (diamond) -->
+      <polygon points="840,72 900,108 840,144 780,108" fill="#4285F4"/>
+      <text x="840" y="104" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#fff" font-weight="600">Verification</text>
+      <text x="840" y="117" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="#fff" font-weight="600">Process</text>
+
+      <!-- "No" branch → back to Login (arc down-left) -->
+      <path d="M840,144 Q840,175 760,175 Q680,175 600,175 Q520,175 440,175 Q360,175 280,175 Q215,175 215,155" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+      <text x="750" y="168" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">No</text>
+
+      <!-- "Yes" label on right side of diamond -->
+      <text x="913" y="112" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Yes</text>
+      <!-- Arrow right from diamond to "Start Safety Check" -->
+      <line x1="900" y1="108" x2="940" y2="108" stroke="rgba(255,255,255,0.5)" stroke-width="1.4"/>
+      <!-- Bend down to row 2 -->
+      <line x1="940" y1="108" x2="940" y2="210" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- ── ROW 2: Safety Check flow ── -->
+      <!-- Start Safety Check -->
+      <rect x="855" y="216" width="170" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="940" y="238" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Start</text>
+      <text x="940" y="253" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Safety Check</text>
+
+      <!-- Arrow left from safety check to "ok to drive" diamond -->
+      <line x1="855" y1="242" x2="810" y2="242" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- "I am ok to drive" diamond -->
+      <polygon points="730,204 800,242 730,280 660,242" fill="#4285F4"/>
+      <text x="730" y="236" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8.5" fill="#fff" font-weight="600">I am ok</text>
+      <text x="730" y="248" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8.5" fill="#fff" font-weight="600">to drive?</text>
+
+      <!-- "No" branch from ok-to-drive → back to Start Safety Check (arc up) -->
+      <path d="M730,280 Q730,310 795,310 Q860,310 940,310 Q940,270 940,270" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+      <text x="835" y="305" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">No</text>
+
+      <!-- "Yes" label -->
+      <text x="648" y="246" text-anchor="end" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Yes</text>
+      <!-- Arrow left from diamond -->
+      <line x1="660" y1="242" x2="620" y2="242" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Equipment / Vehicle / Document check (triple-split rect) -->
+      <rect x="380" y="216" width="236" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <line x1="459" y1="216" x2="459" y2="268" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="537" y1="216" x2="537" y2="268" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <text x="419" y="238" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Equipment</text>
+      <text x="419" y="252" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Check</text>
+      <text x="498" y="238" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Vehicle</text>
+      <text x="498" y="252" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Check</text>
+      <text x="577" y="238" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Document</text>
+      <text x="577" y="252" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Verification</text>
+
+      <!-- Arrow left from equipment block -->
+      <line x1="380" y1="242" x2="340" y2="242" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Journey Pauses -->
+      <rect x="215" y="216" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="275" y="238" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Journey</text>
+      <text x="275" y="253" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Pauses</text>
+
+      <!-- Arrow left from Journey Pauses -->
+      <line x1="215" y1="242" x2="175" y2="242" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Current Trip Status -->
+      <rect x="50" y="216" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="110" y="238" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Current Trip</text>
+      <text x="110" y="253" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Status</text>
+
+      <!-- Vertical arrow down from Current Trip -->
+      <line x1="110" y1="268" x2="110" y2="356" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- ── ROW 3: Scan flow strip ── -->
+      <!-- Scan Point 1 -->
+      <rect x="50" y="362" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="110" y="384" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Scan</text>
+      <text x="110" y="399" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Point</text>
+
+      <!-- Arrow right: Scan → Scan Point 2 -->
+      <line x1="170" y1="388" x2="210" y2="388" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Scan Point 2 -->
+      <rect x="215" y="362" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="275" y="384" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Scan</text>
+      <text x="275" y="399" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Point</text>
+
+      <!-- Arrow right: Scan Point 2 → Checkpoint -->
+      <line x1="335" y1="388" x2="375" y2="388" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Checkpoint -->
+      <rect x="380" y="362" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="440" y="384" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Checkpoint</text>
+      <text x="440" y="399" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Scan</text>
+
+      <!-- Arrow right → End Shift -->
+      <line x1="500" y1="388" x2="540" y2="388" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- End Shift -->
+      <rect x="545" y="362" width="120" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="605" y="384" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">End Shift</text>
+      <text x="605" y="399" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="500">Summary</text>
+
+      <!-- Vertical arrow down from End Shift -->
+      <line x1="605" y1="414" x2="605" y2="468" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- ── ROW 4: Post-shift handoffs ── -->
+      <!-- Vehicle handoff triple box -->
+      <rect x="380" y="474" width="340" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <line x1="493" y1="474" x2="493" y2="526" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="606" y1="474" x2="606" y2="526" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <text x="436" y="496" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Vehicle</text>
+      <text x="436" y="510" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Handoff</text>
+      <text x="549" y="496" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Equipment</text>
+      <text x="549" y="510" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Return</text>
+      <text x="663" y="496" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">SSD's</text>
+      <text x="663" y="510" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Data Sync</text>
+
+      <!-- Arrow right from triple box → Logout circle -->
+      <line x1="720" y1="500" x2="770" y2="500" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- Logout Screen (blue circle) -->
+      <circle cx="820" cy="500" r="34" fill="#4285F4"/>
+      <text x="820" y="496" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="#fff" font-weight="600">Logout</text>
+      <text x="820" y="509" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9.5" fill="#fff" font-weight="600">Screen</text>
+
+      <!-- Legend row -->
+      <rect x="40" y="590" width="100" height="36" rx="6" fill="none" stroke="#4285F4" stroke-width="1.4"/>
+      <text x="90" y="613" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Start / End</text>
+
+      <rect x="180" y="590" width="100" height="36" rx="6" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.4"/>
+      <text x="230" y="613" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Screen / Step</text>
+
+      <rect x="320" y="590" width="36" height="36" rx="2" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.4" transform="rotate(45,338,608)"/>
+      <text x="398" y="613" text-anchor="start" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Decision</text>
+
+      <line x1="530" y1="608" x2="580" y2="608" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+      <text x="590" y="613" text-anchor="start" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Flow path</text>
+
+      <!-- connector line: Equipment box row2 → Journey Pauses (they're in same row, just arrow left from equip) - already done above -->
+
+      <!-- Vertical connector from Journey Pauses / Current Trip alignment: arrow from Journey Pauses down to Scan Point 2 -->
+      <line x1="275" y1="268" x2="275" y2="356" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+
+      <!-- connect row 4 triple box back left to scan row: arrow from scan end shift down -->
+      <!-- already done via vertical arrow from End Shift -->
+      <!-- Arrow from triple box going left to Scan Point 1 area if needed -->
+      <line x1="380" y1="500" x2="185" y2="500" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#arr)"/>
+      <!-- Scan row side-box on left row 4 -->
+      <rect x="50" y="474" width="130" height="52" rx="8" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.4"/>
+      <text x="115" y="498" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">Safety Score</text>
+      <text x="115" y="513" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">Report</text>
+    </svg>
   </div>
 </section>
 
@@ -1477,20 +1570,6 @@
   strip.addEventListener('mousemove',e=>{ if(!isDown) return; e.preventDefault(); const x=e.pageX-strip.offsetLeft; strip.scrollLeft=scrollLeft-(x-startX)*1.5; });
 })();
 
-/* USER FLOW TABS */
-(function(){
-  const btns  = document.querySelectorAll('.flow-tab-btn');
-  const diagrams = document.querySelectorAll('.flow-diagram');
-  btns.forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const idx = btn.dataset.flow;
-      btns.forEach(b=>b.classList.remove('active'));
-      diagrams.forEach(d=>d.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelector(`.flow-diagram[data-flow="${idx}"]`).classList.add('active');
-    });
-  });
-})();
 </script>
 
 </body>

@@ -722,172 +722,18 @@ ul   { list-style:none; }
   max-width: 520px;
   margin-bottom: 48px;
 }
-.flow-tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+/* SVG flowchart wrapper */
+.flow-svg-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.18);
 }
-.flow-tab-btn {
-  padding: 10px 22px;
-  border-radius: 100px;
-  border: 1px solid rgba(0,0,0,.15);
-  background: transparent;
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(0,0,0,.5);
-  cursor: pointer;
-  transition: all .3s var(--ease-out);
+.flow-svg-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.flow-tab-btn:hover { border-color: rgba(0,0,0,.3); color: var(--dark); }
-.flow-tab-btn.active {
-  background: var(--dark);
-  border-color: var(--dark);
-  color: #fff;
-}
-.flow-diagram { display: none; }
-.flow-diagram.active { display: block; }
-.flow-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scrollbar-width: none;
-}
-.flow-row::-webkit-scrollbar { display: none; }
-.flow-row.flow-sub { margin-top: 4px; }
-.flow-node {
-  flex-shrink: 0;
-  padding: 12px 20px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,.12);
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--dark);
-  white-space: nowrap;
-  transition: box-shadow .3s ease, transform .3s var(--ease-out);
-}
-.flow-node:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,.1);
-  transform: translateY(-2px);
-}
-.flow-node.flow-start {
-  background: var(--dark);
-  border-color: var(--dark);
-  color: #fff;
-}
-.flow-node.flow-end {
-  background: var(--g-blue);
-  border-color: var(--g-blue);
-  color: #fff;
-}
-.flow-node.flow-highlight {
-  background: rgba(66,133,244,.08);
-  border-color: rgba(66,133,244,.3);
-  color: var(--g-blue);
-}
-.flow-node.flow-red {
-  background: rgba(234,67,53,.08);
-  border-color: rgba(234,67,53,.3);
-  color: var(--g-red);
-}
-.flow-node.flow-sub-node {
-  background: #f7f7f5;
-  border-color: rgba(0,0,0,.08);
-  color: rgba(0,0,0,.55);
-  font-size: 12px;
-  font-weight: 500;
-  padding: 8px 14px;
-}
-.flow-arrow {
-  flex-shrink: 0;
-  width: 40px;
-  height: 1px;
-  background: rgba(0,0,0,.15);
-  position: relative;
-}
-.flow-arrow::after {
-  content: '';
-  position: absolute;
-  right: -1px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid rgba(0,0,0,.2);
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-}
-.flow-arrow-sub {
-  flex-shrink: 0;
-  width: 24px;
-  height: 1px;
-  background: rgba(0,0,0,.1);
-  position: relative;
-}
-.flow-arrow-sub::after {
-  content: '';
-  position: absolute;
-  right: -1px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 5px solid rgba(0,0,0,.12);
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-}
-.flow-branch-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
-  height: 24px;
-  margin: 0;
-}
-.flow-branch-empty { width: 0; flex: 1; }
-.flow-branch-down {
-  flex-shrink: 0;
-  width: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.flow-branch-down::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: rgba(0,0,0,.12);
-}
-.flow-legend {
-  display: flex;
-  gap: 24px;
-  margin-top: 32px;
-  flex-wrap: wrap;
-}
-.flow-leg-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(0,0,0,.4);
-}
-.flow-leg-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.flow-leg-dot.start   { background: var(--dark); }
-.flow-leg-dot.highlight { background: var(--g-blue); }
-.flow-leg-dot.end     { background: var(--g-blue); }
-.flow-leg-dot.red     { background: var(--g-red); }
 
 /* ═══════════════════════════════════════
    DESIGN SYSTEM SECTION
@@ -1163,6 +1009,6 @@ ul   { list-style:none; }
   .ds-comp-grid { grid-template-columns: 1fr; }
   .ds-type-item { grid-template-columns: 1fr; }
   .ds-type-meta { text-align: left; }
-  .flow-tabs { gap: 6px; }
+  .flow-svg-wrap { border-radius: 10px; }
   .footer-right { align-items: flex-start; }
 }

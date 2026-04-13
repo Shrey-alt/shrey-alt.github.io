@@ -482,47 +482,130 @@
     /* =============================================
        WORK
     ============================================= */
-    #work { padding: 80px 0 40px; }
+    #work {
+      padding: 80px 0 40px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     .work-row {
       display: grid;
-      gap: 28px;
-      padding: 0 40px;
-      margin-bottom: 28px;
+      align-items: start;        /* masonry: each card sits at its natural height */
+      gap: 16px;
+      padding: 0 20px;           /* tighter sides → images ~80px wider overall */
+      margin-bottom: 16px;
     }
-    .work-row-1 { grid-template-columns: 40fr 47.5fr; }
-    .work-row-2 { grid-template-columns: 1fr; }
-    .work-row-3 { grid-template-columns: 47.5fr 40fr; }
+    /* ── Masonry-style asymmetric columns ── */
+    /* Row 1: HDFC smaller left, TataMF larger right — natural height contrast */
+    .work-row-1 { grid-template-columns: 44fr 56fr; }
+    /* Row 2: FGI landscape card occupies the wider right slot */
+    .work-row-2 { grid-template-columns: 38fr 62fr; }
+    .work-row-2 .proj-card { grid-column: 2; }
+    /* Row 3: GSD wider left, P05 narrower right */
+    .work-row-3 { grid-template-columns: 56fr 44fr; }
 
     .proj-card {
-      overflow: hidden; cursor: pointer;
+      overflow: hidden;
+      cursor: pointer;
+      /* JS writes transform; CSS handles spring-back */
+      transition: transform 0.72s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+      will-change: transform, opacity;
     }
     .proj-header {
       display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 2px;
+      transition: opacity 0.45s ease;
     }
     .proj-num, .proj-name {
-      font-size: 19px; font-weight: 500;
+      font-size: 18px; font-weight: 500;
       color: var(--dark); letter-spacing: -0.2px;
+      transition: letter-spacing 0.4s var(--ease-out);
     }
-    .proj-img-wrap { overflow: hidden; }
+    .proj-card:hover .proj-name { letter-spacing: 0.2px; }
+
+    /* ── Image wrapper ── */
+    .proj-img-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+    /* Dark gradient overlay — rises on hover */
+    .proj-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.62) 0%,
+        rgba(0,0,0,0.18) 42%,
+        transparent 72%
+      );
+      opacity: 0;
+      transition: opacity 0.55s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .proj-card:hover .proj-img-wrap::after { opacity: 1; }
+
     .proj-img-wrap img {
-      width: 100%; display: block;
-      object-fit: cover;
-      transition: transform 0.8s var(--ease-standard);
+      width: 100%;
+      height: auto;          /* Natural proportions — no cropping, no blurring */
+      display: block;
+      object-fit: initial;   /* Remove cover to prevent upscale distortion */
+      transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center center;
     }
     .proj-card:hover .proj-img-wrap img { transform: scale(1.04); }
 
-    /* Responsive aspect-ratios — images scale fluidly with column width */
-    .work-row-1 .proj-img-wrap img,
-    .work-row-3 .proj-img-wrap img { aspect-ratio: 15/16; }  /* tall-portrait, ~square */
-    .work-row-2 .proj-img-wrap img { aspect-ratio: 8/5;   }  /* landscape wide */
+    /* ── "View project" CTA — injected by JS ── */
+    .proj-cta {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      transform: translateY(6px);
+      opacity: 0;
+      transition: opacity 0.42s ease, transform 0.42s cubic-bezier(0.16,1,0.3,1);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .proj-card:hover .proj-cta {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .proj-cta-arrow {
+      font-size: 20px;
+      line-height: 1;
+      transition: transform 0.4s var(--ease-out);
+      display: inline-block;
+    }
+    .proj-card:hover .proj-cta-arrow { transform: translateX(5px); }
+
+    /* ── Spotlight: dim siblings when one card is hovered ── */
+    #work:has(.proj-card:hover) .proj-card:not(:hover) {
+      opacity: 0.45;
+    }
+    #work:has(.proj-card:hover) .proj-card:not(:hover) .proj-header {
+      opacity: 0.45;
+    }
+
+    /* Natural aspect ratios — images display at their own proportions, crisp */
+    /* No forced aspect-ratio overrides; height:auto above handles this */
 
     /* =============================================
        WORK FILTER
     ============================================= */
     .work-filter {
-      padding: 44px 40px 50px;
+      padding: 44px 20px 50px;
       border-top: 1px solid var(--border);
     }
     .filter-label {
@@ -862,7 +945,7 @@
 
   /* Work */
   #work { padding: 60px 0 32px; }
-  .work-row { padding: 0 28px; gap: 20px; }
+  .work-row { padding: 0 20px; gap: 14px; margin-bottom: 14px; align-items: start; }
 
   /* Skills */
   #skills { padding: 64px 28px 100px; }
@@ -954,17 +1037,19 @@
     padding: 0 20px;
     gap: 24px;
     margin-bottom: 24px;
+    justify-items: center;      /* centre single cards */
   }
-  /* Fix row-2 centred card — stretch to full width */
-  .work-row-2 .proj-card { align-items: stretch !important; }
-  .work-row-2 .proj-header,
-  .work-row-2 .proj-img-wrap { width: 100% !important; }
+  /* Row-2 on mobile: collapse to single column full-width */
+  .work-row-2 .proj-card { grid-column: 1; }
+  .proj-card { width: 100%; max-width: 540px; }  /* cap card width, centred */
   .proj-num, .proj-name { font-size: 15px; }
-  .proj-header { margin-bottom: 8px; }
+  .proj-header { margin-bottom: 10px; }
+  /* Mobile: natural portrait ratio, crisp — no forced crop */
   .proj-img-wrap img {
-    width: 100%; height: auto !important;
-    aspect-ratio: 4/3 !important;
-    object-fit: cover;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: unset !important;
+    object-fit: initial !important;
   }
 
   /* ── WORK FILTER ── */
@@ -1083,8 +1168,8 @@
   }
 
   /* Work */
-  .work-row { padding: 0 16px; gap: 20px; margin-bottom: 20px; }
-  .proj-img-wrap img { aspect-ratio: 3/2 !important; }
+  .work-row { padding: 0 12px; gap: 12px; margin-bottom: 12px; }
+  .proj-img-wrap img { height: auto !important; aspect-ratio: unset !important; }
 
   /* Work filter */
   .work-filter { padding: 28px 16px 30px; }
@@ -1110,6 +1195,9 @@
 ============================================= */
 @media (hover: none) {
   .proj-card:hover .proj-img-wrap img { transform: none; }
+  .proj-card:hover .proj-img-wrap::after { opacity: 0; }
+  .proj-card:hover .proj-cta { opacity: 0; }
+  #work:has(.proj-card:hover) .proj-card:not(:hover) { opacity: 1; }
   .about-img-wrap:hover img { transform: none; }
   .tag:hover { background: transparent; }
   .text-link:hover { gap: 6px; }
@@ -1204,4 +1292,80 @@
 }
 @media (min-width: 769px) {
   .mobile-menu { display: none; }
+}
+
+/* ── GOOGLE SMART DRIVE PROJECT PLACEHOLDER ── */
+.proj-img-placeholder.gsd-placeholder {
+  width: 100%;
+  aspect-ratio: 574/688;  /* match portrait ratio of HDFC/TataMF images */
+  background: linear-gradient(135deg, #0e1628 0%, #1a2a4a 50%, #0e1628 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transition: background .4s ease;
+}
+.proj-card:hover .gsd-placeholder {
+  background: linear-gradient(135deg, #111e38 0%, #1e3156 50%, #111e38 100%);
+}
+.gsd-dots {
+  display: flex;
+  gap: 8px;
+}
+.gsd-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.gsd-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.gsd-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.5px;
+}
+
+
+/* ── PROJECT 05 PLACEHOLDER ── */
+.proj-img-placeholder.p05-placeholder {
+  width: 100%;
+  aspect-ratio: 574/688;  /* match portrait ratio */
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background .4s ease;
+}
+.proj-card:hover .p05-placeholder {
+  background: linear-gradient(135deg, #222 0%, #383838 50%, #222 100%);
+}
+.p05-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.p05-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.5px;
+}
+
+/* ── FEATURED PROJECT NAME ICON ── */
+.project-name-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  filter: invert(1);
 }

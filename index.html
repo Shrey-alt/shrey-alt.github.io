@@ -112,8 +112,7 @@
 
     <!-- Centred project mockup — replace <source> with your actual video -->
     <div class="feat-mockup reveal">
-      <video autoplay muted loop playsinline
-             poster="https://www.figma.com/api/mcp/asset/14363135-194e-4126-9598-a4b890fa7d9d">
+      <video autoplay muted loop playsinline>
         <source src="video/featured-video.mp4" type="video/mp4">
       </video>
     </div>
@@ -124,7 +123,7 @@
       <!-- Left: name + description -->
       <div class="feat-footer-left reveal">
         <div class="project-name-row">
-          <img src="https://www.figma.com/api/mcp/asset/c0eaf018-4c93-4fb0-be45-793410f921df" alt="©" />
+          <img src="Images/registered-icon.svg" alt="©" class="project-name-icon" />
           PROJECT NAME
         </div>
         <p class="project-desc">
@@ -183,7 +182,7 @@
         <span class="proj-name">HDFC Bank</span>
       </div>
       <div class="proj-img-wrap">
-        <img src="https://www.figma.com/api/mcp/asset/86d5052f-99d9-4496-b876-d25e2b1dc864"
+        <img src="Images/project-images/hdfc-bank.jpg"
              alt="HDFC Bank" />
       </div>
     </a>
@@ -193,46 +192,56 @@
         <span class="proj-name">Tata Mutual Fund</span>
       </div>
       <div class="proj-img-wrap">
-        <img src="https://www.figma.com/api/mcp/asset/e5a1aede-8982-4a43-8b8f-cb34e185aa6c"
+        <img src="Images/project-images/tata-mf.jpg"
              alt="Tata Mutual Fund" />
       </div>
     </a>
   </div>
 
-  <!-- Row 2: Project 03 wide-center -->
+  <!-- Row 2: FGI single card (right column) -->
   <div class="work-row work-row-2">
-    <div class="proj-card reveal" style="display:flex;flex-direction:column;align-items:center;">
-      <div class="proj-header" style="width:946px;max-width:100%;">
+    <div class="proj-card reveal">
+      <div class="proj-header">
         <span class="proj-num">00-3</span>
-        <span class="proj-name">Project Name 03</span>
+        <span class="proj-name">Future Generali Insurance</span>
       </div>
-      <div class="proj-img-wrap" style="width:946px;max-width:100%;overflow:hidden;">
-        <img src="https://www.figma.com/api/mcp/asset/160d08d7-0800-4621-8e84-506da762d072"
-             alt="Project 03" />
+      <div class="proj-img-wrap">
+        <img src="Images/project-images/fgi.jpg"
+             alt="Future Generali Insurance" />
       </div>
     </div>
   </div>
 
-  <!-- Row 3: Project 04 (left) + Project 05 (right) -->
+  <!-- Row 3: Google Smart Drive (left) + Project 05 (right) -->
   <div class="work-row work-row-3">
-    <div class="proj-card reveal">
+    <a href="google-smart-drive-case-study.html" class="proj-card reveal" style="display:block;text-decoration:none;color:inherit;">
       <div class="proj-header">
         <span class="proj-num">00-4</span>
-        <span class="proj-name">Project Name 04</span>
+        <span class="proj-name">Google Smart Drive</span>
       </div>
       <div class="proj-img-wrap">
-        <img src="https://www.figma.com/api/mcp/asset/44cfca51-a1e3-4553-9856-a4d4133ad26d"
-             alt="Project 04" />
+        <div class="proj-img-placeholder gsd-placeholder">
+          <div class="gsd-dots">
+            <div class="gsd-dot" style="background:#4285F4;"></div>
+            <div class="gsd-dot" style="background:#EA4335;"></div>
+            <div class="gsd-dot" style="background:#FBBC04;"></div>
+            <div class="gsd-dot" style="background:#34A853;"></div>
+          </div>
+          <div class="gsd-label">Google Smart Drive</div>
+          <div class="gsd-sub">Driver Safety · Fleet Tech · AI</div>
+        </div>
       </div>
-    </div>
+    </a>
     <div class="proj-card reveal d2">
       <div class="proj-header">
         <span class="proj-num">00-5</span>
         <span class="proj-name">Project Name 05</span>
       </div>
       <div class="proj-img-wrap">
-        <img src="https://www.figma.com/api/mcp/asset/936c5013-8504-4901-901d-b5f8eccf1034"
-             alt="Project 05" />
+        <div class="proj-img-placeholder p05-placeholder">
+          <div class="p05-label">Coming Soon</div>
+          <div class="p05-sub">New Project · 2026</div>
+        </div>
       </div>
     </div>
   </div>
@@ -259,11 +268,11 @@
     <div class="skills-img-col">
       <div class="skills-img-wrap reveal">
         <img src="Images/shrey-portfolio-1.png"    class="active" data-skill-img="default" alt="Skills" />
-        <img src="https://www.figma.com/api/mcp/asset/bfdb398c-34ab-4662-8d63-fb8b952c94b8" data-skill-img="ux"      alt="UX" />
-        <img src="https://www.figma.com/api/mcp/asset/86d5052f-99d9-4496-b876-d25e2b1dc864" data-skill-img="ui"      alt="UI" />
-        <img src="https://www.figma.com/api/mcp/asset/936c5013-8504-4901-901d-b5f8eccf1034" data-skill-img="proto"   alt="Prototype" />
-        <img src="https://www.figma.com/api/mcp/asset/e5a1aede-8982-4a43-8b8f-cb34e185aa6c" data-skill-img="research" alt="Research" />
-        <img src="https://www.figma.com/api/mcp/asset/160d08d7-0800-4621-8e84-506da762d072" data-skill-img="hobby"  alt="Hobbies" />
+        <img src="Images/project-images/hdfc-bank.jpg" data-skill-img="ux"      alt="UX" />
+        <img src="Images/project-images/hdfc-bank.jpg" data-skill-img="ui"      alt="UI" />
+        <img src="Images/project-images/tata-mf.jpg" data-skill-img="proto"   alt="Prototype" />
+        <img src="Images/project-images/tata-mf.jpg" data-skill-img="research" alt="Research" />
+        <img src="Images/project-images/fgi.jpg" data-skill-img="hobby"  alt="Hobbies" />
       </div>
     </div>
 
@@ -514,9 +523,43 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* =============================================
-   PROJECT CARD HOVER — image scale via CSS
-   (handled in CSS .proj-card:hover .proj-img-wrap img)
+   DYNAMIC PROJECT CARDS — tilt + CTA overlay
 ============================================= */
+(function () {
+  /* 1. Inject "View project →" CTA into every image wrapper */
+  document.querySelectorAll('.proj-card').forEach(card => {
+    const wrap = card.querySelector('.proj-img-wrap');
+    if (!wrap) return;
+    const cta = document.createElement('div');
+    cta.className = 'proj-cta';
+    cta.innerHTML = '<span>View project</span><span class="proj-cta-arrow">&#8594;</span>';
+    wrap.appendChild(cta);
+  });
+
+  /* 2. 3-D tilt on mouse move */
+  const cards = document.querySelectorAll('.proj-card');
+  cards.forEach(card => {
+    let raf = null;
+
+    card.addEventListener('mousemove', e => {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;  // -0.5 → +0.5
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        card.style.transition = 'transform 0.08s ease, opacity 0.45s ease';
+        card.style.transform  =
+          `perspective(900px) rotateY(${x * 7}deg) rotateX(${-y * 5}deg) scale3d(1.015,1.015,1.015)`;
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (raf) cancelAnimationFrame(raf);
+      card.style.transition = 'transform 0.72s cubic-bezier(0.16,1,0.3,1), opacity 0.45s ease';
+      card.style.transform  = '';
+    });
+  });
+})();
 
 /* =============================================
    SKILLS — image swap on hover + vertical group tracking
