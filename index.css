@@ -491,10 +491,10 @@
 
     .work-row {
       display: grid;
-      align-items: start;        /* masonry: each card sits at its natural height */
-      gap: 16px;
-      padding: 0 20px;           /* tighter sides → images ~80px wider overall */
-      margin-bottom: 16px;
+      align-items: start;
+      gap: 40px;
+      padding: 0 40px;
+      margin-bottom: 40px;
     }
     /* ── Masonry-style asymmetric columns ── */
     /* Row 1: HDFC smaller left, TataMF larger right — natural height contrast */
