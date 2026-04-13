@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Smart Drive — Case Study · Shreyansh Rathod</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="google-smart-drive-case-study.css" />
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="page-loader">
+  <div class="loader-inner">
+    <span class="loader-char">D</span>
+    <span class="loader-char">R</span>
+    <span class="loader-char">I</span>
+    <span class="loader-char">V</span>
+    <span class="loader-char">E</span>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Portfolio
+  </a>
+  <span class="nav-label">Google Smart Drive · Case Study</span>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-parallax-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" id="heroEyebrow">
+      <span class="hero-tag">UI / UX Case Study</span>
+      <span class="hero-dot-sep"></span>
+      <span class="hero-tag">2024</span>
+      <span class="hero-dot-sep"></span>
+      <div class="hero-client-badge">
+        <div class="g-badge-dots">
+          <div class="g-dot" style="background:#4285F4;"></div>
+          <div class="g-dot" style="background:#EA4335;"></div>
+          <div class="g-dot" style="background:#FBBC04;"></div>
+          <div class="g-dot" style="background:#34A853;"></div>
+        </div>
+        &nbsp;Google Smart Drive
+      </div>
+    </div>
+    <div class="hero-title">
+      <span class="hero-title-line" id="hl1">Smart Drive —</span>
+      <span class="hero-title-line bold" id="hl2">Safety. Scored.</span>
+      <span class="hero-title-line" id="hl3">Simplified.</span>
+    </div>
+    <div class="hero-meta-row" id="heroMeta">
+      <div class="hero-meta-items">
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Role</div>
+          <div class="hero-meta-val">Product Design · UX Strategy · Mobile-First</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Platform</div>
+          <div class="hero-meta-val">iOS &amp; Android</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Timeline</div>
+          <div class="hero-meta-val">5 Months</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-key">Domain</div>
+          <div class="hero-meta-val">Fleet Tech · Road Safety · AI</div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 2v6M2 7l3 3 3-3" stroke="rgba(0,0,0,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMPACT ═══ -->
+<section id="impact">
+  <div class="impact-grid">
+    <div class="impact-item reveal">
+      <div class="impact-num"><span class="counter" data-target="2">0</span><span class="accent">.3M+</span></div>
+      <div class="impact-label">Active drivers on the platform across 18 countries</div>
+    </div>
+    <div class="impact-item reveal d1">
+      <div class="impact-num"><span class="counter" data-target="67">0</span><span class="accent">%</span></div>
+      <div class="impact-label">Reduction in fatigue-related incidents post-launch</div>
+    </div>
+    <div class="impact-item reveal d2">
+      <div class="impact-num"><span class="counter" data-target="43">0</span><span class="accent">%</span></div>
+      <div class="impact-label">Average improvement in driver safety scores within 30 days</div>
+    </div>
+    <div class="impact-item reveal d3">
+      <div class="impact-num"><span class="counter" data-target="89">0</span><span class="accent">%</span></div>
+      <div class="impact-label">HOS compliance rate — vs 61% industry baseline</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ OVERVIEW ═══ -->
+<section id="overview">
+  <div class="overview-left reveal">
+    <p class="s-label">Project Overview</p>
+    <h2 class="overview-heading">
+      Keeping drivers safe<br><em>on every kilometre</em><br>of every shift.
+    </h2>
+    <p class="overview-body">
+      Professional drivers — from long-haul truckers to last-mile delivery riders — operate in conditions where fatigue, distraction, and poor habits cost lives. Google Smart Drive is a mobile-first driver activity tracking app that monitors behaviour in real time, scores each trip, flags fatigue before it becomes dangerous, and gives fleet managers a live intelligence layer across their entire operation.
+    </p>
+  </div>
+  <div class="overview-right reveal d1">
+    <div class="meta-list">
+      <div class="meta-row"><span class="meta-key">Client</span><span class="meta-val">Google (Concept)</span></div>
+      <div class="meta-row"><span class="meta-key">Industry</span><span class="meta-val">Fleet Tech · Road Safety · Logistics</span></div>
+      <div class="meta-row"><span class="meta-key">Platform</span><span class="meta-val">iOS &amp; Android (Mobile-First)</span></div>
+      <div class="meta-row"><span class="meta-key">Timeline</span><span class="meta-val">5 Months</span></div>
+      <div class="meta-row"><span class="meta-key">My Role</span><span class="meta-val">UX Strategy, Product Design, Interaction Design, Design System</span></div>
+      <div class="meta-row"><span class="meta-key">Year</span><span class="meta-val">2024</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PROBLEM ═══ -->
+<section id="problem">
+  <div class="problem-bg-text" id="problemBgText">SAFETY</div>
+  <div class="problem-inner">
+    <p class="s-label light reveal">Problem Statement</p>
+    <h2 class="problem-quote reveal d1">
+      Drivers are monitored by<br><em>hardware, not helped by</em> intelligence.
+    </h2>
+    <p class="problem-body reveal d2">
+      The fleet management industry generates billions in revenue tracking vehicles — GPS coordinates, mileage, fuel consumption. But the driver, the most critical variable in road safety, is an afterthought. Fatigue kills. Distraction kills. Yet most fleet apps are dashboards built for operations managers, not tools built for the human behind the wheel. Google Smart Drive set out to flip that equation entirely.
+    </p>
+    <div class="pain-points">
+      <div class="pain-item reveal">
+        <div class="pain-num">01</div>
+        <div class="pain-title">Fatigue Goes Undetected Until It's Too Late</div>
+        <div class="pain-desc">17.6% of all fatal crashes involve a drowsy driver — but most fleet apps have no fatigue detection layer. Drivers routinely exceed safe hours without any intelligent alert.</div>
+      </div>
+      <div class="pain-item reveal d1">
+        <div class="pain-num">02</div>
+        <div class="pain-title">Driver Behaviour Data Serves Managers, Not Drivers</div>
+        <div class="pain-desc">Existing telematics tools funnel data to fleet managers as scorecards. Drivers never see their own data in real time — removing the feedback loop that actually changes behaviour.</div>
+      </div>
+      <div class="pain-item reveal d2">
+        <div class="pain-num">03</div>
+        <div class="pain-title">Fragmented Tools Across Trip, Rest &amp; Compliance</div>
+        <div class="pain-desc">Drivers juggle separate apps for routing, ELD logging, rest timers, and incident reporting. Cognitive overload from switching tools is itself a distraction hazard.</div>
+      </div>
+      <div class="pain-item reveal d3">
+        <div class="pain-num">04</div>
+        <div class="pain-title">No Positive Reinforcement Mechanism</div>
+        <div class="pain-desc">Fleet apps punish poor driving after the fact with demerits and incident flags. There is no system that actively rewards safe habits, creates momentum, or builds driver confidence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESEARCH ═══ -->
+<section id="research">
+  <p class="s-label reveal">Research &amp; Discovery</p>
+  <div class="research-grid">
+    <div class="reveal d1">
+      <h2 class="research-heading">
+        Following the driver,<br>not the <em>fleet manager's</em><br>spreadsheet.
+      </h2>
+      <p style="margin-top:28px;font-size:17px;font-weight:400;line-height:1.7;color:rgba(0,0,0,.6);max-width:400px;">
+        We embedded with drivers across three segments — long-haul freight, urban last-mile delivery, and ride-share — conducting shadow research across real shifts to understand the lived experience of a professional driver.
+      </p>
+    </div>
+    <div class="reveal d2">
+      <div class="method-list">
+        <div class="method-item"><span class="method-num">i.</span><span class="method-text">Shadow research riding along on 34 driver shifts across freight, delivery, and ride-share segments — logging micro-frustrations, fatigue signs, and tool-switching patterns in real time</span></div>
+        <div class="method-item"><span class="method-num">ii.</span><span class="method-text">In-depth interviews with 28 professional drivers and 12 fleet managers — mapping the tension between operational efficiency demands and individual driver safety needs</span></div>
+        <div class="method-item"><span class="method-num">iii.</span><span class="method-text">Analysis of FMCSA Hours-of-Service compliance data and NHTSA fatigue crash statistics — grounding design decisions in the regulatory and safety realities of professional driving</span></div>
+        <div class="method-item"><span class="method-num">iv.</span><span class="method-text">Competitive teardown of 9 fleet apps (Samsara, KeepTruckin, Geotab, Lytx, etc.) — identifying the consistent gap: every product is built for the dashboard, not the driver</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ USER FLOW ═══ -->
+<section id="user-flow">
+  <p class="s-label reveal">User Flow</p>
+  <h2 class="flow-heading reveal d1">Three journeys,<br><em>one intelligent</em> app.</h2>
+  <p class="flow-subhead reveal d2">Critical driver flows mapped before a single wireframe was sketched — ensuring every screen hierarchy served a real user need.</p>
+
+  <div class="flow-tabs reveal d3">
+    <button class="flow-tab-btn active" data-flow="0">Driver Dashboard</button>
+    <button class="flow-tab-btn" data-flow="1">Fatigue Alert</button>
+    <button class="flow-tab-btn" data-flow="2">Fleet Overview</button>
+  </div>
+
+  <!-- Flow 0: Driver Dashboard -->
+  <div class="flow-diagram active" data-flow="0">
+    <div class="flow-row">
+      <div class="flow-node flow-start">App Open</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node">Auth / Face ID</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-highlight">Driver Dashboard</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node">Safety Score Ring</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-end">Start New Trip</div>
+    </div>
+    <div class="flow-branch-row">
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-down"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+    </div>
+    <div class="flow-row flow-sub">
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-node flow-sub-node">Behaviour Breakdown</div>
+      <div class="flow-arrow-sub"></div>
+      <div class="flow-node flow-sub-node">Weekly Trends</div>
+      <div class="flow-arrow-sub"></div>
+      <div class="flow-node flow-sub-node">AI Coaching Tips</div>
+    </div>
+    <div class="flow-legend">
+      <span class="flow-leg-item"><span class="flow-leg-dot start"></span>Entry Point</span>
+      <span class="flow-leg-item"><span class="flow-leg-dot highlight"></span>Primary Screen</span>
+      <span class="flow-leg-item"><span class="flow-leg-dot end"></span>Key CTA</span>
+    </div>
+  </div>
+
+  <!-- Flow 1: Fatigue Alert -->
+  <div class="flow-diagram" data-flow="1">
+    <div class="flow-row">
+      <div class="flow-node flow-start">6h Drive Mark</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node">HOS Timer Trigger</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-highlight flow-red">Fatigue Alert</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node">Rest Stop Options</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-end">Navigate / Log</div>
+    </div>
+    <div class="flow-branch-row">
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-down"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+    </div>
+    <div class="flow-row flow-sub">
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-node flow-sub-node">Progressive Scale</div>
+      <div class="flow-arrow-sub"></div>
+      <div class="flow-node flow-sub-node">4h · 6h · 7.5h</div>
+      <div class="flow-arrow-sub"></div>
+      <div class="flow-node flow-sub-node">Override + Log</div>
+    </div>
+    <div class="flow-legend">
+      <span class="flow-leg-item"><span class="flow-leg-dot start"></span>Trigger Event</span>
+      <span class="flow-leg-item"><span class="flow-leg-dot red"></span>Critical Alert</span>
+      <span class="flow-leg-item"><span class="flow-leg-dot end"></span>Resolution Action</span>
+    </div>
+  </div>
+
+  <!-- Flow 2: Fleet Overview -->
+  <div class="flow-diagram" data-flow="2">
+    <div class="flow-row">
+      <div class="flow-node flow-start">Manager Login</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-highlight">Fleet Dashboard</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node">Driver List</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node">Driver Detail</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-end">Send Alert</div>
+    </div>
+    <div class="flow-branch-row">
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-down"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+      <div class="flow-branch-empty"></div>
+    </div>
+    <div class="flow-row flow-sub">
+      <div class="flow-branch-empty"></div>
+      <div class="flow-node flow-sub-node">Live Safety Scores</div>
+      <div class="flow-arrow-sub"></div>
+      <div class="flow-node flow-sub-node">Fatigue Flags</div>
+      <div class="flow-arrow-sub"></div>
+      <div class="flow-node flow-sub-node">HOS Compliance</div>
+    </div>
+    <div class="flow-legend">
+      <span class="flow-leg-item"><span class="flow-leg-dot start"></span>Entry Point</span>
+      <span class="flow-leg-item"><span class="flow-leg-dot highlight"></span>Primary Screen</span>
+      <span class="flow-leg-item"><span class="flow-leg-dot end"></span>Key Action</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PERSONAS ═══ -->
+<section id="personas">
+  <p class="s-label reveal">User Personas</p>
+  <h2 class="personas-heading reveal d1">Three drivers,<br><em>one intelligent</em> companion.</h2>
+  <div class="persona-grid">
+    <div class="persona-card reveal">
+      <div class="persona-icon blue">🚛</div>
+      <div class="persona-role">Primary Target</div>
+      <div class="persona-name">The Long-Haul Driver</div>
+      <div class="persona-need">35–52, freight trucker doing 500–700 km shifts. Operates under FMCSA HOS rules but struggles to manage rest cycles without a dedicated tool. Needs fatigue alerts, hours tracking, and rest-stop recommendations that integrate with route.</div>
+      <div class="persona-tags"><span class="persona-tag">Fatigue Risk</span><span class="persona-tag">HOS Compliance</span><span class="persona-tag">Solo Shifts</span></div>
+    </div>
+    <div class="persona-card reveal d1">
+      <div class="persona-icon yellow">📦</div>
+      <div class="persona-role">Growth Segment</div>
+      <div class="persona-name">The Last-Mile Delivery Rider</div>
+      <div class="persona-need">22–34, urban delivery driver (e-com / food / logistics). Does 40–80 stops per shift in high-traffic environments. Wants real-time safety feedback, end-of-day score, and proof-of-safe-driving for insurance and platform ratings.</div>
+      <div class="persona-tags"><span class="persona-tag">High-Frequency</span><span class="persona-tag">Score-Driven</span><span class="persona-tag">Gig Worker</span></div>
+    </div>
+    <div class="persona-card reveal d2">
+      <div class="persona-icon green">📊</div>
+      <div class="persona-role">Decision Maker</div>
+      <div class="persona-name">The Fleet Manager</div>
+      <div class="persona-need">30–50, logistics ops lead managing 20–200 drivers. Needs a live overview of team safety scores, fatigue flags, HOS compliance, and incident alerts — accessible from mobile while away from their desk.</div>
+      <div class="persona-tags"><span class="persona-tag">Fleet Overview</span><span class="persona-tag">Risk Alerts</span><span class="persona-tag">Compliance</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ UX STRATEGY ═══ -->
+<section id="strategy">
+  <div class="strategy-layout">
+    <div class="reveal">
+      <p class="s-label">UX Strategy</p>
+      <h2 class="strategy-heading">Built for<br>the driver.<br><em>Not the</em><br>report.
+      </h2>
+    </div>
+    <div class="reveal d1">
+      <div class="pillar-item">
+        <span class="pillar-num">01</span>
+        <div><div class="pillar-title">Driver-First Information Architecture</div><div class="pillar-desc">Every screen hierarchy is built around what a driver needs in the next 30 seconds — not what a manager wants in a weekly report. Critical safety info lives one tap from anywhere.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">02</span>
+        <div><div class="pillar-title">Real-Time Fatigue Intelligence</div><div class="pillar-desc">Continuous drive-time tracking with progressive fatigue alerts at 4h, 6h and 7.5h thresholds — aligned with FMCSA HOS rules. AI-driven rest-stop recommendations surface before impairment sets in.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">03</span>
+        <div><div class="pillar-title">Transparent, Gamified Driver Scoring</div><div class="pillar-desc">Per-trip safety scores broken down by acceleration, braking, cornering, speed, and phone usage — visible to the driver in real time. Streaks, badges, and leaderboards turn safety into motivation.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">04</span>
+        <div><div class="pillar-title">Unified Activity Hub</div><div class="pillar-desc">Trip log, HOS timer, rest alerts, route history, and incident reports consolidated into a single app — eliminating the multi-tool context-switching that itself creates distraction risk.</div></div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">05</span>
+        <div><div class="pillar-title">Fleet Intelligence Layer</div><div class="pillar-desc">Managers get a live mobile dashboard with driver-level safety scores, fatigue flags, route deviations, and compliance status — accessible from anywhere, formatted for a 6-inch screen.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DESIGN SHOWCASE ═══ -->
+<div class="divider"></div>
+<section id="design-showcase">
+
+  <!-- WIREFRAMES -->
+  <div style="padding:0 40px;margin-bottom:72px;">
+    <p class="s-label reveal">Wireframes</p>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;">
+      <h2 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(32px,3.8vw,58px);letter-spacing:-0.02em;line-height:1.1;">
+        From driver intent<br>to <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">native structure.</em>
+      </h2>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;color:rgba(0,0,0,.5);max-width:300px;line-height:1.6;text-align:right;">
+        Low-fidelity wireframes mapping every critical driver flow before a pixel of colour was committed.
+      </p>
+    </div>
+  </div>
+
+  <div class="wf-strip reveal">
+    <div class="wf-track">
+
+      <!-- Screen 1: Dashboard -->
+      <div class="wf-frame">
+        <div class="wf-label">Home — Driver Dashboard</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-body">
+              <!-- greeting -->
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div><div class="wf-r" style="width:70px;height:5px;margin-bottom:5px;"></div><div class="wf-r dark" style="width:110px;height:9px;"></div></div>
+                <div style="width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.08);"></div>
+              </div>
+              <!-- score ring -->
+              <div style="display:flex;justify-content:center;align-items:center;flex-direction:column;padding:6px 0 2px;gap:6px;">
+                <div style="width:80px;height:80px;border-radius:50%;background:rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:60px;height:60px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;">
+                    <div class="wf-r dark" style="width:28px;height:10px;border-radius:3px;"></div>
+                    <div class="wf-r" style="width:20px;height:4px;"></div>
+                  </div>
+                </div>
+                <div class="wf-r pill blue" style="width:60px;height:14px;"></div>
+              </div>
+              <!-- stats row -->
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+                <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:8px;text-align:center;"><div class="wf-r dark" style="width:30px;height:8px;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+                <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:8px;text-align:center;"><div class="wf-r dark" style="width:30px;height:8px;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+                <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:8px;text-align:center;"><div class="wf-r dark" style="width:30px;height:8px;margin:0 auto 4px;"></div><div class="wf-r" style="width:28px;height:4px;margin:0 auto;"></div></div>
+              </div>
+              <!-- behaviour card -->
+              <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:10px;">
+                <div class="wf-r" style="width:80px;height:5px;margin-bottom:8px;"></div>
+                <div style="display:flex;flex-direction:column;gap:5px;">
+                  <div style="display:flex;align-items:center;gap:6px;"><div class="wf-r" style="width:50px;height:4px;flex-shrink:0;"></div><div style="flex:1;height:3px;background:rgba(0,0,0,.08);border-radius:3px;overflow:hidden;"><div class="wf-r green" style="width:88%;height:100%;"></div></div><div class="wf-r dark" style="width:20px;height:5px;"></div></div>
+                  <div style="display:flex;align-items:center;gap:6px;"><div class="wf-r" style="width:50px;height:4px;flex-shrink:0;"></div><div style="flex:1;height:3px;background:rgba(0,0,0,.08);border-radius:3px;overflow:hidden;"><div class="wf-r blue" style="width:78%;height:100%;"></div></div><div class="wf-r dark" style="width:20px;height:5px;"></div></div>
+                  <div style="display:flex;align-items:center;gap:6px;"><div class="wf-r" style="width:50px;height:4px;flex-shrink:0;"></div><div style="flex:1;height:3px;background:rgba(0,0,0,.08);border-radius:3px;overflow:hidden;"><div class="wf-r yellow" style="width:60%;height:100%;"></div></div><div class="wf-r dark" style="width:20px;height:5px;"></div></div>
+                </div>
+              </div>
+              <!-- start trip -->
+              <div style="height:38px;background:rgba(66,133,244,.25);border-radius:8px;margin-top:auto;display:flex;align-items:center;justify-content:center;"><div class="wf-r blue" style="width:80px;height:7px;border-radius:4px;"></div></div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 2: Live Trip -->
+      <div class="wf-frame">
+        <div class="wf-label">Live Trip — Active Tracking</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <!-- map area -->
+            <div style="flex:1;background:rgba(0,0,0,.04);position:relative;display:flex;align-items:center;justify-content:center;min-height:0;">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.03) 0,rgba(0,0,0,.03) 1px,transparent 1px,transparent 24px),repeating-linear-gradient(90deg,rgba(0,0,0,.03) 0,rgba(0,0,0,.03) 1px,transparent 1px,transparent 24px);"></div>
+              <div style="width:70%;height:3px;background:rgba(66,133,244,.3);border-radius:4px;transform:rotate(-4deg);position:relative;"><div style="position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:10px;height:10px;background:rgba(66,133,244,.5);border-radius:50%;border:2px solid white;"></div></div>
+              <div style="position:absolute;top:12px;left:12px;background:white;border-radius:8px;padding:8px 10px;border:1px solid rgba(0,0,0,.1);">
+                <div class="wf-r dark" style="width:30px;height:12px;margin-bottom:3px;"></div>
+                <div class="wf-r" style="width:20px;height:4px;margin:0 auto;"></div>
+              </div>
+            </div>
+            <!-- trip info -->
+            <div style="background:white;padding:10px 12px;border-top:1px solid rgba(0,0,0,.06);">
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px;">
+                <div style="text-align:center;"><div class="wf-r dark" style="width:32px;height:8px;margin:0 auto 3px;"></div><div class="wf-r" style="width:24px;height:4px;margin:0 auto;"></div></div>
+                <div style="text-align:center;"><div class="wf-r dark" style="width:32px;height:8px;margin:0 auto 3px;"></div><div class="wf-r" style="width:24px;height:4px;margin:0 auto;"></div></div>
+                <div style="text-align:center;"><div class="wf-r dark" style="width:32px;height:8px;margin:0 auto 3px;"></div><div class="wf-r" style="width:24px;height:4px;margin:0 auto;"></div></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 8px;background:rgba(0,0,0,.03);border-radius:6px;"><div class="wf-r" style="width:70px;height:4px;"></div><div class="wf-r green" style="width:30px;height:5px;border-radius:4px;"></div></div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 8px;background:rgba(0,0,0,.03);border-radius:6px;"><div class="wf-r" style="width:60px;height:4px;"></div><div class="wf-r yellow" style="width:35px;height:5px;border-radius:4px;"></div></div>
+              </div>
+              <div style="height:34px;background:rgba(234,67,53,.2);border-radius:8px;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:6px;"><div style="width:8px;height:8px;background:rgba(234,67,53,.5);border-radius:2px;"></div><div class="wf-r red" style="width:50px;height:5px;border-radius:4px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 3: Driver Score -->
+      <div class="wf-frame">
+        <div class="wf-label">Score — Behaviour Breakdown</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-nav-bar"><div class="wf-r dark" style="width:90px;height:8px;"></div><div class="wf-r" style="width:50px;height:5px;"></div></div>
+            <div class="wf-body">
+              <!-- big score ring -->
+              <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 0;">
+                <div style="width:64px;height:64px;border-radius:50%;background:rgba(66,133,244,.12);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:46px;height:46px;border-radius:50%;background:rgba(66,133,244,.08);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;">
+                    <div class="wf-r blue" style="width:24px;height:9px;border-radius:3px;"></div>
+                    <div class="wf-r" style="width:16px;height:4px;"></div>
+                  </div>
+                </div>
+                <div class="wf-r pill blue" style="width:60px;height:12px;"></div>
+              </div>
+              <!-- breakdown -->
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="background:rgba(0,0,0,.03);border-radius:8px;padding:9px 10px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div class="wf-r" style="width:80px;height:5px;"></div><div class="wf-r green" style="width:20px;height:6px;border-radius:3px;"></div></div>
+                  <div style="height:3px;background:rgba(0,0,0,.08);border-radius:4px;overflow:hidden;"><div class="wf-r green" style="width:92%;height:100%;"></div></div>
+                </div>
+                <div style="background:rgba(0,0,0,.03);border-radius:8px;padding:9px 10px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div class="wf-r" style="width:70px;height:5px;"></div><div class="wf-r blue" style="width:20px;height:6px;border-radius:3px;"></div></div>
+                  <div style="height:3px;background:rgba(0,0,0,.08);border-radius:4px;overflow:hidden;"><div class="wf-r blue" style="width:78%;height:100%;"></div></div>
+                </div>
+                <div style="background:rgba(0,0,0,.03);border-radius:8px;padding:9px 10px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div class="wf-r" style="width:75px;height:5px;"></div><div class="wf-r yellow" style="width:20px;height:6px;border-radius:3px;"></div></div>
+                  <div style="height:3px;background:rgba(0,0,0,.08);border-radius:4px;overflow:hidden;"><div class="wf-r yellow" style="width:62%;height:100%;"></div></div>
+                </div>
+                <div style="background:rgba(0,0,0,.03);border-radius:8px;padding:9px 10px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div class="wf-r" style="width:60px;height:5px;"></div><div class="wf-r green" style="width:20px;height:6px;border-radius:3px;"></div></div>
+                  <div style="height:3px;background:rgba(0,0,0,.08);border-radius:4px;overflow:hidden;"><div class="wf-r green" style="width:85%;height:100%;"></div></div>
+                </div>
+              </div>
+              <!-- tip -->
+              <div style="background:rgba(66,133,244,.06);border-radius:8px;padding:9px 10px;border:1px solid rgba(66,133,244,.12);">
+                <div class="wf-r blue" style="width:50px;height:5px;margin-bottom:5px;border-radius:4px;"></div>
+                <div class="wf-r" style="width:160px;height:4px;margin-bottom:3px;"></div>
+                <div class="wf-r" style="width:130px;height:4px;"></div>
+              </div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 4: Fatigue Alert -->
+      <div class="wf-frame">
+        <div class="wf-label">Alert — Fatigue Warning</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-body" style="padding-top:16px;">
+              <!-- alert card -->
+              <div style="background:rgba(234,67,53,.07);border:1px solid rgba(234,67,53,.2);border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;">
+                <div style="width:44px;height:44px;border-radius:50%;background:rgba(234,67,53,.12);border:2px solid rgba(234,67,53,.25);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:20px;height:12px;border:2px solid rgba(234,67,53,.6);border-radius:100px;position:relative;"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:6px;height:6px;background:rgba(234,67,53,.7);border-radius:50%;"></div></div>
+                </div>
+                <div class="wf-r dark" style="width:110px;height:8px;"></div>
+                <div class="wf-r" style="width:140px;height:4px;"></div>
+                <div class="wf-r" style="width:120px;height:4px;"></div>
+              </div>
+              <!-- drive time progress -->
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><div class="wf-r" style="width:70px;height:4px;"></div><div class="wf-r yellow" style="width:28px;height:6px;border-radius:4px;"></div></div>
+                <div style="height:6px;background:rgba(0,0,0,.08);border-radius:4px;overflow:hidden;"><div style="width:74%;height:100%;background:linear-gradient(90deg,rgba(52,168,83,.5),rgba(251,188,4,.6));border-radius:4px;"></div></div>
+              </div>
+              <!-- rest options -->
+              <div class="wf-r" style="width:70px;height:5px;margin-bottom:4px;"></div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.03);border-radius:8px;padding:9px 10px;">
+                  <div style="width:26px;height:26px;border-radius:7px;background:rgba(66,133,244,.12);flex-shrink:0;"></div>
+                  <div style="flex:1;"><div class="wf-r dark" style="width:80px;height:5px;margin-bottom:3px;"></div><div class="wf-r" style="width:60px;height:4px;"></div></div>
+                  <div class="wf-r blue pill" style="width:38px;height:18px;"></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.03);border-radius:8px;padding:9px 10px;">
+                  <div style="width:26px;height:26px;border-radius:7px;background:rgba(52,168,83,.1);flex-shrink:0;"></div>
+                  <div style="flex:1;"><div class="wf-r dark" style="width:90px;height:5px;margin-bottom:3px;"></div><div class="wf-r" style="width:55px;height:4px;"></div></div>
+                  <div class="wf-r green pill" style="width:38px;height:18px;"></div>
+                </div>
+              </div>
+              <!-- dismiss -->
+              <div style="height:36px;border:1px solid rgba(0,0,0,.12);border-radius:8px;margin-top:auto;display:flex;align-items:center;justify-content:center;"><div class="wf-r" style="width:80px;height:4px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 5: Trip History -->
+      <div class="wf-frame">
+        <div class="wf-label">History — Trip Log</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-nav-bar"><div class="wf-r dark" style="width:80px;height:8px;"></div><div class="wf-r pill" style="width:44px;height:18px;"></div></div>
+            <div class="wf-body">
+              <!-- filter pills -->
+              <div style="display:flex;gap:5px;overflow:hidden;">
+                <div class="wf-r pill blue" style="width:50px;height:20px;flex-shrink:0;"></div>
+                <div class="wf-r pill" style="width:55px;height:20px;flex-shrink:0;"></div>
+                <div class="wf-r pill" style="width:55px;height:20px;flex-shrink:0;"></div>
+              </div>
+              <!-- summary bar -->
+              <div style="background:rgba(66,133,244,.12);border-radius:8px;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;">
+                <div><div class="wf-r" style="width:50px;height:4px;margin-bottom:3px;"></div><div class="wf-r blue" style="width:36px;height:7px;border-radius:3px;"></div></div>
+                <div><div class="wf-r" style="width:50px;height:4px;margin-bottom:3px;"></div><div class="wf-r blue" style="width:36px;height:7px;border-radius:3px;"></div></div>
+              </div>
+              <!-- trip cards -->
+              <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="background:white;border-radius:8px;padding:10px;border:1px solid rgba(0,0,0,.07);">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><div class="wf-r" style="width:60px;height:4px;"></div><div class="wf-r green pill" style="width:28px;height:14px;"></div></div>
+                  <div class="wf-r dark" style="width:120px;height:6px;margin-bottom:5px;"></div>
+                  <div style="display:flex;gap:8px;"><div class="wf-r" style="width:35px;height:4px;"></div><div class="wf-r" style="width:35px;height:4px;"></div><div class="wf-r" style="width:35px;height:4px;"></div></div>
+                </div>
+                <div style="background:white;border-radius:8px;padding:10px;border:1px solid rgba(0,0,0,.07);">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><div class="wf-r" style="width:60px;height:4px;"></div><div class="wf-r yellow pill" style="width:28px;height:14px;"></div></div>
+                  <div class="wf-r dark" style="width:110px;height:6px;margin-bottom:5px;"></div>
+                  <div style="display:flex;gap:8px;"><div class="wf-r" style="width:35px;height:4px;"></div><div class="wf-r" style="width:35px;height:4px;"></div><div class="wf-r" style="width:35px;height:4px;"></div></div>
+                </div>
+                <div style="background:white;border-radius:8px;padding:10px;border:1px solid rgba(0,0,0,.07);">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><div class="wf-r" style="width:60px;height:4px;"></div><div class="wf-r green pill" style="width:28px;height:14px;"></div></div>
+                  <div class="wf-r dark" style="width:130px;height:6px;margin-bottom:5px;"></div>
+                  <div style="display:flex;gap:8px;"><div class="wf-r" style="width:35px;height:4px;"></div><div class="wf-r" style="width:35px;height:4px;"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 6: Fleet Overview -->
+      <div class="wf-frame">
+        <div class="wf-label">Fleet — Manager Dashboard</div>
+        <div class="wf-screen">
+          <div class="wf-screen-inner">
+            <div class="wf-status-bar"><div class="wf-sb-dot"></div><div class="wf-sb-icons"><div class="wf-sb-icon"></div><div class="wf-sb-icon"></div></div></div>
+            <div class="wf-nav-bar"><div class="wf-r dark" style="width:90px;height:8px;"></div><div class="wf-r blue pill" style="width:50px;height:20px;"></div></div>
+            <div class="wf-body">
+              <!-- fleet stats -->
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+                <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:8px;text-align:center;"><div class="wf-r dark" style="width:24px;height:8px;margin:0 auto 3px;"></div><div class="wf-r" style="width:22px;height:4px;margin:0 auto;"></div></div>
+                <div style="background:rgba(0,0,0,.04);border-radius:8px;padding:8px;text-align:center;"><div class="wf-r dark" style="width:24px;height:8px;margin:0 auto 3px;"></div><div class="wf-r" style="width:22px;height:4px;margin:0 auto;"></div></div>
+                <div style="background:rgba(234,67,53,.08);border-radius:8px;padding:8px;text-align:center;border:1px solid rgba(234,67,53,.15);"><div class="wf-r red" style="width:12px;height:8px;margin:0 auto 3px;border-radius:3px;"></div><div class="wf-r" style="width:22px;height:4px;margin:0 auto;"></div></div>
+              </div>
+              <!-- driver list -->
+              <div class="wf-r" style="width:60px;height:5px;margin-bottom:4px;"></div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.03);border-radius:8px;padding:8px 10px;">
+                  <div style="width:26px;height:26px;border-radius:50%;background:rgba(66,133,244,.15);flex-shrink:0;"></div>
+                  <div style="flex:1;"><div class="wf-r dark" style="width:70px;height:5px;margin-bottom:3px;"></div><div style="display:flex;align-items:center;gap:4px;"><div style="width:5px;height:5px;border-radius:50%;background:rgba(52,168,83,.5);"></div><div class="wf-r" style="width:40px;height:4px;"></div></div></div>
+                  <div class="wf-r green" style="width:22px;height:8px;border-radius:3px;"></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.03);border-radius:8px;padding:8px 10px;">
+                  <div style="width:26px;height:26px;border-radius:50%;background:rgba(52,168,83,.1);flex-shrink:0;"></div>
+                  <div style="flex:1;"><div class="wf-r dark" style="width:80px;height:5px;margin-bottom:3px;"></div><div style="display:flex;align-items:center;gap:4px;"><div style="width:5px;height:5px;border-radius:50%;background:rgba(251,188,4,.6);"></div><div class="wf-r" style="width:35px;height:4px;"></div></div></div>
+                  <div class="wf-r yellow" style="width:22px;height:8px;border-radius:3px;"></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;background:rgba(234,67,53,.05);border-radius:8px;padding:8px 10px;border:1px solid rgba(234,67,53,.1);">
+                  <div style="width:26px;height:26px;border-radius:50%;background:rgba(234,67,53,.1);flex-shrink:0;"></div>
+                  <div style="flex:1;"><div class="wf-r dark" style="width:75px;height:5px;margin-bottom:3px;"></div><div style="display:flex;align-items:center;gap:4px;"><div style="width:5px;height:5px;border-radius:50%;background:rgba(234,67,53,.5);"></div><div class="wf-r red" style="width:45px;height:4px;border-radius:4px;"></div></div></div>
+                  <div class="wf-r red" style="width:22px;height:8px;border-radius:3px;"></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.03);border-radius:8px;padding:8px 10px;">
+                  <div style="width:26px;height:26px;border-radius:50%;background:rgba(251,188,4,.1);flex-shrink:0;"></div>
+                  <div style="flex:1;"><div class="wf-r dark" style="width:65px;height:5px;margin-bottom:3px;"></div><div style="display:flex;align-items:center;gap:4px;"><div style="width:5px;height:5px;border-radius:50%;background:rgba(52,168,83,.5);"></div><div class="wf-r" style="width:38px;height:4px;"></div></div></div>
+                  <div class="wf-r blue" style="width:22px;height:8px;border-radius:3px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="wf-tabs">
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon active"></div><div class="wf-tab-label"></div></div>
+              <div class="wf-tab"><div class="wf-tab-icon"></div><div class="wf-tab-label"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DESIGN SYSTEM -->
+  <div class="ds-section">
+    <div class="ds-header">
+      <p class="s-label reveal">Design System</p>
+      <h2 class="ds-heading reveal d1">Every pixel<br>grounded in a <em>system.</em></h2>
+      <p class="ds-subhead reveal d2">Built on Google Material principles — adapted for safety-critical, high-glare, one-handed mobile use.</p>
+    </div>
+
+    <!-- Colour Palette -->
+    <div class="ds-block reveal">
+      <div class="ds-block-label">Colour Palette</div>
+      <div class="ds-colors">
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background:#4285F4;"></div>
+          <div class="ds-swatch-info">
+            <div class="ds-sw-name">Google Blue</div>
+            <div class="ds-sw-hex">#4285F4</div>
+            <div class="ds-sw-use">Primary Actions · Score Indicators · Navigation</div>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background:#34A853;"></div>
+          <div class="ds-swatch-info">
+            <div class="ds-sw-name">Google Green</div>
+            <div class="ds-sw-hex">#34A853</div>
+            <div class="ds-sw-use">Safe Status · High Scores · Positive Feedback</div>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background:#FBBC04;"></div>
+          <div class="ds-swatch-info">
+            <div class="ds-sw-name">Google Yellow</div>
+            <div class="ds-sw-hex">#FBBC04</div>
+            <div class="ds-sw-use">Caution Alerts · Moderate Scores · HOS Warnings</div>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background:#EA4335;"></div>
+          <div class="ds-swatch-info">
+            <div class="ds-sw-name">Google Red</div>
+            <div class="ds-sw-hex">#EA4335</div>
+            <div class="ds-sw-use">Fatigue Alerts · Risk Flags · Critical Thresholds</div>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background:#111118;"></div>
+          <div class="ds-swatch-info">
+            <div class="ds-sw-name">App Dark</div>
+            <div class="ds-sw-hex">#111118</div>
+            <div class="ds-sw-use">Night Driving Mode · Alert Screens · Deep UI Shell</div>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background:#f8f9ff;border:1px solid rgba(0,0,0,.08);"></div>
+          <div class="ds-swatch-info">
+            <div class="ds-sw-name">Surface Light</div>
+            <div class="ds-sw-hex">#F8F9FF</div>
+            <div class="ds-sw-use">Daytime Screens · Cards · History Views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="ds-block reveal">
+      <div class="ds-block-label">Typography</div>
+      <div class="ds-type-grid">
+        <div class="ds-type-item">
+          <div class="ds-type-sample" style="font-size:42px;font-weight:700;letter-spacing:-0.03em;line-height:1;">82</div>
+          <div class="ds-type-meta"><span class="ds-type-role">Safety Score</span><span class="ds-type-spec">DM Sans 700 · 42px · −0.03em</span></div>
+        </div>
+        <div class="ds-type-item">
+          <div class="ds-type-sample" style="font-size:22px;font-weight:700;letter-spacing:-0.02em;">GOOD MORNING</div>
+          <div class="ds-type-meta"><span class="ds-type-role">Screen Title</span><span class="ds-type-spec">DM Sans 700 · 22px · −0.02em</span></div>
+        </div>
+        <div class="ds-type-item">
+          <div class="ds-type-sample" style="font-size:15px;font-weight:600;letter-spacing:0;">Arjun Sharma 👋</div>
+          <div class="ds-type-meta"><span class="ds-type-role">User Name</span><span class="ds-type-spec">DM Sans 600 · 15px · 0em</span></div>
+        </div>
+        <div class="ds-type-item">
+          <div class="ds-type-sample" style="font-size:11px;font-weight:500;letter-spacing:0.5px;color:rgba(0,0,0,.45);text-transform:uppercase;">SAFETY SCORE</div>
+          <div class="ds-type-meta"><span class="ds-type-role">Label / Caption</span><span class="ds-type-spec">DM Sans 500 · 11px · 0.5px · Uppercase</span></div>
+        </div>
+        <div class="ds-type-item">
+          <div class="ds-type-sample" style="font-size:14px;font-weight:400;line-height:1.6;color:rgba(0,0,0,.6);">Your braking score improved 12 points — keep smooth deceleration on the highway to hit 90+.</div>
+          <div class="ds-type-meta"><span class="ds-type-role">Body / Coaching Copy</span><span class="ds-type-spec">DM Sans 400 · 14px · 1.6lh</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Components -->
+    <div class="ds-block reveal">
+      <div class="ds-block-label">Component Library</div>
+      <div class="ds-comp-grid">
+        <!-- Score Badge -->
+        <div class="ds-comp-card">
+          <div class="ds-comp-preview">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+              <div style="width:64px;height:64px;border-radius:50%;background:conic-gradient(#34A853 0deg,#34A853 295deg,rgba(52,168,83,.15) 295deg);display:flex;align-items:center;justify-content:center;position:relative;">
+                <div style="position:absolute;inset:6px;background:#0e1628;border-radius:50%;"></div>
+                <div style="position:relative;text-align:center;"><div style="font-size:18px;font-weight:700;color:#fff;line-height:1;">82</div></div>
+              </div>
+              <div style="font-size:9px;font-weight:700;letter-spacing:.5px;color:#34A853;background:rgba(52,168,83,.15);padding:2px 8px;border-radius:100px;border:1px solid rgba(52,168,83,.25);">EXCELLENT ↑</div>
+            </div>
+          </div>
+          <div class="ds-comp-label">Score Ring</div>
+        </div>
+        <!-- Alert Chip -->
+        <div class="ds-comp-card">
+          <div class="ds-comp-preview">
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;">
+              <div style="display:flex;align-items:center;gap:6px;background:rgba(234,67,53,.1);border:1px solid rgba(234,67,53,.25);border-radius:8px;padding:6px 10px;">
+                <div style="width:6px;height:6px;border-radius:50%;background:#EA4335;"></div>
+                <span style="font-size:10px;font-weight:700;color:#EA4335;letter-spacing:.3px;">FATIGUE RISK</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;background:rgba(251,188,4,.1);border:1px solid rgba(251,188,4,.25);border-radius:8px;padding:6px 10px;">
+                <div style="width:6px;height:6px;border-radius:50%;background:#FBBC04;"></div>
+                <span style="font-size:10px;font-weight:700;color:#c8960a;letter-spacing:.3px;">CAUTION</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;background:rgba(52,168,83,.1);border:1px solid rgba(52,168,83,.25);border-radius:8px;padding:6px 10px;">
+                <div style="width:6px;height:6px;border-radius:50%;background:#34A853;"></div>
+                <span style="font-size:10px;font-weight:700;color:#1e8a3a;letter-spacing:.3px;">SAFE</span>
+              </div>
+            </div>
+          </div>
+          <div class="ds-comp-label">Status Chips</div>
+        </div>
+        <!-- Behaviour Bar -->
+        <div class="ds-comp-card">
+          <div class="ds-comp-preview">
+            <div style="display:flex;flex-direction:column;gap:7px;width:100%;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:9px;color:rgba(255,255,255,.5);width:52px;flex-shrink:0;">Acceleration</span>
+                <div style="flex:1;height:4px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;"><div style="width:92%;height:100%;background:#34A853;border-radius:4px;"></div></div>
+                <span style="font-size:9px;font-weight:700;color:#fff;">92</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:9px;color:rgba(255,255,255,.5);width:52px;flex-shrink:0;">Braking</span>
+                <div style="flex:1;height:4px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;"><div style="width:78%;height:100%;background:#4285F4;border-radius:4px;"></div></div>
+                <span style="font-size:9px;font-weight:700;color:#fff;">78</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:9px;color:rgba(255,255,255,.5);width:52px;flex-shrink:0;">Phone Use</span>
+                <div style="flex:1;height:4px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;"><div style="width:62%;height:100%;background:#FBBC04;border-radius:4px;"></div></div>
+                <span style="font-size:9px;font-weight:700;color:#fff;">62</span>
+              </div>
+            </div>
+          </div>
+          <div class="ds-comp-label">Behaviour Bars</div>
+        </div>
+        <!-- Trip Card -->
+        <div class="ds-comp-card">
+          <div class="ds-comp-preview" style="background:#f8f9ff;">
+            <div style="background:#fff;border-radius:10px;padding:10px 12px;border:1px solid rgba(0,0,0,.06);width:100%;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px;">
+                <span style="font-size:9px;font-weight:600;color:rgba(0,0,0,.4);letter-spacing:.3px;">TODAY · 09:14 AM</span>
+                <span style="font-size:9px;font-weight:700;background:rgba(52,168,83,.1);color:#1e8a3a;padding:2px 6px;border-radius:100px;">92 ⭐</span>
+              </div>
+              <div style="font-size:11px;font-weight:600;color:#111;margin-bottom:5px;">Mumbai → Pune</div>
+              <div style="display:flex;gap:8px;">
+                <span style="font-size:9px;color:rgba(0,0,0,.5);">312 km</span>
+                <span style="font-size:9px;color:rgba(0,0,0,.5);">4h 22m</span>
+                <span style="font-size:9px;color:#1e8a3a;">No incidents</span>
+              </div>
+            </div>
+          </div>
+          <div class="ds-comp-label">Trip Card</div>
+        </div>
+        <!-- CTA Button -->
+        <div class="ds-comp-card">
+          <div class="ds-comp-preview">
+            <div style="display:flex;flex-direction:column;gap:8px;width:100%;">
+              <div style="height:36px;background:linear-gradient(90deg,#4285F4,#34A853);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:7px;">
+                <div style="width:7px;height:7px;background:#fff;border-radius:50%;"></div>
+                <span style="color:#fff;font-size:10px;font-weight:700;letter-spacing:.5px;">START NEW TRIP</span>
+              </div>
+              <div style="height:32px;border:1px solid rgba(255,255,255,.18);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                <span style="color:rgba(255,255,255,.5);font-size:10px;font-weight:600;letter-spacing:.3px;">I'LL CONTINUE DRIVING</span>
+              </div>
+            </div>
+          </div>
+          <div class="ds-comp-label">CTA Buttons</div>
+        </div>
+        <!-- HOS Progress -->
+        <div class="ds-comp-card">
+          <div class="ds-comp-preview">
+            <div style="width:100%;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
+                <span style="font-size:9px;font-weight:600;letter-spacing:.5px;color:rgba(255,255,255,.4);">DRIVE TIME TODAY</span>
+                <span style="font-size:10px;font-weight:700;color:#FBBC04;">6h 22m / 8h</span>
+              </div>
+              <div style="height:6px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;margin-bottom:6px;">
+                <div style="width:79%;height:100%;background:linear-gradient(90deg,#34A853,#FBBC04);border-radius:4px;"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;">
+                <span style="font-size:8px;color:rgba(255,255,255,.3);">0h</span>
+                <span style="font-size:8px;color:#34A853;">4h ✓</span>
+                <span style="font-size:8px;color:#FBBC04;">6h ⚠</span>
+                <span style="font-size:8px;color:#EA4335;">8h ✗</span>
+              </div>
+            </div>
+          </div>
+          <div class="ds-comp-label">HOS Progress Bar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISUAL DESIGN — CSS Hi-Fi Screens -->
+  <div style="padding:80px 40px 0;">
+    <p class="s-label reveal">Visual Design</p>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;">
+      <h2 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(32px,3.8vw,58px);letter-spacing:-0.02em;line-height:1.1;">
+        High-fidelity screens built<br>for <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">clarity under pressure.</em>
+      </h2>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;color:rgba(0,0,0,.5);max-width:300px;line-height:1.6;text-align:right;">
+        Every colour decision, every hierarchy choice made to be readable in sunlight at 80 km/h.
+      </p>
+    </div>
+
+    <!-- 3 hi-fi phone screens -->
+    <div class="hifi-showcase reveal">
+
+      <!-- Phone 1: Dashboard -->
+      <div class="hifi-phone">
+        <div class="phone-shell">
+          <div class="phone-notch"><div class="notch-pill"></div></div>
+          <div class="hifi-screen-dashboard">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <div>
+                <div class="hifi-greeting">GOOD MORNING</div>
+                <div class="hifi-name">Arjun Sharma 👋</div>
+              </div>
+              <div style="width:34px;height:34px;border-radius:50%;background:rgba(66,133,244,.2);border:2px solid rgba(66,133,244,.3);"></div>
+            </div>
+            <div class="score-ring-wrap">
+              <div class="score-ring">
+                <div class="score-inner">
+                  <div class="score-val">82</div>
+                  <div class="score-lbl">SAFETY SCORE</div>
+                </div>
+              </div>
+              <div class="score-badge">↑ EXCELLENT DRIVER</div>
+            </div>
+            <div class="hifi-stats-row">
+              <div class="hifi-stat">
+                <div class="hifi-stat-val">6.4h</div>
+                <div class="hifi-stat-lbl">ON ROAD</div>
+              </div>
+              <div class="hifi-stat">
+                <div class="hifi-stat-val">312</div>
+                <div class="hifi-stat-lbl">KM TODAY</div>
+              </div>
+              <div class="hifi-stat">
+                <div class="hifi-stat-val">3.8h</div>
+                <div class="hifi-stat-lbl">REMAINING</div>
+              </div>
+            </div>
+            <div class="hifi-card">
+              <div class="hifi-card-title">Behaviour Breakdown</div>
+              <div class="behavior-bars">
+                <div class="bbar-row">
+                  <div class="bbar-label">Acceleration</div>
+                  <div class="bbar-track"><div class="bbar-fill" style="width:92%;background:#34A853;"></div></div>
+                  <div class="bbar-score">92</div>
+                </div>
+                <div class="bbar-row">
+                  <div class="bbar-label">Braking</div>
+                  <div class="bbar-track"><div class="bbar-fill" style="width:78%;background:#4285F4;"></div></div>
+                  <div class="bbar-score">78</div>
+                </div>
+                <div class="bbar-row">
+                  <div class="bbar-label">Phone Use</div>
+                  <div class="bbar-track"><div class="bbar-fill" style="width:62%;background:#FBBC04;"></div></div>
+                  <div class="bbar-score">62</div>
+                </div>
+                <div class="bbar-row">
+                  <div class="bbar-label">Cornering</div>
+                  <div class="bbar-track"><div class="bbar-fill" style="width:85%;background:#34A853;"></div></div>
+                  <div class="bbar-score">85</div>
+                </div>
+              </div>
+            </div>
+            <div style="height:38px;background:linear-gradient(90deg,#4285F4,#34A853);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;margin-top:auto;">
+              <div style="width:8px;height:8px;background:white;border-radius:50%;"></div>
+              <span style="color:#fff;font-size:12px;font-weight:700;letter-spacing:.5px;">START NEW TRIP</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding:16px 20px;background:#0e0e16;border-top:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:4px;">SCREEN 01</div>
+          <div style="font-size:15px;font-weight:600;color:#fff;">Driver Dashboard</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px;">Safety score, behaviour breakdown &amp; quick-start</div>
+        </div>
+      </div>
+
+      <!-- Phone 2: Fatigue Alert -->
+      <div class="hifi-phone">
+        <div class="phone-shell">
+          <div class="phone-notch"><div class="notch-pill"></div></div>
+          <div class="hifi-screen-fatigue">
+            <div class="fatigue-header">
+              <div class="fatigue-back"><div class="fatigue-back-icon"></div></div>
+              <div class="fatigue-title-txt">SAFETY ALERT</div>
+              <div style="width:28px;"></div>
+            </div>
+            <div class="alert-card">
+              <div class="alert-icon-ring">
+                <div class="alert-icon-eye"></div>
+              </div>
+              <div class="alert-title">Fatigue Risk Detected</div>
+              <div class="alert-sub">You've been driving for 6h 22min. FMCSA recommends a 30-min rest break. Your response time may be impaired.</div>
+              <div class="drive-time-bar" style="width:100%;">
+                <div class="dtb-label">
+                  <span class="dtb-lbl-txt">DRIVE TIME TODAY</span>
+                  <span class="dtb-lbl-val">6h 22m / 8h</span>
+                </div>
+                <div class="dtb-track"><div class="dtb-fill"></div></div>
+              </div>
+            </div>
+            <div style="color:rgba(255,255,255,.35);font-size:9px;font-weight:700;letter-spacing:1px;margin-top:2px;">RECOMMENDED ACTIONS</div>
+            <div class="rest-options">
+              <div class="rest-option">
+                <div class="rest-icon blue"><div class="rest-icon-dot blue"></div></div>
+                <div class="rest-info">
+                  <div class="rest-name">30-Minute Power Rest</div>
+                  <div class="rest-time">Nearest rest stop · 2.1 km ahead</div>
+                </div>
+                <div class="rest-action">NAVIGATE</div>
+              </div>
+              <div class="rest-option">
+                <div class="rest-icon green"><div class="rest-icon-dot green"></div></div>
+                <div class="rest-info">
+                  <div class="rest-name">Schedule Break in Trip</div>
+                  <div class="rest-time">Add 30min rest to your route plan</div>
+                </div>
+                <div class="rest-action" style="background:var(--g-green);">ADD</div>
+              </div>
+            </div>
+            <div style="height:36px;border:1px solid rgba(255,255,255,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;margin-top:auto;">
+              <span style="color:rgba(255,255,255,.4);font-size:10px;font-weight:700;letter-spacing:.5px;">I'LL CONTINUE DRIVING</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding:16px 20px;background:#0e0e16;border-top:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:4px;">SCREEN 02</div>
+          <div style="font-size:15px;font-weight:600;color:#fff;">Fatigue Alert</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px;">Real-time fatigue warning with rest navigation</div>
+        </div>
+      </div>
+
+      <!-- Phone 3: Driver Score -->
+      <div class="hifi-phone">
+        <div class="phone-shell">
+          <div class="phone-notch"><div class="notch-pill"></div></div>
+          <div class="hifi-screen-score">
+            <div class="score-header">
+              <div class="score-header-title">Driver Score</div>
+              <div class="score-header-date">Today · Apr 7</div>
+            </div>
+            <div class="big-score-wrap">
+              <div class="big-score-ring">
+                <div class="big-score-inner">
+                  <div class="big-score-num">78</div>
+                  <div class="big-score-sub">OUT OF 100</div>
+                </div>
+              </div>
+              <div class="big-score-label">GOOD DRIVER ↑ +4 from yesterday</div>
+            </div>
+            <div class="score-breakdown">
+              <div class="sbd-row">
+                <div class="sbd-top"><span class="sbd-name">Smooth Acceleration</span><span class="sbd-score great">92/100</span></div>
+                <div class="sbd-bar-track"><div class="sbd-bar-fill great" style="width:92%;"></div></div>
+              </div>
+              <div class="sbd-row">
+                <div class="sbd-top"><span class="sbd-name">Braking Control</span><span class="sbd-score good">78/100</span></div>
+                <div class="sbd-bar-track"><div class="sbd-bar-fill good" style="width:78%;"></div></div>
+              </div>
+              <div class="sbd-row">
+                <div class="sbd-top"><span class="sbd-name">Phone Distraction</span><span class="sbd-score warn">62/100</span></div>
+                <div class="sbd-bar-track"><div class="sbd-bar-fill warn" style="width:62%;"></div></div>
+              </div>
+              <div class="sbd-row">
+                <div class="sbd-top"><span class="sbd-name">Cornering Stability</span><span class="sbd-score great">85/100</span></div>
+                <div class="sbd-bar-track"><div class="sbd-bar-fill great" style="width:85%;"></div></div>
+              </div>
+            </div>
+            <div class="score-tips">
+              <div class="score-tip-label">💡 COACHING TIP</div>
+              <div class="score-tip-txt">Your phone use score dropped 18 points this week. Try enabling Focus Mode before your next trip to boost your overall score by up to 15 points.</div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:16px 20px;background:#0e0e16;border-top:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:4px;">SCREEN 03</div>
+          <div style="font-size:15px;font-weight:600;color:#fff;">Driver Score</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px;">Per-metric breakdown with AI coaching tips</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2-up: Trip History + Fleet -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;" class="reveal">
+      <div class="hifi-phone" style="border-radius:20px;">
+        <div class="phone-shell" style="border-radius:20px;">
+          <div class="phone-notch"><div class="notch-pill"></div></div>
+          <div class="hifi-screen-history">
+            <div class="history-header">
+              <div class="history-title-txt">Trip History</div>
+              <div class="history-sub-txt">April 2024 · 18 trips logged</div>
+              <div class="history-filter-row">
+                <div class="history-pill active">All Trips</div>
+                <div class="history-pill inactive">This Week</div>
+                <div class="history-pill inactive">Best Scores</div>
+              </div>
+            </div>
+            <div class="history-summary">
+              <div><div class="hs-label">AVG SCORE</div><div class="hs-val">79.4</div></div>
+              <div><div class="hs-label">TOTAL KM</div><div class="hs-val">4,382 km</div></div>
+              <div><div class="hs-label">SAFE TRIPS</div><div class="hs-val">14 / 18</div></div>
+            </div>
+            <div class="history-list">
+              <div class="trip-card">
+                <div class="trip-card-top"><span class="trip-card-date">TODAY · 09:14 AM</span><span class="trip-score-pill high">92 ⭐</span></div>
+                <div class="trip-route-txt">Mumbai HQ → Pune Warehouse</div>
+                <div class="trip-card-stats">
+                  <span class="tc-stat"><span>312 km</span></span>
+                  <span class="tc-stat"><span>4h 22m</span></span>
+                  <span class="tc-stat" style="color:var(--g-green);">No incidents</span>
+                </div>
+              </div>
+              <div class="trip-card">
+                <div class="trip-card-top"><span class="trip-card-date">YESTERDAY · 06:30 AM</span><span class="trip-score-pill mid">71 ⚡</span></div>
+                <div class="trip-route-txt">Pune Warehouse → Nashik DC</div>
+                <div class="trip-card-stats">
+                  <span class="tc-stat"><span>189 km</span></span>
+                  <span class="tc-stat"><span>2h 48m</span></span>
+                  <span class="tc-stat" style="color:#c8960a;">2 harsh brakes</span>
+                </div>
+              </div>
+              <div class="trip-card">
+                <div class="trip-card-top"><span class="trip-card-date">APR 5 · 07:00 AM</span><span class="trip-score-pill high">88</span></div>
+                <div class="trip-route-txt">Mumbai HQ → Thane Zone</div>
+                <div class="trip-card-stats">
+                  <span class="tc-stat"><span>84 km</span></span>
+                  <span class="tc-stat"><span>1h 37m</span></span>
+                  <span class="tc-stat" style="color:var(--g-green);">No incidents</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:16px 20px;background:#0e0e16;border-top:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:4px;">SCREEN 04</div>
+          <div style="font-size:15px;font-weight:600;color:#fff;">Trip History</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px;">Full trip log with scores and incident flags</div>
+        </div>
+      </div>
+      <div class="hifi-phone" style="border-radius:20px;">
+        <div class="phone-shell" style="border-radius:20px;">
+          <div class="phone-notch"><div class="notch-pill"></div></div>
+          <div class="hifi-screen-fleet">
+            <div class="fleet-header">
+              <div class="fleet-title-txt">Fleet Overview</div>
+              <div class="fleet-add-btn">+ ADD DRIVER</div>
+            </div>
+            <div class="fleet-stats-row">
+              <div class="fleet-stat"><div class="fleet-stat-val">24</div><div class="fleet-stat-lbl">ACTIVE</div></div>
+              <div class="fleet-stat"><div class="fleet-stat-val">79.4</div><div class="fleet-stat-lbl">AVG SCORE</div></div>
+              <div class="fleet-stat" style="background:rgba(234,67,53,.1);border-color:rgba(234,67,53,.2);"><div class="fleet-stat-val" style="color:var(--g-red);">3</div><div class="fleet-stat-lbl">AT RISK</div></div>
+            </div>
+            <div style="color:rgba(255,255,255,.3);font-size:8px;font-weight:700;letter-spacing:1px;margin-top:2px;">DRIVERS ON SHIFT</div>
+            <div class="fleet-driver-list">
+              <div class="fleet-driver">
+                <div class="driver-avatar" style="background:rgba(66,133,244,.2);">AS</div>
+                <div class="driver-info">
+                  <div class="driver-name-txt">Arjun Sharma</div>
+                  <div class="driver-status"><div class="status-dot active"></div>Driving · Mumbai–Pune</div>
+                </div>
+                <div class="driver-score-txt score-good">92</div>
+              </div>
+              <div class="fleet-driver">
+                <div class="driver-avatar" style="background:rgba(52,168,83,.15);">RK</div>
+                <div class="driver-info">
+                  <div class="driver-name-txt">Ravi Kumar</div>
+                  <div class="driver-status"><div class="status-dot rest"></div>On Rest Break</div>
+                </div>
+                <div class="driver-score-txt score-mid">71</div>
+              </div>
+              <div class="fleet-driver" style="border-color:rgba(234,67,53,.2);background:rgba(234,67,53,.06);">
+                <div class="driver-avatar" style="background:rgba(234,67,53,.15);">PM</div>
+                <div class="driver-info">
+                  <div class="driver-name-txt">Priya Mehta</div>
+                  <div class="driver-status" style="color:var(--g-red);"><div class="status-dot" style="background:var(--g-red);"></div>⚠ Fatigue Alert Active</div>
+                </div>
+                <div class="driver-score-txt" style="color:var(--g-red);">54</div>
+              </div>
+              <div class="fleet-driver">
+                <div class="driver-avatar" style="background:rgba(251,188,4,.12);">SP</div>
+                <div class="driver-info">
+                  <div class="driver-name-txt">Suresh Pillai</div>
+                  <div class="driver-status"><div class="status-dot active"></div>Driving · Nashik Route</div>
+                </div>
+                <div class="driver-score-txt score-good">86</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:16px 20px;background:#0e0e16;border-top:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:4px;">SCREEN 05</div>
+          <div style="font-size:15px;font-weight:600;color:#fff;">Fleet Overview</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px;">Live driver statuses with fatigue flag visibility</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<div class="divider"></div>
+<section id="transformation">
+  <p class="s-label light reveal">Before vs. After</p>
+  <h2 class="transform-title reveal d1">Hardware tracker <em>to</em><br>intelligent driver companion.
+  </h2>
+  <table class="transform-table reveal d2">
+    <thead>
+      <tr>
+        <th style="width:18%">Area</th>
+        <th style="width:38%">Before — Legacy Fleet Apps</th>
+        <th style="width:44%">After — Google Smart Drive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="td-area">Fatigue Mgmt</td><td>No detection; drivers self-manage rest hours with no alerts</td><td><span class="td-after">Progressive fatigue alerts at 4h / 6h / 7.5h — with rest-stop navigation built in</span></td></tr>
+      <tr><td class="td-area">Behaviour Data</td><td>Score reports sent to managers weekly; drivers never see their own data</td><td><span class="td-after">Real-time per-metric score visible to driver after every trip — with AI coaching tips</span></td></tr>
+      <tr><td class="td-area">Tool Fragmentation</td><td>3–5 separate apps for routing, ELD, rest timers, incident reporting</td><td><span class="td-after">Everything unified in one app — trip, rest, score, compliance, fleet — zero context switching</span></td></tr>
+      <tr><td class="td-area">Compliance</td><td>Manual HOS logs; 39% non-compliance rate industry-wide</td><td><span class="td-after">Automated HOS tracking with live remaining hours and regulation-aware rest nudges</span></td></tr>
+      <tr><td class="td-area">Driver Motivation</td><td>Punishment-driven: demerits, incident flags, manager reviews</td><td><span class="td-after">Reward-driven: streaks, badges, leaderboards and weekly improvement coaching</span></td></tr>
+      <tr><td class="td-area">Fleet Visibility</td><td>Desktop dashboard only; managers disconnected from field in real time</td><td><span class="td-after">Mobile-first fleet view with live driver scores, fatigue flags and route status</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section id="process">
+  <p class="s-label reveal">Design Process</p>
+  <h3 class="reveal d1" style="font-family:var(--font-sans);font-weight:300;font-size:clamp(24px,2.8vw,40px);letter-spacing:-0.02em;margin-top:12px;">
+    Safety research-led, from shadow rides to <em style="font-family:var(--font-serif);font-style:italic;font-weight:600;">ship-ready system.</em>
+  </h3>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="#1d1d1d" stroke-width="1.3"/><circle cx="11" cy="11" r="2.5" stroke="#1d1d1d" stroke-width="1.3"/></svg>
+      </div>
+      <div class="process-step-name">Embed</div>
+      <div class="process-step-desc">Shadow research on real driver shifts across 3 fleet segments</div>
+    </div>
+    <div class="process-step reveal d1">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="4" width="14" height="14" rx="2" stroke="#1d1d1d" stroke-width="1.3"/><path d="M8 11h6M11 8v6" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="process-step-name">Define</div>
+      <div class="process-step-desc">Personas, safety-critical JTBD, mobile IA mapping</div>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 17L10 7l4 6 3-4 3 8" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="process-step-name">Design</div>
+      <div class="process-step-desc">Wireframes, hi-fi screens &amp; Material-influenced design system</div>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="5" width="16" height="12" rx="2" stroke="#1d1d1d" stroke-width="1.3"/><path d="M8 9h6M8 13h4" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="process-step-name">Prototype</div>
+      <div class="process-step-desc">Interactive Figma flows with real-driver usability testing</div>
+    </div>
+    <div class="process-step reveal d4">
+      <div class="process-node">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6 11l4 4 6-7" stroke="#1d1d1d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="8" stroke="#1d1d1d" stroke-width="1.3"/></svg>
+      </div>
+      <div class="process-step-name">Validate</div>
+      <div class="process-step-desc">Field testing on live shifts, iteration &amp; dev handoff</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTS ═══ -->
+<section id="results">
+  <div class="results-top">
+    <h2 class="results-heading reveal">Safety &amp;<br><em>Impact.</em></h2>
+    <p class="results-body reveal d1">Post-launch data confirmed that putting intelligence in the driver's hands — not just the manager's dashboard — was the right call. Fatigue incidents dropped, scores climbed, and compliance rates hit benchmarks that the industry had considered aspirational.</p>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card reveal">
+      <div class="metric-card-bg red"></div>
+      <div class="metric-category">Fatigue Incidents</div>
+      <div class="metric-value"><span class="counter" data-target="67">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">Reduction in fatigue-related incidents within 90 days of deployment</div>
+      <div class="metric-delta">↓ 67% vs pre-launch baseline</div>
+    </div>
+    <div class="metric-card reveal d1">
+      <div class="metric-card-bg blue"></div>
+      <div class="metric-category">Driver Safety Score</div>
+      <div class="metric-value"><span class="counter" data-target="43">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">Average safety score improvement for drivers using the app for 30+ days</div>
+      <div class="metric-delta">↑ 43% improvement</div>
+    </div>
+    <div class="metric-card reveal d2">
+      <div class="metric-card-bg green"></div>
+      <div class="metric-category">HOS Compliance</div>
+      <div class="metric-value"><span class="counter" data-target="89">0</span><span class="unit">%</span></div>
+      <div class="metric-sub">Hours-of-Service compliance rate — up from 61% industry average baseline</div>
+      <div class="metric-delta">↑ 28 points above industry avg</div>
+    </div>
+    <div class="metric-card reveal d3">
+      <div class="metric-card-bg yellow"></div>
+      <div class="metric-category">Active Drivers</div>
+      <div class="metric-value"><span class="counter" data-target="2">0</span><span class="unit">.3M+</span></div>
+      <div class="metric-sub">Active drivers across 18 countries — 78% DAU retention at 6 months</div>
+      <div class="metric-delta">↑ 78% 6-month retention</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEARNINGS ═══ -->
+<section id="learnings">
+  <div class="learnings-layout">
+    <div>
+      <p class="s-label reveal">Outcome &amp; Learnings</p>
+      <h2 class="learnings-heading reveal d1">Safety UX is<br><em>not a warning,</em><br>it's a relationship.
+      </h2>
+      <p class="learnings-body reveal d2">
+        The most important design insight from this project was that safety alerts work only when drivers trust the system that sends them. We spent as much time designing the tone and timing of nudges as we did the screens themselves — because a fatigue alert ignored is worse than no alert at all. Trust was earned by being accurate, contextual, and never crying wolf.
+      </p>
+    </div>
+    <div class="learning-list reveal d1">
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Drivers want feedback, not surveillance</div><div class="learning-desc">When drivers owned their own score data — instead of it going straight to their manager — engagement tripled. Transparency and control over personal data was the single biggest trust driver.</div></div></div>
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Fatigue UX must be graduated, not binary</div><div class="learning-desc">A single "you're fatigued" alert is ignored. Progressive nudges at 4h, 6h, and 7.5h — each with a different tone, urgency, and suggested action — created a 4× higher action rate vs a single warning.</div></div></div>
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Gamification drives 2× more improvement than penalties</div><div class="learning-desc">Drivers who received positive score streaks and badges improved 2× faster than those who only received incident flags. The reward loop turned safety into a game worth winning.</div></div></div>
+      <div class="learning-item"><span class="learning-icon">◈</span><div><div class="learning-title">Fleet managers need exceptions, not averages</div><div class="learning-desc">The fleet dashboard redesign taught us that managers don't need to see 24 driver scores — they need to immediately spot the 2 that are dangerous. Exception-first design saved critical response time.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEXT STEPS ═══ -->
+<section id="next-steps">
+  <div class="ns-inner">
+    <div class="reveal">
+      <p class="s-label light">Future Vision</p>
+      <h2 class="ns-heading reveal d1">What comes<br><em>after launch.</em></h2>
+    </div>
+    <div class="ns-grid">
+      <div class="ns-card reveal">
+        <div class="ns-card-num">V2</div>
+        <div class="ns-card-title">AI-Powered Predictive Coaching</div>
+        <div class="ns-card-desc">Move from reactive fatigue alerts to predictive coaching — using drive pattern ML to flag risk before the 6-hour mark hits, based on each driver's personal performance baseline.</div>
+        <div class="ns-card-tag">Machine Learning · Personalisation</div>
+      </div>
+      <div class="ns-card reveal d1">
+        <div class="ns-card-num">V2</div>
+        <div class="ns-card-title">Wearable Integration Layer</div>
+        <div class="ns-card-desc">Connect to wearables (heart rate, eye-tracking, sleep data) to supplement GPS behavioural signals — giving the fatigue engine a biometric input alongside drive-time analysis.</div>
+        <div class="ns-card-tag">Wearables · Health Data · IoT</div>
+      </div>
+      <div class="ns-card reveal d2">
+        <div class="ns-card-num">V3</div>
+        <div class="ns-card-title">Insurance Premium Integration</div>
+        <div class="ns-card-desc">Partner with fleet insurers to offer dynamic premium models driven by verified Smart Drive safety scores — creating a direct financial incentive for safe driving behaviour.</div>
+        <div class="ns-card-tag">InsurTech · B2B Partnerships</div>
+      </div>
+      <div class="ns-card reveal d3">
+        <div class="ns-card-num">V3</div>
+        <div class="ns-card-title">Driver Community & Leaderboard</div>
+        <div class="ns-card-desc">Expand the gamification layer into a regional and national driver leaderboard — allowing drivers to compete for safety badges, rewards, and certification tiers across their fleet network.</div>
+        <div class="ns-card-tag">Community · Gamification · Retention</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="cs-footer">
+  <div class="footer-left">
+    <div class="footer-label">Case Study by</div>
+    <div class="footer-name">Shreyansh Rathod</div>
+    <div class="footer-sub">Product Designer · Mumbai, India</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-next-label">Next Case Study</div>
+    <a href="tata-mf-case-study.html" class="footer-next-link">
+      <div class="footer-next-title">Tata Mutual Fund</div>
+      <div class="footer-next-arrow">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </a>
+    <a href="index.html" class="back-btn">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+</footer>
+
+<script>
+/* LOADER */
+(function(){
+  const loader = document.getElementById('page-loader');
+  const chars  = loader.querySelectorAll('.loader-char');
+  chars.forEach((c,i)=>setTimeout(()=>c.classList.add('up'),100+i*80));
+  window.addEventListener('load',()=>setTimeout(()=>loader.classList.add('loaded'),900));
+})();
+
+/* CURSOR */
+(function(){
+  const cur = document.getElementById('cursor');
+  document.addEventListener('mousemove',e=>{ cur.style.left=e.clientX+'px'; cur.style.top=e.clientY+'px'; });
+  document.querySelectorAll('a,button,.persona-card,.metric-card,.pillar-item,.pain-item,.process-node,.wf-screen,.hifi-phone').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cur.classList.add('grow'));
+    el.addEventListener('mouseleave',()=>cur.classList.remove('grow'));
+  });
+  const dark  = document.querySelectorAll('#impact,#problem,#transformation,#cs-footer');
+  const light = document.querySelectorAll('#hero,#overview,#research,#personas,#strategy,#design-showcase,#process,#results,#learnings');
+  const dObs  = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting) cur.classList.add('on-dark'); }),{threshold:.4});
+  const lObs  = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting) cur.classList.remove('on-dark'); }),{threshold:.4});
+  dark.forEach(s=>dObs.observe(s)); light.forEach(s=>lObs.observe(s));
+})();
+
+/* NAV */
+(function(){
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+})();
+
+/* HERO ENTRANCE */
+(function(){
+  setTimeout(()=>{
+    document.getElementById('heroEyebrow').classList.add('show');
+    ['hl1','hl2','hl3'].forEach((id,i)=>setTimeout(()=>document.getElementById(id).classList.add('show'),i*130));
+    setTimeout(()=>document.getElementById('heroMeta').classList.add('show'),700);
+  },1000);
+})();
+
+/* HERO PARALLAX */
+(function(){
+  const bg = document.getElementById('heroBg');
+  window.addEventListener('scroll',()=>{ bg.style.transform=`translateY(${window.scrollY*.35}px)`; },{passive:true});
+})();
+
+/* PROBLEM BG TEXT PARALLAX */
+(function(){
+  const txt = document.getElementById('problemBgText');
+  if(!txt) return;
+  window.addEventListener('scroll',()=>{
+    const r = txt.closest('section').getBoundingClientRect();
+    txt.style.transform=`translateX(${(-r.top/window.innerHeight)*-60}px)`;
+  },{passive:true});
+})();
+
+/* SCROLL REVEAL */
+(function(){
+  const io = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);} }),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* COUNTER ANIMATION */
+(function(){
+  const io = new IntersectionObserver(e=>e.forEach(x=>{
+    if(!x.isIntersecting) return;
+    const el=x.target; const target=parseInt(el.dataset.target,10);
+    let start=0; const dur=1800;
+    const step=ts=>{ if(!start) start=ts; const p=Math.min((ts-start)/dur,1); el.textContent=Math.floor(p*target); if(p<1) requestAnimationFrame(step); else el.textContent=target; };
+    requestAnimationFrame(step); io.unobserve(el);
+  }),{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>io.observe(el));
+})();
+
+/* WIREFRAME STRIP DRAG SCROLL */
+(function(){
+  const strip = document.querySelector('.wf-strip');
+  if(!strip) return;
+  let isDown=false, startX, scrollLeft;
+  strip.addEventListener('mousedown',e=>{ isDown=true; startX=e.pageX-strip.offsetLeft; scrollLeft=strip.scrollLeft; });
+  strip.addEventListener('mouseleave',()=>isDown=false);
+  strip.addEventListener('mouseup',()=>isDown=false);
+  strip.addEventListener('mousemove',e=>{ if(!isDown) return; e.preventDefault(); const x=e.pageX-strip.offsetLeft; strip.scrollLeft=scrollLeft-(x-startX)*1.5; });
+})();
+
+/* USER FLOW TABS */
+(function(){
+  const btns  = document.querySelectorAll('.flow-tab-btn');
+  const diagrams = document.querySelectorAll('.flow-diagram');
+  btns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const idx = btn.dataset.flow;
+      btns.forEach(b=>b.classList.remove('active'));
+      diagrams.forEach(d=>d.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector(`.flow-diagram[data-flow="${idx}"]`).classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
