@@ -98,6 +98,9 @@
   </div>
 </section>
 
+<!-- ==================== FEATURED CURSOR ==================== -->
+<div class="feat-cursor" id="featCursor">Visit Site</div>
+
 <!-- ==================== FEATURED PROJECT ==================== -->
 <section id="featured">
 
@@ -400,6 +403,44 @@ growTargets.forEach(el => {
   el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
   el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
 });
+
+/* =============================================
+   FEATURED — custom "Visit Site" cursor
+============================================= */
+(function() {
+  const featCursor = document.getElementById('featCursor');
+  const featMockup = document.querySelector('.feat-mockup');
+  if (!featCursor || !featMockup) return;
+
+  let fcx = 0, fcy = 0, ftx = 0, fty = 0;
+  let rafId = null;
+
+  function lerpCursor() {
+    fcx += (ftx - fcx) * 0.12;
+    fcy += (fty - fcy) * 0.12;
+    featCursor.style.left = fcx + 'px';
+    featCursor.style.top  = fcy + 'px';
+    rafId = requestAnimationFrame(lerpCursor);
+  }
+
+  featMockup.addEventListener('mouseenter', () => {
+    featCursor.classList.add('visible');
+    cursor.style.opacity = '0';          /* hide main cursor */
+    if (!rafId) rafId = requestAnimationFrame(lerpCursor);
+  });
+
+  featMockup.addEventListener('mousemove', e => {
+    ftx = e.clientX;
+    fty = e.clientY;
+  });
+
+  featMockup.addEventListener('mouseleave', () => {
+    featCursor.classList.remove('visible');
+    cursor.style.opacity = '';           /* restore main cursor */
+    cancelAnimationFrame(rafId);
+    rafId = null;
+  });
+})();
 
 /* =============================================
    LOADER → HERO REVEAL
