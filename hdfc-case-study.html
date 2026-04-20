@@ -454,11 +454,12 @@
 
     <!-- Visual Design — full-width actual screenshot -->
     <div class="vis-real reveal" style="margin-bottom:0;">
-      <div class="vis-real-img-wrap" style="aspect-ratio:20/9;overflow:hidden;border-radius:12px;">
+      <div class="vis-real-img-wrap cs-parallax-wrap" style="aspect-ratio:20/9;overflow:hidden;border-radius:12px;position:relative;">
         <img
           src="Images/project-images/Hdfc-bank-image.jpg"
           alt="HDFC Bank — High-Fidelity Visual Designs"
-          style="width:100%;height:100%;object-fit:cover;display:block;"
+          class="cs-parallax-img"
+          style="width:100%;height:130%;object-fit:cover;display:block;will-change:transform;"
         />
       </div>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-top:24px;gap:32px;">
@@ -474,6 +475,26 @@
 
   </div>
 </section>
+
+<!-- JS: parallax images -->
+<script>
+(function(){
+  const imgs = document.querySelectorAll('.cs-parallax-img');
+  if(!imgs.length) return;
+  function update(){
+    imgs.forEach(function(img){
+      const wrap = img.closest('.cs-parallax-wrap');
+      const rect = wrap.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const progress = Math.max(0, Math.min(1, (vh - rect.top) / (vh + rect.height)));
+      const shift = (0.5 - progress) * wrap.offsetHeight * 0.3;
+      img.style.transform = 'translateY(' + shift + 'px)';
+    });
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
 
 <!-- JS: draggable wireframe strip -->
 <script>
