@@ -982,7 +982,7 @@ ul   { list-style: none; }
   #user-flow { padding: 72px 28px; }
 
   #personas { padding: 72px 28px; }
-  .persona-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .persona-grid { grid-template-columns: 1fr; gap: 16px; }
 
   #strategy { padding: 72px 28px; }
   .strategy-layout { grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
