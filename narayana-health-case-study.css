@@ -934,6 +934,36 @@ ul   { list-style: none; }
 }
 
 /* =============================================
+   DESIGN-SHOWCASE SHARED HEADERS
+   (Wireframes & Visual Design intro blocks)
+============================================= */
+.ds-section-pad { padding: 0 40px; }
+.ds-section-pad--top { padding-top: 80px; }
+.ds-section-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; gap: 32px; margin-bottom: 40px;
+}
+.ds-section-title {
+  font-family: var(--font-sans); font-weight: 300;
+  font-size: clamp(32px, 3.8vw, 58px);
+  letter-spacing: -0.02em; line-height: 1.1;
+}
+.ds-section-title em {
+  font-family: var(--font-serif);
+  font-style: italic; font-weight: 600;
+  color: var(--nh-teal);
+}
+.ds-section-sub {
+  font-size: 15px; font-weight: 400;
+  color: rgba(0,0,0,.5);
+  max-width: 300px; line-height: 1.6;
+  text-align: right; flex-shrink: 0;
+}
+
+/* User-flow SVG wrap — allow horizontal scroll on narrow viewports */
+.flow-svg-wrap { -webkit-overflow-scrolling: touch; }
+
+/* =============================================
    RESPONSIVE — TABLET (≤1024px)
 ============================================= */
 @media (max-width: 1024px) {
@@ -990,6 +1020,13 @@ ul   { list-style: none; }
   #design-showcase { padding: 72px 0; }
   .wf-strip { padding: 0 28px 24px; }
   .vis-section-pad { padding: 56px 28px 0; }
+  .ds-section-pad { padding: 0 28px; }
+  .ds-section-pad--top { padding-top: 56px; }
+  .ds-section-header { gap: 24px; }
+  .ds-section-sub { max-width: 260px; }
+
+  /* Hero meta — 4 items wrap nicely on tablet */
+  .hero-meta-items { gap: 24px 32px; }
 
   #transformation { padding: 80px 28px; }
 
@@ -1107,6 +1144,33 @@ ul   { list-style: none; }
   .vis-section-pad { padding: 40px 20px 0; }
   .vis-real-caption { flex-direction: column; gap: 16px; }
   .vis-real-caption-right { text-align: left; max-width: 100%; }
+  .ds-section-pad { padding: 0 20px; }
+  .ds-section-pad--top { padding-top: 40px; }
+  .ds-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .ds-section-sub {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  /* User flow SVG — allow horizontal scroll on small screens */
+  .flow-svg-wrap { overflow-x: auto; }
+  .flow-svg-wrap svg { min-width: 720px; }
+
+  /* Visual design parallax wrap — taller aspect on mobile */
+  .vis-real-img-wrap { aspect-ratio: 4 / 3 !important; }
+
+  /* Strategy heading scaling */
+  .strategy-heading { font-size: clamp(30px, 8vw, 52px); }
+  .strategy-heading em { font-size: clamp(32px, 8.4vw, 56px); }
+
+  /* Footer: Next-Step link wraps nicely */
+  .footer-next-link { padding: 12px 18px; }
+  .footer-next-title { font-size: 14px; }
 
   /* Transformation */
   #transformation { padding: 56px 20px; }
@@ -1167,12 +1231,34 @@ ul   { list-style: none; }
   .wf-frame { width: 180px; }
   .wf-screen { height: 320px; }
 
+  .ds-section-pad { padding: 0 16px; }
+  .ds-section-pad--top { padding-top: 32px; }
+
   .metrics-grid { grid-template-columns: 1fr; }
   .metric-card { padding: 28px 20px; }
   .ns-grid { grid-template-columns: 1fr; }
 
   #cs-footer { padding: 48px 16px; }
   .meta-row { grid-template-columns: 90px 1fr; }
+
+  /* Hero — extra cramped fixes */
+  .hero-eyebrow { gap: 8px; }
+  .hero-meta-items { gap: 16px; }
+  .hero-client-badge { padding: 4px 12px 4px 8px; }
+
+  /* Impact strip — single column when very narrow */
+  .impact-grid { grid-template-columns: 1fr; }
+  .impact-item:nth-child(odd) {
+    padding-right: 0 !important;
+    border-right: none !important;
+  }
+  .impact-item {
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+    padding: 20px 0 !important;
+  }
+  .impact-item:last-child {
+    border-bottom: none !important;
+  }
 }
 
 /* =============================================
