@@ -26,6 +26,21 @@
 <!-- ==================== CURSOR ==================== -->
 <div id="cursor"></div>
 
+<!-- ▼ "View Case Study" — playful follow-the-mouse pill that appears on project-card hover -->
+<div id="cs-cursor" aria-hidden="true">
+  <span class="cs-cursor-spark"></span>
+  <span class="cs-cursor-spark cs-cursor-spark--b"></span>
+  <span class="cs-cursor-text">
+    <span class="cs-cursor-line cs-cursor-line--top">View</span>
+    <span class="cs-cursor-line cs-cursor-line--btm">Case Study</span>
+  </span>
+  <span class="cs-cursor-arrow">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M3.5 8h9M8 3.5L12.5 8 8 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+</div>
+
 <!-- ==================== NAV ==================== -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
@@ -178,7 +193,8 @@
 
   <!-- Row 1: HDFC Bank (left) + Tata Mutual Fund (right) -->
   <div class="work-row work-row-1">
-    <a href="hdfc-case-study.html" class="proj-card reveal" style="display:block;">
+    <a href="hdfc-case-study.html" class="proj-card reveal" style="display:block;"
+       data-blurb="Modernised India's most trusted bank for the digital era. Lifted monthly visits from 40M to 160M with full WCAG AA compliance.">
       <div class="proj-header">
         <span class="proj-num">00-1</span>
         <span class="proj-name">HDFC Bank</span>
@@ -188,7 +204,8 @@
              alt="HDFC Bank" />
       </div>
     </a>
-    <a href="tata-mf-case-study.html" class="proj-card reveal d2" style="display:block;text-decoration:none;color:inherit;">
+    <a href="tata-mf-case-study.html" class="proj-card reveal d2" style="display:block;text-decoration:none;color:inherit;"
+       data-blurb="Reimagined wealth discovery for India's largest fund house. Made SIPs approachable for first-time investors without dumbing it down for the pros.">
       <div class="proj-header">
         <span class="proj-num">00-2</span>
         <span class="proj-name">Tata Mutual Fund</span>
@@ -202,7 +219,8 @@
 
   <!-- Row 2: Parcos single card (right column) -->
   <div class="work-row work-row-2">
-    <a href="parcos-case-study.html" class="proj-card reveal" style="display:block;text-decoration:none;color:inherit;">
+    <a href="parcos-case-study.html" class="proj-card reveal" style="display:block;text-decoration:none;color:inherit;"
+       data-blurb="Crafted a quiet, editorial-grade luxury beauty experience. Brought European boutique heritage to a digital storefront — without losing the perfume.">
       <div class="proj-header">
         <span class="proj-num">00-3</span>
         <span class="proj-name">Parcos</span>
@@ -216,7 +234,8 @@
 
   <!-- Row 3: Google Smart Drive (left) + Project 05 (right) -->
   <div class="work-row work-row-3">
-    <a href="google-smart-drive-case-study.html" class="proj-card reveal" style="display:block;text-decoration:none;color:inherit;">
+    <a href="google-smart-drive-case-study.html" class="proj-card reveal" style="display:block;text-decoration:none;color:inherit;"
+       data-blurb="Designed an AI-powered file companion for Drive. Surfaces the right file at the right moment — no folders, no hunting.">
       <div class="proj-header">
         <span class="proj-num">00-4</span>
         <span class="proj-name">Google Smart Drive</span>
@@ -225,7 +244,8 @@
         <img src="Images/google-smart-drive/smart-drive-image.png" alt="Google Smart Drive" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;" />
       </div>
     </a>
-    <a href="narayana-health-case-study.html" class="proj-card reveal d2" style="display:block;text-decoration:none;color:inherit;">
+    <a href="narayana-health-case-study.html" class="proj-card reveal d2" style="display:block;text-decoration:none;color:inherit;"
+       data-blurb="Rebuilt patient booking across web, app and portal. Solved 50% Step-1 abandonment and 86% specialty confusion across 21 hospitals.">
       <div class="proj-header">
         <span class="proj-num">00-5</span>
         <span class="proj-name">Narayana Health</span>
@@ -268,7 +288,11 @@
         <img src="Images/project-images/hdfc-bank.jpg" data-skill-img="ui"      alt="UI" />
         <img src="Images/project-images/tata-mf.jpg" data-skill-img="proto"   alt="Prototype" />
         <img src="Images/project-images/tata-mf.jpg" data-skill-img="research" alt="Research" />
-        <img src="Images/project-images/parcos.jpg" data-skill-img="hobby"  alt="Hobbies" />
+        <!-- Hobbies — one image per interest -->
+        <img src="Images/hobbies/gaming.jpg"      data-skill-img="gaming"     alt="Gaming" />
+        <img src="Images/hobbies/music.jpg"       data-skill-img="music"      alt="Music" />
+        <img src="Images/hobbies/travelling.jpg"  data-skill-img="travelling" alt="Travelling" />
+        <img src="Images/hobbies/novel.jpg"       data-skill-img="novel"      alt="Novel" />
       </div>
     </div>
 
@@ -302,10 +326,10 @@
       <div class="skill-group">
         <h3 class="skill-cat-label">Hobbies</h3>
         <ul class="skill-list">
-          <li data-img="hobby">Gaming</li>
-          <li data-img="hobby">Music</li>
-          <li data-img="hobby">Travelling</li>
-          <li data-img="hobby">Reading Novel</li>
+          <li data-img="gaming">Gaming</li>
+          <li data-img="music">Music</li>
+          <li data-img="travelling">Travelling</li>
+          <li data-img="novel">Reading Novel</li>
         </ul>
       </div>
 
@@ -520,17 +544,20 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* =============================================
-   DYNAMIC PROJECT CARDS — tilt + CTA overlay
+   DYNAMIC PROJECT CARDS — tilt + corner blurb +
+   playful "View Case Study" follow-cursor
 ============================================= */
 (function () {
-  /* 1. Inject "View project →" CTA into every image wrapper */
+  /* 1. Inject the bottom-right blurb into every project card image wrap.
+        Falls back to a generic blurb if data-blurb is missing. */
   document.querySelectorAll('.proj-card').forEach(card => {
     const wrap = card.querySelector('.proj-img-wrap');
     if (!wrap) return;
-    const cta = document.createElement('div');
-    cta.className = 'proj-cta';
-    cta.innerHTML = '<span>View project</span><span class="proj-cta-arrow">&#8594;</span>';
-    wrap.appendChild(cta);
+    const text = card.dataset.blurb || 'A senior-level case study — design system, research, and delivery.';
+    const blurb = document.createElement('div');
+    blurb.className = 'proj-blurb';
+    blurb.textContent = text;
+    wrap.appendChild(blurb);
   });
 
   /* 2. 3-D tilt on mouse move */
@@ -556,6 +583,69 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       card.style.transform  = '';
     });
   });
+
+  /* 3. PLAYFUL "VIEW CASE STUDY" CURSOR
+        — only attaches on devices that actually have a hover-capable pointer */
+  const csCursor = document.getElementById('cs-cursor');
+  const fineHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!csCursor || !fineHover) return;
+
+  let csX = 0, csY = 0;          // smoothed position
+  let tX = 0,  tY = 0;            // target position
+  let visible = false;
+  let csRaf = null;
+
+  function csTick() {
+    // Springy magnetic follow — slightly slower than the dot for "weighty" feel
+    csX += (tX - csX) * 0.18;
+    csY += (tY - csY) * 0.18;
+    csCursor.style.left = csX + 'px';
+    csCursor.style.top  = csY + 'px';
+    if (visible || Math.abs(tX - csX) > 0.1 || Math.abs(tY - csY) > 0.1) {
+      csRaf = requestAnimationFrame(csTick);
+    } else {
+      csRaf = null;
+    }
+  }
+
+  function showCs(x, y) {
+    // Snap into place at the entry point (avoid an awkward sweep across the page)
+    if (!visible) {
+      csX = x; csY = y;
+    }
+    tX = x; tY = y;
+    visible = true;
+    csCursor.classList.add('show');
+    document.body.classList.add('cs-cursor-on');
+    if (!csRaf) csRaf = requestAnimationFrame(csTick);
+  }
+
+  function hideCs() {
+    visible = false;
+    csCursor.classList.remove('show');
+    csCursor.classList.remove('click');
+    document.body.classList.remove('cs-cursor-on');
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', e => showCs(e.clientX, e.clientY));
+    card.addEventListener('mousemove',  e => { tX = e.clientX; tY = e.clientY; if (!csRaf) csRaf = requestAnimationFrame(csTick); });
+    card.addEventListener('mouseleave', hideCs);
+
+    // Click pop — "we heard you, here we go"
+    card.addEventListener('mousedown', () => {
+      csCursor.classList.remove('click');
+      // force reflow so the animation can replay
+      void csCursor.offsetWidth;
+      csCursor.classList.add('click');
+    });
+    card.addEventListener('mouseup', () => {
+      setTimeout(() => csCursor.classList.remove('click'), 450);
+    });
+  });
+
+  // Safety: hide cs-cursor if mouse leaves the window entirely while over a card
+  document.addEventListener('mouseleave', hideCs);
 })();
 
 /* =============================================

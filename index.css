@@ -72,6 +72,174 @@
     #cursor.grow { width: 44px; height: 44px; }
     #cursor.on-dark { background: var(--white); }
 
+    /* When the "View Case Study" cursor is active, hide the dot so they don't overlap */
+    body.cs-cursor-on #cursor { opacity: 0; transform: translate(-50%,-50%) scale(0.4); }
+
+    /* =============================================
+       "VIEW CASE STUDY" — PLAYFUL HOVER CURSOR
+       (appears only when over a .proj-card)
+    ============================================= */
+    #cs-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 9999;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px 12px 18px;
+      background: var(--dark, #111);
+      color: #fff;
+      border-radius: 100px;
+      font-family: var(--font-sans), 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      box-shadow:
+        0 12px 40px rgba(0,0,0,0.28),
+        0 0 0 1px rgba(255,255,255,0.06) inset,
+        0 1px 0 rgba(255,255,255,0.08) inset;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.4) rotate(-6deg);
+      transform-origin: center center;
+      transition:
+        opacity 0.35s cubic-bezier(0.16,1,0.3,1),
+        transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+      will-change: transform, opacity, left, top;
+    }
+    #cs-cursor.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+      animation: cs-cursor-bob 2.6s ease-in-out infinite 0.4s;
+    }
+    @keyframes cs-cursor-bob {
+      0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(-1.5deg); }
+      50%      { transform: translate(-50%, -50%) scale(1.04) rotate(1.5deg); }
+    }
+
+    /* Two-line stacked text — slides from below on appear */
+    .cs-cursor-text {
+      display: inline-flex; flex-direction: column;
+      line-height: 1.1;
+      overflow: hidden;
+      gap: 1px;
+    }
+    .cs-cursor-line {
+      display: block;
+      transform: translateY(110%);
+      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    }
+    .cs-cursor-line--top { transition-delay: 0.05s; }
+    .cs-cursor-line--btm { color: rgba(255,255,255,0.7); transition-delay: 0.12s; }
+    #cs-cursor.show .cs-cursor-line { transform: translateY(0); }
+
+    /* Arrow — gets a continuous "nudge" loop while visible */
+    .cs-cursor-arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--dark, #111);
+      flex-shrink: 0;
+      transform: scale(0.6);
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
+    }
+    #cs-cursor.show .cs-cursor-arrow {
+      transform: scale(1);
+      animation: cs-arrow-nudge 1.4s ease-in-out infinite 0.6s;
+    }
+    @keyframes cs-arrow-nudge {
+      0%, 100% { transform: scale(1) translateX(0) rotate(0deg); }
+      45%      { transform: scale(1.08) translateX(2px) rotate(8deg); }
+      55%      { transform: scale(1.08) translateX(2px) rotate(-4deg); }
+    }
+    /* Click pulse: when card is mousedown'd, the pill snaps & sparks */
+    #cs-cursor.click {
+      animation: cs-cursor-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    @keyframes cs-cursor-pop {
+      0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+      40%  { transform: translate(-50%, -50%) scale(0.86) rotate(-6deg); }
+      100% { transform: translate(-50%, -50%) scale(1.04) rotate(2deg); }
+    }
+
+    /* Floating sparks — tiny dots that drift around the pill for fun */
+    .cs-cursor-spark {
+      position: absolute;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: #fff;
+      top: -6px; left: 14px;
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .cs-cursor-spark--b {
+      top: auto; left: auto;
+      bottom: -6px; right: 22px;
+      width: 3px; height: 3px;
+      background: rgba(255,255,255,0.8);
+    }
+    #cs-cursor.show .cs-cursor-spark {
+      opacity: 1;
+      animation: cs-spark-orbit 2.4s ease-in-out infinite 0.5s;
+    }
+    #cs-cursor.show .cs-cursor-spark--b {
+      animation: cs-spark-orbit 2.8s ease-in-out infinite 0.9s reverse;
+    }
+    @keyframes cs-spark-orbit {
+      0%, 100% { transform: translate(0,0) scale(1); opacity: 0.9; }
+      50%      { transform: translate(6px,-4px) scale(0.5); opacity: 0.2; }
+    }
+
+    /* =============================================
+       PROJECT-CARD CORNER BLURB
+       (1.5-sentence description, bottom-right of card)
+    ============================================= */
+    .proj-blurb {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      max-width: min(56%, 360px);
+      padding: 14px 16px;
+      background: rgba(20,20,20,0.78);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      color: #fff;
+      font-family: var(--font-sans), 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.1px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(14px) scale(0.96);
+      transition:
+        opacity 0.45s cubic-bezier(0.16,1,0.3,1) 0.05s,
+        transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s;
+      pointer-events: none;
+      z-index: 3;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .proj-card:hover .proj-blurb {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .proj-blurb::before {
+      content: '';
+      display: block;
+      width: 22px; height: 1px;
+      background: rgba(255,255,255,0.45);
+      margin-bottom: 8px;
+    }
+
+    /* Hide the legacy bottom CTA strip — replaced by cursor + blurb */
+    .proj-cta { display: none !important; }
+
     /* =============================================
        NAVIGATION
     ============================================= */
@@ -983,6 +1151,29 @@
   /* Global */
   body { cursor: auto; }
   #cursor { display: none; }
+  #cs-cursor { display: none !important; }
+
+  /* On mobile, show the corner blurb statically (no hover) so the description is still visible */
+  .proj-blurb {
+    position: static;
+    max-width: 100%;
+    margin-top: 10px;
+    opacity: 1;
+    transform: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    color: rgba(0,0,0,0.65);
+    padding: 0;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .proj-blurb::before {
+    background: rgba(0,0,0,0.25);
+    margin-bottom: 10px;
+  }
 
   /* ── NAV ── */
   .nav { padding: 0 20px; height: 64px; }
