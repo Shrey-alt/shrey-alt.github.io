@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="r-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8F5EE"/>
+      <stop offset="100%" stop-color="#EAE3D2"/>
+    </linearGradient>
+    <pattern id="r-paper" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#000" opacity="0"/>
+      <circle cx="2" cy="2" r="0.5" fill="#000" opacity="0.04"/>
+      <circle cx="5" cy="5" r="0.4" fill="#000" opacity="0.03"/>
+    </pattern>
+    <filter id="r-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="6" stdDeviation="5" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="r-shadow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background — corkboard / soft beige -->
+  <rect width="800" height="800" fill="url(#r-bg)"/>
+  <rect width="800" height="800" fill="url(#r-paper)"/>
+
+  <!-- Faint vertical/horizontal lines (cluster boundaries) -->
+  <g stroke="#1d1d1d" stroke-opacity="0.06" stroke-width="1.2" stroke-dasharray="4 6">
+    <line x1="295" y1="170" x2="295" y2="700"/>
+    <line x1="555" y1="170" x2="555" y2="700"/>
+  </g>
+
+  <!-- Cluster headers -->
+  <g font-family="DM Sans, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#1d1d1d" opacity="0.55">
+    <text x="160" y="200" text-anchor="middle">DELIGHT</text>
+    <text x="425" y="200" text-anchor="middle">FRICTION</text>
+    <text x="680" y="200" text-anchor="middle">UNMET NEED</text>
+  </g>
+  <g stroke="#1d1d1d" stroke-opacity="0.25" stroke-width="1.2">
+    <line x1="120" y1="208" x2="200" y2="208"/>
+    <line x1="385" y1="208" x2="465" y2="208"/>
+    <line x1="640" y1="208" x2="720" y2="208"/>
+  </g>
+
+  <!-- ── COLUMN 1: DELIGHT (yellow-ish notes) ── -->
+  <!-- Note 1 -->
+  <g transform="translate(60,228) rotate(-4)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="170" height="140" fill="#FCD34D"/>
+    <rect x="0" y="0" width="170" height="140" fill="url(#r-paper)"/>
+    <line x1="20" y1="46" x2="150" y2="44" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="62" x2="140" y2="60" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="78" x2="120" y2="76" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="94" x2="90" y2="92" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- pin -->
+    <circle cx="155" cy="14" r="6" fill="#0F172A"/>
+    <circle cx="155" cy="13" r="2" fill="#FFF" opacity="0.4"/>
+  </g>
+  <!-- Note 2 -->
+  <g transform="translate(95,400) rotate(3)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="160" height="130" fill="#FBBF24"/>
+    <rect x="0" y="0" width="160" height="130" fill="url(#r-paper)"/>
+    <line x1="18" y1="40" x2="140" y2="38" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="56" x2="120" y2="54" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="72" x2="100" y2="70" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="88" x2="76" y2="86" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="148" cy="12" r="6" fill="#0F172A"/>
+  </g>
+  <!-- Note 3 -->
+  <g transform="translate(60,560) rotate(-2)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="170" height="120" fill="#FCD34D"/>
+    <rect x="0" y="0" width="170" height="120" fill="url(#r-paper)"/>
+    <line x1="20" y1="36" x2="148" y2="34" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="52" x2="138" y2="50" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="68" x2="98" y2="66" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="156" cy="14" r="6" fill="#0F172A"/>
+  </g>
+
+  <!-- ── COLUMN 2: FRICTION (pink notes) ── -->
+  <!-- Note 1 -->
+  <g transform="translate(330,238) rotate(2)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="160" height="135" fill="#FDA4AF"/>
+    <rect x="0" y="0" width="160" height="135" fill="url(#r-paper)"/>
+    <line x1="18" y1="42" x2="140" y2="40" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="58" x2="120" y2="56" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="74" x2="130" y2="72" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="90" x2="80" y2="88" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="148" cy="14" r="6" fill="#0F172A"/>
+  </g>
+  <!-- Note 2 -->
+  <g transform="translate(360,400) rotate(-3)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="160" height="130" fill="#F87171"/>
+    <rect x="0" y="0" width="160" height="130" fill="url(#r-paper)"/>
+    <line x1="18" y1="38" x2="140" y2="36" stroke="#FFF" stroke-opacity="0.85" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="18" y1="54" x2="120" y2="52" stroke="#FFF" stroke-opacity="0.85" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="18" y1="70" x2="100" y2="68" stroke="#FFF" stroke-opacity="0.85" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="18" y1="86" x2="76" y2="84" stroke="#FFF" stroke-opacity="0.85" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="146" cy="12" r="6" fill="#0F172A"/>
+  </g>
+  <!-- Note 3 -->
+  <g transform="translate(330,560) rotate(2)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="170" height="125" fill="#FDA4AF"/>
+    <rect x="0" y="0" width="170" height="125" fill="url(#r-paper)"/>
+    <line x1="20" y1="40" x2="148" y2="38" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="56" x2="138" y2="54" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="72" x2="100" y2="70" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="155" cy="14" r="6" fill="#0F172A"/>
+  </g>
+
+  <!-- ── COLUMN 3: UNMET NEED (mint/cyan notes) ── -->
+  <!-- Note 1 -->
+  <g transform="translate(595,228) rotate(-3)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="165" height="135" fill="#6EE7B7"/>
+    <rect x="0" y="0" width="165" height="135" fill="url(#r-paper)"/>
+    <line x1="18" y1="42" x2="142" y2="40" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="58" x2="125" y2="56" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="74" x2="100" y2="72" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="90" x2="78" y2="88" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="150" cy="14" r="6" fill="#0F172A"/>
+  </g>
+  <!-- Note 2 -->
+  <g transform="translate(620,400) rotate(4)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="160" height="130" fill="#5EEAD4"/>
+    <rect x="0" y="0" width="160" height="130" fill="url(#r-paper)"/>
+    <line x1="18" y1="40" x2="138" y2="38" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="56" x2="120" y2="54" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="72" x2="98" y2="70" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="88" x2="74" y2="86" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="148" cy="12" r="6" fill="#0F172A"/>
+  </g>
+  <!-- Note 3 -->
+  <g transform="translate(595,560) rotate(-2)" filter="url(#r-shadow)">
+    <rect x="0" y="0" width="170" height="125" fill="#6EE7B7"/>
+    <rect x="0" y="0" width="170" height="125" fill="url(#r-paper)"/>
+    <line x1="20" y1="40" x2="148" y2="38" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="56" x2="138" y2="54" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="72" x2="100" y2="70" stroke="#1d1d1d" stroke-opacity="0.45" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="156" cy="14" r="6" fill="#0F172A"/>
+  </g>
+
+  <!-- A small floating "highlight" sticker + arrow (mid-canvas) -->
+  <g transform="translate(498,370) rotate(-6)" filter="url(#r-shadow-soft)">
+    <rect x="0" y="0" width="80" height="32" rx="4" fill="#0F172A"/>
+    <text x="40" y="20" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#FFF">INSIGHT</text>
+  </g>
+
+  <!-- Top-left label -->
+  <text x="80" y="100" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#1d1d1d" opacity="0.58">USER RESEARCH</text>
+  <line x1="80" y1="116" x2="240" y2="116" stroke="#1d1d1d" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Bottom signature -->
+  <text x="80" y="740" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" letter-spacing="2" fill="#1d1d1d" opacity="0.45">INTERVIEW · CLUSTER · SYNTHESISE</text>
+</svg>
