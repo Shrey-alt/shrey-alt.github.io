@@ -659,6 +659,18 @@ ul   { list-style:none; }
 .back-btn svg path { transition:stroke .35s ease; }
 .back-btn:hover svg path { stroke:var(--dark); }
 
+/* ── VISUAL DESIGN IMAGE ── */
+.vis-section-pad { padding: 80px 40px 0; }
+.vis-real-caption {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-top: 24px; gap: 32px;
+}
+.vis-real-caption-right {
+  font-size: 14px; color: rgba(0,0,0,.5);
+  max-width: 420px; line-height: 1.65;
+  text-align: right; padding-top: 4px; flex-shrink: 0;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width:1024px) {
   #overview { grid-template-columns:1fr; }
