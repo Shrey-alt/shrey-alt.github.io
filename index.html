@@ -23,6 +23,27 @@
   </div>
 </div>
 
+<!-- ==================== GLOBAL DUST-DISTORTION FILTERS ====================
+     Filters for the hero name, footer name, and (dynamically) project cards.
+     Each filter has its own feTurbulence + feDisplacementMap so JS can drive
+     them independently. scale="0" at rest = visually a no-op. -->
+<svg class="dust-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="text-distort-hero" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence id="textTurbHero" type="fractalNoise" baseFrequency="0.018 0.7"
+                    numOctaves="2" seed="3" stitchTiles="stitch" result="noise" />
+      <feDisplacementMap id="textMapHero" in="SourceGraphic" in2="noise"
+                         scale="0" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <filter id="text-distort-footer" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence id="textTurbFooter" type="fractalNoise" baseFrequency="0.018 0.7"
+                    numOctaves="2" seed="9" stitchTiles="stitch" result="noise" />
+      <feDisplacementMap id="textMapFooter" in="SourceGraphic" in2="noise"
+                         scale="0" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+</svg>
+
 <!-- ==================== CURSOR ==================== -->
 <div id="cursor"></div>
 
@@ -94,6 +115,27 @@
     </ul>
   </div>
 </section>
+
+<!-- ==================== HERO PORTRAIT (floating, dust-distort on scroll) ==================== -->
+<div class="hero-carousel" id="heroCarousel" aria-hidden="true">
+  <!-- Inline SVG defs for the distortion filter (dust effect) -->
+  <svg class="hc-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="hc-distort" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence id="hcTurb" type="fractalNoise" baseFrequency="0.012 0.55"
+                      numOctaves="2" seed="3" stitchTiles="stitch" result="noise" />
+        <feDisplacementMap id="hcDistortMap" in="SourceGraphic" in2="noise"
+                           scale="2" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="hc-frame">
+    <img src="Images/shrey-portfolio-1.png" class="hc-img active" alt="" />
+    <div class="hc-dust" id="hcDust" aria-hidden="true"></div>
+    <span class="hc-tag">(Info)</span>
+  </div>
+</div>
 
 <!-- ==================== ABOUT ==================== -->
 <section id="about">
@@ -877,6 +919,281 @@ mobileLinks.forEach(link => {
     closeMenu();
   });
 });
+
+/* =============================================
+   HERO PORTRAIT — scroll-driven dust distortion
+   Single portrait image. The faster you scroll,
+   the more the SVG displacement scale + grain
+   overlay intensify. Decays smoothly at rest.
+============================================= */
+(function () {
+  const carousel    = document.getElementById('heroCarousel');
+  const aboutWrap   = document.querySelector('.about-img-wrap');
+  const heroSection = document.getElementById('hero');
+  if (!carousel || !aboutWrap || !heroSection) return;
+
+  document.body.classList.add('has-hero-carousel');
+
+  const distortMap  = document.getElementById('hcDistortMap');
+  const turb        = document.getElementById('hcTurb');
+  const dust        = document.getElementById('hcDust');
+
+  const LAND_AT     = 0.78;
+  const START_W     = 113;
+  const START_H     = 120;
+  const MAX_SCALE   = 38;    // peak displacement scale
+  const BASE_SCALE  = 1.2;   // resting filmic distortion
+  const DECAY       = 0.90;  // per-frame velocity decay
+  const SCROLL_KICK = 1.4;   // multiplier on scroll-delta per event
+
+  let landed        = false;
+  let rafPending    = false;
+  let lastScrollY   = window.scrollY;
+  let velocity      = 0;
+  let dustRaf       = null;
+  let seed          = 3;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function easeInOut(t)  { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+  function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+
+  function applyDust() {
+    const intensity = clamp(velocity, 0, 60);
+    // Displacement scale — image warps with scroll
+    const scale = BASE_SCALE + (intensity / 60) * MAX_SCALE;
+    distortMap.setAttribute('scale', scale.toFixed(2));
+
+    // Re-seed the noise so the dust pattern shifts, looks like drifting particles
+    if (intensity > 4) {
+      seed = (seed + 0.6) % 100;
+      turb.setAttribute('seed', seed.toFixed(2));
+    }
+
+    // Dust overlay opacity scales with velocity
+    const op = clamp(intensity / 38, 0, 0.85);
+    dust.style.opacity = op.toFixed(3);
+
+    // Subtle drift on dust position so particles "move"
+    const drift = intensity * 0.4;
+    dust.style.backgroundPosition =
+      `${Math.sin(seed * 0.7) * drift}px ${Math.cos(seed * 0.5) * drift}px`;
+  }
+
+  function decayLoop() {
+    velocity *= DECAY;
+    applyDust();
+    if (velocity > 0.25) {
+      dustRaf = requestAnimationFrame(decayLoop);
+    } else {
+      velocity = 0;
+      applyDust();
+      dustRaf = null;
+    }
+  }
+  function pumpVelocity(amount) {
+    velocity = clamp(velocity + amount, 0, 60);
+    applyDust();
+    if (!dustRaf) dustRaf = requestAnimationFrame(decayLoop);
+  }
+
+  function applyFrame() {
+    rafPending = false;
+
+    const heroH    = heroSection.offsetHeight || window.innerHeight;
+    const progress = clamp(window.scrollY / heroH, 0, 1);
+    const eased    = easeInOut(progress);
+
+    const r       = aboutWrap.getBoundingClientRect();
+    const startCx = window.innerWidth  / 2;
+    const startCy = window.innerHeight * 0.42;
+    const endCx   = r.left + r.width  / 2;
+    const endCy   = r.top  + r.height / 2;
+
+    const w  = lerp(START_W, r.width,  eased);
+    const h  = lerp(START_H, r.height, eased);
+    const cx = lerp(startCx, endCx,    eased);
+    const cy = lerp(startCy, endCy,    eased);
+
+    carousel.style.width  = w  + 'px';
+    carousel.style.height = h  + 'px';
+    carousel.style.left   = cx + 'px';
+    carousel.style.top    = cy + 'px';
+
+    if (progress >= LAND_AT && !landed) {
+      landed = true;
+      carousel.classList.add('landed');
+    } else if (progress < LAND_AT && landed) {
+      landed = false;
+      carousel.classList.remove('landed');
+    }
+  }
+  function schedule() {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(applyFrame);
+  }
+
+  // Each scroll event pumps the velocity proportional to the scroll delta.
+  window.addEventListener('scroll', () => {
+    schedule();
+    const dy = Math.abs(window.scrollY - lastScrollY);
+    lastScrollY = window.scrollY;
+    if (dy > 0) pumpVelocity(dy * SCROLL_KICK);
+  }, { passive: true });
+  window.addEventListener('resize', schedule);
+
+  applyFrame();
+  applyDust();
+
+  // Reveal — pump a big velocity spike so the image "dust-dissolves" in.
+  setTimeout(() => {
+    carousel.classList.add('show');
+    pumpVelocity(55);
+    const heroH = heroSection.offsetHeight || window.innerHeight;
+    if (window.scrollY / heroH >= LAND_AT) {
+      landed = true;
+      carousel.classList.add('landed');
+    }
+  }, 1800);
+})();
+
+/* =============================================
+   DUST DISTORTION — hero name, footer name,
+   project-card hover. Same noise filter, each
+   target gets its own controller for an
+   independent velocity + decay.
+============================================= */
+(function () {
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  // Reusable factory — pumps a velocity, decays each rAF tick,
+  // maps to feDisplacementMap "scale" and rotates feTurbulence "seed".
+  function createDistortionController(opts) {
+    const map   = opts.map;
+    const turb  = opts.turb;
+    const MAX   = opts.max   != null ? opts.max   : 18;
+    const BASE  = opts.base  != null ? opts.base  : 0;
+    const DECAY = opts.decay != null ? opts.decay : 0.88;
+    const CAP   = opts.cap   != null ? opts.cap   : 60;
+
+    let velocity = 0;
+    let raf      = null;
+    let seed     = Math.random() * 90;
+
+    function apply() {
+      const norm  = Math.min(velocity, CAP) / CAP;
+      const scale = BASE + norm * MAX;
+      map.setAttribute('scale', scale.toFixed(2));
+      if (velocity > 3) {
+        seed = (seed + 0.75) % 100;
+        turb.setAttribute('seed', seed.toFixed(2));
+      }
+    }
+    function loop() {
+      velocity *= DECAY;
+      apply();
+      if (velocity > 0.25) {
+        raf = requestAnimationFrame(loop);
+      } else {
+        velocity = 0;
+        apply();
+        raf = null;
+      }
+    }
+    return {
+      pump(amount) {
+        velocity = Math.min(CAP, velocity + amount);
+        apply();
+        if (!raf) raf = requestAnimationFrame(loop);
+      }
+    };
+  }
+
+  // ── HERO NAME — glitches in right after the loader fades ──
+  const heroTurb = document.getElementById('textTurbHero');
+  const heroMap  = document.getElementById('textMapHero');
+  if (heroTurb && heroMap) {
+    const heroDistort = createDistortionController({
+      turb: heroTurb, map: heroMap, max: 34, decay: 0.945
+    });
+    // Loader fades at 1400ms → name .show fires at +100ms → glitch sync to that.
+    window.addEventListener('load', () => {
+      setTimeout(() => heroDistort.pump(70), 1500);
+      // Second pump 400ms later for a "double-glitch" reveal feel
+      setTimeout(() => heroDistort.pump(45), 1900);
+    });
+  }
+
+  // ── FOOTER NAME — glitches the moment the name row reveals ──
+  const footTurb = document.getElementById('textTurbFooter');
+  const footMap  = document.getElementById('textMapFooter');
+  const footFirst = document.getElementById('footFirst');
+  if (footTurb && footMap && footFirst) {
+    const footerDistort = createDistortionController({
+      turb: footTurb, map: footMap, max: 34, decay: 0.945
+    });
+    // Piggy-back on the existing IntersectionObserver by watching the
+    // .show class that it sets — keeps this code decoupled.
+    const mo = new MutationObserver(() => {
+      if (footFirst.classList.contains('show')) {
+        footerDistort.pump(70);
+        setTimeout(() => footerDistort.pump(45), 400);
+        mo.disconnect();
+      }
+    });
+    mo.observe(footFirst, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // ── PROJECT CARDS — each card gets its own filter so they don't
+  //    bleed into each other when you swipe between them quickly. ──
+  const dustDefs = document.querySelector('.dust-defs defs');
+  const projectCards = document.querySelectorAll('.proj-card');
+  if (dustDefs && projectCards.length) {
+    projectCards.forEach((card, i) => {
+      const filterId = `proj-distort-${i}`;
+
+      const filter = document.createElementNS(SVG_NS, 'filter');
+      filter.setAttribute('id',     filterId);
+      filter.setAttribute('x',      '-10%');
+      filter.setAttribute('y',      '-10%');
+      filter.setAttribute('width',  '120%');
+      filter.setAttribute('height', '120%');
+
+      const turb = document.createElementNS(SVG_NS, 'feTurbulence');
+      turb.setAttribute('type',          'fractalNoise');
+      turb.setAttribute('baseFrequency', '0.015 0.55');
+      turb.setAttribute('numOctaves',    '2');
+      turb.setAttribute('seed',          String(5 + i * 3));
+      turb.setAttribute('stitchTiles',   'stitch');
+      turb.setAttribute('result',        'noise');
+      filter.appendChild(turb);
+
+      const map = document.createElementNS(SVG_NS, 'feDisplacementMap');
+      map.setAttribute('in',                'SourceGraphic');
+      map.setAttribute('in2',               'noise');
+      map.setAttribute('scale',             '0');
+      map.setAttribute('xChannelSelector',  'R');
+      map.setAttribute('yChannelSelector',  'G');
+      filter.appendChild(map);
+
+      dustDefs.appendChild(filter);
+      card.style.filter = `url(#${filterId})`;
+
+      const controller = createDistortionController({
+        turb, map, max: 28, decay: 0.90
+      });
+
+      // Big initial pump on enter; mousemove keeps the glitch alive
+      // while inside, and another pump on leave gives a "snap-back" ripple.
+      card.addEventListener('mouseenter', () => controller.pump(55));
+      card.addEventListener('mousemove', e => {
+        const speed = Math.abs(e.movementX || 0) + Math.abs(e.movementY || 0);
+        if (speed > 1) controller.pump(speed * 0.35);
+      });
+      card.addEventListener('mouseleave', () => controller.pump(30));
+    });
+  }
+})();
 </script>
 
 </body>
