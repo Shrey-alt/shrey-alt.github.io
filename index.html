@@ -77,6 +77,19 @@
 
 <!-- ==================== HERO ==================== -->
 <section id="hero">
+  <!-- chaos → clarity, mouse-eraser interactive -->
+  <div class="hero-art-wrap" aria-hidden="true">
+    <span class="hero-art-cap hero-art-cap-l">(complexity)</span>
+    <svg class="hero-art"
+         viewBox="0 0 1200 440"
+         preserveAspectRatio="xMidYMid meet">
+      <g class="t-scribble-g"></g>
+      <g class="t-bridge-g"></g>
+      <g class="t-spiral-g"></g>
+    </svg>
+    <span class="hero-art-cap hero-art-cap-r">(clarity)</span>
+  </div>
+
   <div class="hero-name">
     <span class="hero-first" id="heroFirst">Shreyansh</span>
     <span class="hero-last" id="heroLast">Rathod</span>
@@ -529,6 +542,251 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
+
+/* =============================================
+   HERO ART — chaos → clarity, mouse-eraser
+   Sits above the name on the first fold.
+   On load the line tells its story once
+   (chaos → bridge → spiral → leader).
+   After that the cursor becomes a soft
+   eraser: move it over the art to disturb
+   the line, move away and the line heals
+   back. Lots of tiny <line> segments lets
+   us erase precisely where the cursor is.
+============================================= */
+(function heroArt() {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+  const wrap = hero.querySelector('.hero-art-wrap');
+  if (!wrap) return;
+  const svg = wrap.querySelector('.hero-art');
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  const VB_W = 1200, VB_H = 440;
+
+  /* ── Path builders — same shapes as before ── */
+  function buildScribble(cx, cy, rx, ry) {
+    const N = 240;
+    const pts = [];
+    for (let i = 0; i <= N; i++) {
+      const t = i / N;
+      const a1 = t * Math.PI * 13.0 + Math.sin(t * 7.3) * 1.4;
+      const a2 = t * Math.PI *  9.6 + Math.cos(t * 5.7) * 1.2;
+      const ax = 0.78 + 0.22 * Math.sin(t * 11.1 + 0.5);
+      const ay = 0.80 + 0.20 * Math.cos(t * 13.4);
+      pts.push([
+        cx + Math.cos(a1) * rx * ax,
+        cy + Math.sin(a2) * ry * ay
+      ]);
+    }
+    return 'M' + pts.map(p => p[0].toFixed(2) + ',' + p[1].toFixed(2)).join(' L');
+  }
+  function buildBridge(x1, y1, x2, y2) {
+    const dx  = x2 - x1;
+    const c1x = x1 + dx * 0.35, c1y = y1 - 32;
+    const c2x = x1 + dx * 0.68, c2y = y2 + 26;
+    return `M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`;
+  }
+  function buildSpiral(cx, cy, innerR, outerR, turns) {
+    const TWO_PI = Math.PI * 2;
+    const totalAngle = TWO_PI * turns;
+    const steps = Math.floor(turns * 100);
+    const pts = [];
+    for (let i = 0; i <= steps; i++) {
+      const k = i / steps;
+      const theta = k * totalAngle;
+      const r = innerR + (outerR - innerR) * k;
+      pts.push([cx + r * Math.cos(theta), cy + r * Math.sin(theta)]);
+    }
+    return 'M' + pts.map(p => p[0].toFixed(2) + ',' + p[1].toFixed(2)).join(' L');
+  }
+  /* ── Sample a path d-string into points
+        every `step` viewBox units along its
+        length. Uses a hidden helper <path>
+        because getPointAtLength needs a real
+        SVG element in the DOM. */
+  function samplePath(d, step) {
+    const tmp = document.createElementNS(SVG_NS, 'path');
+    tmp.setAttribute('d', d);
+    tmp.style.visibility = 'hidden';
+    svg.appendChild(tmp);
+    const len = tmp.getTotalLength();
+    const pts = [];
+    for (let s = 0; s < len; s += step) {
+      const p = tmp.getPointAtLength(s);
+      pts.push({ x: p.x, y: p.y });
+    }
+    const last = tmp.getPointAtLength(len);
+    pts.push({ x: last.x, y: last.y });
+    svg.removeChild(tmp);
+    return pts;
+  }
+
+  /* ── Materialise each pair of points as a
+        short <line> we can fade individually. */
+  function buildSegments(group, pts) {
+    const segs = [];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const a = pts[i], b = pts[i + 1];
+      const line = document.createElementNS(SVG_NS, 'line');
+      line.setAttribute('x1', a.x.toFixed(2));
+      line.setAttribute('y1', a.y.toFixed(2));
+      line.setAttribute('x2', b.x.toFixed(2));
+      line.setAttribute('y2', b.y.toFixed(2));
+      line.setAttribute('class', 't-seg');
+      group.appendChild(line);
+      segs.push({
+        el: line,
+        mx: (a.x + b.x) * 0.5,
+        my: (a.y + b.y) * 0.5,
+        shown: false,
+        erased: false
+      });
+    }
+    return segs;
+  }
+
+  // ── Layout inside the 1200×440 viewBox ──
+  // Both shapes share a single horizontal axis at y = 220,
+  // giving the artwork a calm, symmetric feel.
+  const leftCx = 340, leftCy = 220;
+  const rightCx = 860, rightCy = 220;
+  const scribbleRx = 148, scribbleRy = 116;
+  const spiralOuter = 136, spiralInner = 1, spiralTurns = 4.25;
+
+  const dScribble = buildScribble(leftCx, leftCy, scribbleRx, scribbleRy);
+  const dBridge   = buildBridge(leftCx + scribbleRx - 8, leftCy, rightCx, rightCy);
+  const dSpiral   = buildSpiral(rightCx, rightCy, spiralInner, spiralOuter, spiralTurns);
+
+  // Sample density (smaller = more segments = finer eraser, more DOM)
+  const ptsScribble = samplePath(dScribble, 5);
+  const ptsBridge   = samplePath(dBridge,   7);
+  const ptsSpiral   = samplePath(dSpiral,   5);
+
+  const gS = svg.querySelector('.t-scribble-g');
+  const gB = svg.querySelector('.t-bridge-g');
+  const gP = svg.querySelector('.t-spiral-g');
+
+  const segsS = buildSegments(gS, ptsScribble);
+  const segsB = buildSegments(gB, ptsBridge);
+  const segsP = buildSegments(gP, ptsSpiral);
+  const segsAll = segsS.concat(segsB, segsP);
+
+  function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasHover       = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* ── INTRO: walks 'shown' down the segments
+        in path order so each shape traces in
+        as if a pen is drawing it. */
+  function showUpTo(segs, n) {
+    for (let i = 0; i < n && i < segs.length; i++) {
+      if (!segs[i].shown) {
+        segs[i].shown = true;
+        segs[i].el.classList.add('shown');
+      }
+    }
+  }
+  function showAll() {
+    segsAll.forEach(s => {
+      if (!s.shown) { s.shown = true; s.el.classList.add('shown'); }
+    });
+  }
+
+  let introStart = 0;
+  function introTick(ts) {
+    if (!introStart) introStart = ts;
+    const t = (ts - introStart) / 1000;
+
+    showUpTo(segsS, Math.floor(clamp(t / 1.4,         0, 1) * segsS.length));
+    showUpTo(segsB, Math.floor(clamp((t - 1.2) / 0.5, 0, 1) * segsB.length));
+    showUpTo(segsP, Math.floor(clamp((t - 1.6) / 1.8, 0, 1) * segsP.length));
+
+    if (t > 0.6) hero.classList.add('art-intro-1');
+    if (t > 2.5) hero.classList.add('art-intro-2');
+
+    if (t < 3.5) {
+      requestAnimationFrame(introTick);
+    } else {
+      showAll();                       // catch any rounding leftovers
+      hero.classList.add('art-ready');
+      if (hasHover) activateEraser();
+    }
+  }
+
+  /* ── INTERACTIVE: cursor as eraser. ── */
+  function activateEraser() {
+    const ERASE_R = 70;                // viewBox units (~70px on desktop)
+    const ERASE_R_SQ = ERASE_R * ERASE_R;
+    let mx = -1e4, my = -1e4;
+    let inside = false;
+    let needsUpdate = true;
+
+    function update() {
+      if (needsUpdate) {
+        needsUpdate = false;
+        for (let i = 0; i < segsAll.length; i++) {
+          const s = segsAll[i];
+          const dx = s.mx - mx, dy = s.my - my;
+          const erase = dx * dx + dy * dy < ERASE_R_SQ;
+          if (erase !== s.erased) {
+            s.erased = erase;
+            if (erase) s.el.classList.add('erased');
+            else       s.el.classList.remove('erased');
+          }
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    function setInside(v) {
+      if (v === inside) return;
+      inside = v;
+      if (!v) { mx = -1e4; my = -1e4; needsUpdate = true; }
+    }
+
+    function onMove(e) {
+      const r = svg.getBoundingClientRect();
+      const within =
+        e.clientX >= r.left  && e.clientX <= r.right &&
+        e.clientY >= r.top   && e.clientY <= r.bottom;
+      setInside(within);
+      if (within) {
+        mx = (e.clientX - r.left) * (VB_W / r.width);
+        my = (e.clientY - r.top)  * (VB_H / r.height);
+        needsUpdate = true;
+      }
+    }
+
+    document.addEventListener('mousemove', onMove, { passive: true });
+    document.addEventListener('mouseleave', () => setInside(false));
+    window.addEventListener('blur', () => setInside(false));
+    requestAnimationFrame(update);
+  }
+
+  /* ── Boot ──
+        Reduced motion → show everything, no animation.
+        Otherwise the intro plays once, then the
+        eraser kicks in (on hover-capable devices). */
+  function boot() {
+    if (prefersReduced) {
+      showAll();
+      hero.classList.add('art-intro-1', 'art-intro-2', 'art-ready');
+      return;
+    }
+    introStart = 0;
+    requestAnimationFrame(introTick);
+  }
+
+  // Start once the page-loader has begun fading
+  // so the user actually sees the intro.
+  if (document.readyState === 'complete') {
+    setTimeout(boot, 1500);
+  } else {
+    window.addEventListener('load', () => setTimeout(boot, 1500));
+  }
+})();
 
 /* =============================================
    SMOOTH SCROLL LINKS

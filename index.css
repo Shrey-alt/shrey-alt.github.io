@@ -1577,3 +1577,126 @@
   opacity: 0.7;
   filter: invert(1);
 }
+
+/* =============================================
+   HERO ART — chaos → clarity, mouse-eraser
+   Sits above the name on the first fold.
+   Hundreds of tiny <line> segments. Each
+   fades in once during the intro; the cursor
+   erases nearby segments, which heal back
+   smoothly when the cursor moves on.
+============================================= */
+.hero-art-wrap {
+  position: absolute;
+  left: 50%;
+  /* fluid top spacing — sits just below the nav */
+  top: clamp(72px, 11vh, 140px);
+  transform: translateX(-50%);
+  /* a touch larger than before */
+  width: min(88vw, 1280px);
+  /* eraser tracking uses document mousemove + getBoundingClientRect,
+     so the wrap doesn't need to intercept events — and we don't want
+     it to (the name below has higher z-index and should stay click-through) */
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Each tiny segment fades in/out smoothly */
+.t-seg {
+  fill: none;
+  stroke: var(--dark);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  opacity: 0;
+  /* default transition — used for HEAL (returning to visible) */
+  transition: opacity 0.55s var(--ease-out);
+  pointer-events: none;
+}
+.t-seg.shown { opacity: 1; }
+
+/* Erase = quick, gentle, linear */
+.t-seg.shown.erased {
+  opacity: 0;
+  transition: opacity 0.14s linear;
+}
+
+/* Caption labels: faint, sequenced with the intro */
+.hero-art-cap {
+  position: absolute;
+  top: 50%;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dark);
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.7s var(--ease-out);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.hero-art-cap-l { left: -2px; }
+.hero-art-cap-r { right: -2px; }
+#hero.art-intro-1 .hero-art-cap-l { opacity: 0.32; }
+#hero.art-intro-2 .hero-art-cap-r { opacity: 0.32; }
+
+/* The hero-name needs to sit above the SVG when they overlap */
+#hero .hero-name,
+#hero .hero-bottom { z-index: 2; }
+
+/* ── RESPONSIVE BREAKPOINTS ──
+      Each layer adjusts the art's top offset
+      and max-width so the gap to the name
+      stays comfortable on every viewport. */
+
+/* Large desktop (≥1440) — generous max width */
+@media (min-width: 1440px) {
+  .hero-art-wrap { width: min(82vw, 1340px); }
+}
+
+/* Tablet landscape (≤1200) */
+@media (max-width: 1200px) {
+  .hero-art-wrap {
+    top: clamp(60px, 9vh, 110px);
+    width: min(90vw, 1040px);
+  }
+}
+
+/* Tablet portrait (≤900) */
+@media (max-width: 900px) {
+  .hero-art-wrap {
+    top: clamp(56px, 8vh, 96px);
+    width: min(92vw, 820px);
+  }
+  .hero-art-cap { font-size: 10px; }
+}
+
+/* Mobile (≤640) */
+@media (max-width: 640px) {
+  .hero-art-wrap {
+    top: clamp(44px, 7vh, 80px);
+    width: 96vw;
+  }
+  .hero-art-cap { font-size: 9px; letter-spacing: 0.12em; }
+}
+
+/* Hide the side captions when they crowd the art */
+@media (max-width: 520px) {
+  .hero-art-cap { display: none; }
+}
+
+/* Reduced motion: skip stagger + erase, show final state */
+@media (prefers-reduced-motion: reduce) {
+  .t-seg {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
